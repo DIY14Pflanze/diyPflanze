@@ -1,0 +1,4 @@
+Arduino Mega Nachbau ist da. (beim Stefan?)
+Magnetventil ist da aber defekt.
+Zigbee ist getestet.
+gitHub-Account ist angelegt.
