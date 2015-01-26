@@ -1,0 +1,56 @@
+\documentclass[]{IEEEtran}
+
+\usepackage[utf8]{inputenc}		%UTF8 input file
+\usepackage[T1]{fontenc}		%
+\usepackage[ngerman]{babel}
+\date{\today}
+
+
+\begin{document}
+%	\maketitle
+\section{Idee}
+Auch unter den Studenten gibt es den einen oder anderen mit einem grünen Daumen, der seine WG will durch ein paar Pflanzen aufgewertet hat. Wenn nur nicht das ständige Gießen wäre. Vor jedem längeren Urlaub stellt sich die Frage, was machen mit den ganzen Pflanzen? Den Nachbarn fragen und hoffen er ist da und verlässlich. Die Pflanzen "Absaufen" lassen und hoffen, dass die sich das was einteilen? Beides keine zufriedenstellende Lösung. Wieso lässt man sich die Pflanze nicht selber gießen?
+
+Aus diesen Überlegungen ist die Idee entstanden, eine Pflanze mit Sensoren auszustatten, die uns über den aktuellen Zustand Informieren. Die wichtigste Information in dieser Hinsicht ist natürlich die Bodenfeuchtigkeit im Top der Pflanze. Neben dieser können noch weitere Informationsquellen herangezogen werden, die über das Wohlbefinden der Pflanze Aufschluss geben. Hierunter fallen unter anderer der Nährstoffgehalt der Erde, die Temperatur an der Wurzel oder die Luftqualität im Umfeld.
+
+In der folgender Darstellung soll der Entstehungs- und Entscheidungsprozess des erste Prototyp der "Gießanlage für die WG"
+näher erläutert werden. Zu beginnt wird eine kurze Ideensammlung aufgestellt, aus der sich der Prototyp hervorgetan hat. Im weiteren wird der Gesamtaufbau erläutert der in den Unterkapiteln \emph{Wassertransport und Gefäß, Sensorik, Gehäuse, Programmierung und Weboberfläche} weiter detailliert wird. Abschließend wird eine Auflistung aller  Materialien und Tools gegeben die für das Projekt verwendet wurden, sowie eine Kostenaufstellung. Im letzten Abschnitt geben wir ein kurzes Resümee und stellen unsere Do's and Dont's zusammen, die uns während des Projekts aufgefallen sind, damit die selben Fehler nicht nochmal gemacht werden.
+
+
+
+\section{Varianten}
+Die Anwendungsfelder lassen sich grob über zwei Achsen aufspannen. Zum einen die Anzahl der zu bewässernden Pflanzen und zum anderer die Art der Bewässerung. Recht schnell haben wir uns für eine "Einpflanzenlösung" entschieden, da eine Erweiterung auf mehrere Pflanzen grundsätzlich möglich ist, dies jedoch wegen dem erhöhten Aufwand und die Notwendigen Anpassungen auf den individuellen Einzelfall den Projektrahmen gesprengt hätten.
+Bei einer Einpflanzen-Variante ...
+
+Bei einer Mehrpflanzen-Variante ...
+
+Die Gießart lässt sich grob in Pumpgießen und Schwerkraftgießen einteilen. Beim Pumpgießen wird, wie im Namen bereits enthalten, das Wasser mithilfe einer Pumpe zu der Pflanze transportiert. Dadurch haben wir eine größeren Freiraum für die Positionierung des Wassertanks im Bezug zur Pflanze. Dieser kann, je nach Leistung der Pumpe in einiger Entfernung zur Pflanze verstaut werden. 
+Beim Schwerkraftpumpen wird die Schwerkraft genutzt um das Wasser zu verteilen. Hierbei ist jedoch immer darauf zu achten, dass der Wassertank oberhalb der Pflanze angebracht wird. Für diese Variante ist außerdem ein Ventil notwendig, welches auch bei wech
+
+\section{Aufbau}
+
+	\subsection{Wassertransport und Gefäß}
+	
+	\subsection{Sensorik}
+
+	\subsection{Gehäuse}
+
+	\subsection{Programmierung}
+		
+		\subsubsection{Mikrocontroller}
+	
+		\subsubsection{Websteuerung}
+	
+	\subsection{BOM - Bill of Matirial}
+	
+	\subsection{Kostenplan}
+	
+	\subsection{Resüme - Do's And Dont's}	
+	
+
+
+
+\end{document}
+
+
+
