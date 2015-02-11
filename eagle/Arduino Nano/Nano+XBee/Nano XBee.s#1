@@ -4945,6 +4945,7 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="R7" library="rcl" deviceset="R-EU_" device="M0805"/>
 <part name="Q3" library="transistor-fet" deviceset="FDN302P" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="M0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -4956,20 +4957,20 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <instance part="VENTIL" gate="-2" x="0" y="71.12" rot="R180"/>
 <instance part="V_IN_12V" gate="-1" x="-25.4" y="20.32"/>
 <instance part="V_IN_12V" gate="-2" x="-25.4" y="15.24"/>
-<instance part="DISPLAY" gate="A" x="193.04" y="10.16"/>
+<instance part="DISPLAY" gate="A" x="203.2" y="-50.8"/>
 <instance part="SOILSENSOR" gate="A" x="147.32" y="-50.8"/>
-<instance part="PHOTOSENSOR" gate="G$1" x="193.04" y="86.36" rot="MR0"/>
-<instance part="BUTTON_DISPLAY" gate="G$1" x="193.04" y="58.42" rot="MR0"/>
+<instance part="PHOTOSENSOR" gate="G$1" x="198.12" y="63.5" rot="MR0"/>
+<instance part="BUTTON_DISPLAY" gate="G$1" x="198.12" y="35.56" rot="MR0"/>
 <instance part="VENTIL_TRANSISTOR" gate="G$1" x="-15.24" y="53.34"/>
 <instance part="P+1" gate="1" x="-15.24" y="78.74"/>
 <instance part="GND1" gate="1" x="-15.24" y="40.64"/>
 <instance part="P+2" gate="1" x="-7.62" y="22.86"/>
 <instance part="GND2" gate="1" x="-7.62" y="12.7"/>
-<instance part="BUTTON_GIES" gate="G$1" x="195.58" y="38.1" rot="MR0"/>
-<instance part="R1" gate="G$1" x="175.26" y="91.44"/>
-<instance part="GND3" gate="1" x="182.88" y="73.66"/>
-<instance part="GND4" gate="1" x="182.88" y="55.88"/>
-<instance part="GND5" gate="1" x="182.88" y="33.02"/>
+<instance part="BUTTON_GIES" gate="G$1" x="200.66" y="15.24" rot="MR0"/>
+<instance part="R1" gate="G$1" x="180.34" y="68.58"/>
+<instance part="GND3" gate="1" x="187.96" y="50.8"/>
+<instance part="GND4" gate="1" x="187.96" y="33.02"/>
+<instance part="GND5" gate="1" x="187.96" y="10.16"/>
 <instance part="XB1" gate="G$1" x="144.78" y="147.32"/>
 <instance part="+3V1" gate="G$1" x="119.38" y="180.34"/>
 <instance part="GND6" gate="1" x="124.46" y="111.76"/>
@@ -4988,14 +4989,15 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <instance part="P+5" gate="1" x="124.46" y="91.44"/>
 <instance part="+3V4" gate="G$1" x="119.38" y="17.78" rot="R270"/>
 <instance part="P+6" gate="1" x="114.3" y="73.66"/>
-<instance part="GND9" gate="1" x="160.02" y="35.56" rot="R180"/>
-<instance part="P+8" gate="1" x="129.54" y="12.7" rot="R90"/>
-<instance part="R6" gate="G$1" x="139.7" y="17.78" rot="R90"/>
-<instance part="Q5" gate="G$1" x="149.86" y="12.7" rot="R270"/>
+<instance part="GND9" gate="1" x="187.96" y="-40.64" rot="R180"/>
+<instance part="P+8" gate="1" x="170.18" y="-22.86"/>
+<instance part="R6" gate="G$1" x="175.26" y="-33.02"/>
+<instance part="Q5" gate="G$1" x="170.18" y="-43.18" rot="R180"/>
 <instance part="P+7" gate="1" x="127" y="-20.32"/>
 <instance part="R7" gate="G$1" x="132.08" y="-30.48"/>
 <instance part="Q3" gate="G$1" x="127" y="-40.64" rot="R180"/>
 <instance part="GND10" gate="1" x="116.84" y="-45.72" rot="R180"/>
+<instance part="R8" gate="G$1" x="-27.94" y="45.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -5003,9 +5005,12 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <net name="VENTIL_CTL" class="0">
 <segment>
 <pinref part="VENTIL_TRANSISTOR" gate="G$1" pin="G"/>
-<wire x1="-20.32" y1="50.8" x2="-33.02" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="50.8" x2="-27.94" y2="50.8" width="0.1524" layer="91"/>
 <label x="-33.02" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 <junction x="-20.32" y="50.8"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="-27.94" y1="50.8" x2="-33.02" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-27.94" y="50.8"/>
 </segment>
 <segment>
 <label x="68.58" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -5055,6 +5060,11 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <wire x1="-15.24" y1="48.26" x2="-15.24" y2="43.18" width="0.1524" layer="91"/>
 <junction x="-15.24" y="48.26"/>
 <junction x="-15.24" y="43.18"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="40.64" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="40.64" x2="-20.32" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="43.18" x2="-15.24" y2="43.18" width="0.1524" layer="91"/>
+<junction x="-27.94" y="40.64"/>
 </segment>
 <segment>
 <pinref part="V_IN_12V" gate="-2" pin="KL"/>
@@ -5065,26 +5075,26 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </segment>
 <segment>
 <pinref part="PHOTOSENSOR" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="86.36" x2="182.88" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="86.36" x2="182.88" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="63.5" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="63.5" x2="187.96" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<junction x="195.58" y="86.36"/>
-<junction x="182.88" y="76.2"/>
+<junction x="200.66" y="63.5"/>
+<junction x="187.96" y="53.34"/>
 </segment>
 <segment>
 <pinref part="BUTTON_GIES" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="198.12" y1="38.1" x2="182.88" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="38.1" x2="182.88" y2="35.56" width="0.1524" layer="91"/>
-<junction x="198.12" y="38.1"/>
-<junction x="182.88" y="35.56"/>
+<wire x1="203.2" y1="15.24" x2="187.96" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="15.24" x2="187.96" y2="12.7" width="0.1524" layer="91"/>
+<junction x="203.2" y="15.24"/>
+<junction x="187.96" y="12.7"/>
 </segment>
 <segment>
 <pinref part="BUTTON_DISPLAY" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="195.58" y1="58.42" x2="182.88" y2="58.42" width="0.1524" layer="91"/>
-<junction x="195.58" y="58.42"/>
-<junction x="182.88" y="58.42"/>
+<wire x1="200.66" y1="35.56" x2="187.96" y2="35.56" width="0.1524" layer="91"/>
+<junction x="200.66" y="35.56"/>
+<junction x="187.96" y="35.56"/>
 </segment>
 <segment>
 <pinref part="XB1" gate="G$1" pin="GND"/>
@@ -5113,10 +5123,10 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="DISPLAY" gate="A" pin="1"/>
-<wire x1="190.5" y1="15.24" x2="160.02" y2="15.24" width="0.1524" layer="91"/>
-<junction x="190.5" y="15.24"/>
-<wire x1="160.02" y1="15.24" x2="160.02" y2="33.02" width="0.1524" layer="91"/>
-<junction x="160.02" y="33.02"/>
+<wire x1="200.66" y1="-45.72" x2="187.96" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="200.66" y="-45.72"/>
+<wire x1="187.96" y1="-45.72" x2="187.96" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="187.96" y="-43.18"/>
 <junction x="139.7" y="-38.1"/>
 </segment>
 <segment>
@@ -5130,31 +5140,43 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="PHOTOSENSOR" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="91.44" x2="182.88" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="88.9" x2="195.58" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="91.44" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="91.44" x2="182.88" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="109.22" x2="167.64" y2="109.22" width="0.1524" layer="91"/>
-<label x="167.64" y="109.22" size="1.778" layer="95" rot="R180" xref="yes"/>
-<junction x="180.34" y="91.44"/>
-<junction x="195.58" y="88.9"/>
+<wire x1="187.96" y1="68.58" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="66.04" x2="200.66" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="68.58" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="68.58" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="76.2" x2="172.72" y2="76.2" width="0.1524" layer="91"/>
+<label x="172.72" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<junction x="185.42" y="68.58"/>
+<junction x="200.66" y="66.04"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A1"/>
+<wire x1="109.22" y1="58.42" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
+<label x="119.38" y="58.42" size="1.778" layer="95" xref="yes"/>
+<junction x="109.22" y="58.42"/>
 </segment>
 </net>
 <net name="V_IN_PHOTO" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
-<label x="165.1" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
-<junction x="170.18" y="91.44"/>
+<wire x1="175.26" y1="68.58" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
+<label x="170.18" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
+<junction x="175.26" y="68.58"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D4"/>
+<wire x1="78.74" y1="53.34" x2="66.04" y2="53.34" width="0.1524" layer="91"/>
+<junction x="78.74" y="53.34"/>
+<label x="66.04" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DISPLAY_BUTTON" class="0">
 <segment>
-<wire x1="193.04" y1="60.96" x2="195.58" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="38.1" x2="200.66" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="BUTTON_DISPLAY" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="60.96" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
-<junction x="195.58" y="60.96"/>
-<label x="172.72" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="38.1" x2="177.8" y2="38.1" width="0.1524" layer="91"/>
+<junction x="200.66" y="38.1"/>
+<label x="177.8" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="66.04" y="58.42" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -5180,9 +5202,9 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </segment>
 <segment>
 <pinref part="BUTTON_GIES" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="40.64" x2="172.72" y2="40.64" width="0.1524" layer="91"/>
-<label x="172.72" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
-<junction x="198.12" y="40.64"/>
+<wire x1="203.2" y1="17.78" x2="177.8" y2="17.78" width="0.1524" layer="91"/>
+<label x="177.8" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
+<junction x="203.2" y="17.78"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -5317,10 +5339,10 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <segment>
 <pinref part="P+8" gate="1" pin="+5V"/>
 <pinref part="Q5" gate="G$1" pin="S"/>
-<wire x1="132.08" y1="12.7" x2="139.7" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="-25.4" x2="170.18" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<junction x="139.7" y="12.7"/>
-<wire x1="139.7" y1="12.7" x2="144.78" y2="12.7" width="0.1524" layer="91"/>
+<junction x="170.18" y="-33.02"/>
+<wire x1="170.18" y1="-33.02" x2="170.18" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+7" gate="1" pin="+5V"/>
@@ -5341,9 +5363,9 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </segment>
 <segment>
 <pinref part="DISPLAY" gate="A" pin="3"/>
-<wire x1="190.5" y1="10.16" x2="165.1" y2="10.16" width="0.1524" layer="91"/>
-<junction x="190.5" y="10.16"/>
-<label x="165.1" y="10.16" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="-50.8" x2="195.58" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="200.66" y="-50.8"/>
+<label x="195.58" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -5355,31 +5377,37 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </segment>
 <segment>
 <pinref part="DISPLAY" gate="A" pin="4"/>
-<wire x1="190.5" y1="7.62" x2="182.88" y2="7.62" width="0.1524" layer="91"/>
-<junction x="190.5" y="7.62"/>
-<label x="182.88" y="7.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="-53.34" x2="185.42" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="200.66" y="-53.34"/>
+<label x="185.42" y="-53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DISPLAY_ON" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="22.86" x2="139.7" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="25.4" x2="137.16" y2="25.4" width="0.1524" layer="91"/>
-<label x="137.16" y="25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="180.34" y1="-33.02" x2="182.88" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="-33.02" x2="182.88" y2="-30.48" width="0.1524" layer="91"/>
+<label x="182.88" y="-30.48" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="Q5" gate="G$1" pin="G"/>
-<wire x1="139.7" y1="25.4" x2="147.32" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="25.4" x2="147.32" y2="17.78" width="0.1524" layer="91"/>
-<junction x="139.7" y="25.4"/>
-<junction x="147.32" y="17.78"/>
+<wire x1="182.88" y1="-33.02" x2="182.88" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="-40.64" x2="175.26" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="182.88" y="-33.02"/>
+<junction x="175.26" y="-40.64"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D7"/>
+<wire x1="78.74" y1="38.1" x2="63.5" y2="38.1" width="0.1524" layer="91"/>
+<label x="63.5" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
+<junction x="78.74" y="38.1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="Q5" gate="G$1" pin="D"/>
 <pinref part="DISPLAY" gate="A" pin="2"/>
-<wire x1="154.94" y1="12.7" x2="190.5" y2="12.7" width="0.1524" layer="91"/>
-<junction x="190.5" y="12.7"/>
-<junction x="154.94" y="12.7"/>
+<wire x1="170.18" y1="-48.26" x2="200.66" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="200.66" y="-48.26"/>
+<junction x="170.18" y="-48.26"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -5402,6 +5430,12 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <junction x="139.7" y="-30.48"/>
 <junction x="132.08" y="-38.1"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D8"/>
+<wire x1="78.74" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
+<label x="63.5" y="33.02" size="1.778" layer="95" rot="R180" xref="yes"/>
+<junction x="78.74" y="33.02"/>
+</segment>
 </net>
 <net name="BODEN_ANALOG" class="0">
 <segment>
@@ -5409,12 +5443,24 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <wire x1="144.78" y1="-50.8" x2="139.7" y2="-50.8" width="0.1524" layer="91"/>
 <label x="139.7" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A2"/>
+<wire x1="109.22" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
+<label x="114.3" y="53.34" size="1.778" layer="95" xref="yes"/>
+<junction x="109.22" y="53.34"/>
+</segment>
 </net>
 <net name="BODEN_DIGITAL" class="0">
 <segment>
 <pinref part="SOILSENSOR" gate="A" pin="4"/>
 <wire x1="144.78" y1="-53.34" x2="114.3" y2="-53.34" width="0.1524" layer="91"/>
 <label x="114.3" y="-53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A3"/>
+<wire x1="109.22" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
+<label x="114.3" y="48.26" size="1.778" layer="95" xref="yes"/>
+<junction x="109.22" y="48.26"/>
 </segment>
 </net>
 </nets>
