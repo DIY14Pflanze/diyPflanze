@@ -1,12 +1,14 @@
 \documentclass[]{IEEEtran}
-
 \usepackage[utf8]{inputenc}		%UTF8 input file
-\usepackage[T1]{fontenc}		%
+\usepackage[T1]{fontenc}		
 \usepackage[ngerman]{babel}
+
 \date{\today}
 
 
 \begin{document}
+
+
 %	\maketitle
 \section{Idee}\label{refIdee}
 Auch unter den Studenten gibt es den einen oder anderen mit einem grünen Daumen, der seine WG will durch ein paar Pflanzen aufgewertet hat. Wenn nur nicht das ständige Gießen wäre. Vor jedem längeren Urlaub stellt sich die Frage, was machen mit den ganzen Pflanzen? Den Nachbarn fragen und hoffen er ist da und verlässlich. Die Pflanzen "Absaufen" lassen und hoffen, dass die sich das was einteilen? Beides keine zufriedenstellende Lösung. Wieso lässt man sich die Pflanze nicht selber gießen?
@@ -30,15 +32,50 @@ Beim Schwerkraftpumpen wird die Schwerkraft genutzt um das Wasser zu verteilen. 
 
 
 \section{Aufbau}
-
-	\subsection{Wassertransport und Gefäß}
+Das System lässt sich in drei Bereiche einteilen. Zum ersten der Mechanik mit Hilfe der das Wasser zu der/den Pflanze/n kommt. Eine Elektronik die die Energieversorgung regelt und Messwerte aufnimmt. Gesteuert wird das ganze durch die Logik die auf ein Arduino kompatiblem Board programmiert wird.
+\subsection{Mechanik}
+	\subsubsection{Wassertransport und Gefäß}
+	In der Mechanik wurde sich für eine Zahnradpumpe entschieden. Diese setzte sich gegenüber anderen Lösungen vor allem wegen ihrer selbstsaugenden Eigenschaft durch. Selbstsaugend bedeutet, das selbst trotz einer mit Luft gefüllten Wasserleitung und Pumpe Wasser ansaugen und dann fördern kann. Als Alternativen wurden Ventile und Kreiselpumpen angedacht. Die Kreiselpumpe konnte trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind. Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wassers genutzt werden. Das Gefäß ist frei wählbar deswegen wurde hier ein fünf-Liter-Weinballon gewählt. In den der Schlauch gesteckt wird. Auf der anderen Seite wird das Schlauchende mit einem durchbohrten Kantholz in der Pflanzenerde befestigt.
+	\begin{table*}[!h]
 	
-	\subsection{Sensorik}
-	
-	\subsection{Gehäuse}
 
-	\subsection{Programmierung}
-		
+	\begin{tabular}{|lcccc|}
+	\hline
+	\textit{Pumpentyp} & \textit{selbstsaugend} & \textit{Lautstärke} & \textit{Stromverbrauch} & \textit{Förderleistung} \\ \hline
+	Zahnradpumpe & ja & sehr laut & @12V 2,8A & gering (XXXX l/min)\\
+	Kreiselpumpe & nein & mittel laut & @12V 600mA & groß (XXXX l/min)\\
+	Ventil & nein & leises Klacken & @12V 80 mA & keine eigene \\
+	\hline
+	\end{tabular}
+	\caption{Vergleich zwischen Wasserpumpen und Ventil}
+	\label{Vergleich zwischen Wasserpumpen und Ventil}
+	
+\end{table*}	%
+	\subsubsection{Gehäuse}
+	Das Gehäuse wurde möglichst klein, aber genügend Platz für die Elektronik konzipiert.
+	So muss es genügend Platz bieten um ein LCD-Display, zwei Taster, die Hauptplatine, das Arduino Board,  die Vorschaltung für den Bodenfeuchtesensor, die Verkabelung und Anschlüsse für die Sensoren, den Motor und Stromversorgung  bieten.
+	Um den Körper der Box zu gestalten, wurde der BoxMaker benutzt und mit Inkscape angepasst. 
+	Das gesamte Gehäuse wurde im FabLab Erlangen mit Hilfe des Lasercutters gefertigt.
+	
+	\subsection{Elektronik}
+	
+	\subsubsection{Hauptplatine}
+	
+	\subsubsection{Sensorik}
+	Sensorisch erfasst werden die Helligkeit und die Bodenfeuchtigkeit. 
+	Um eine Pflanze mit Wasser zu versorgen reicht es zu wissen wie feucht der Boden ist. 
+	Aber um Rücksicht auf die Bewohner einer Wohnung zu nehmen ist zusätzlich ein Helligkeitssensor verbaut, dieser soll dafür sorgen, dass bei Dunkelheit im Raum eine "Nachtruhe" gehalten wird.
+	Der Bodenfeuchtesensor bestimmt den Wassergehalt des Bodens über einen Widerstand zwischen zwei Zinken einer Messgabel. 
+	Leider zeigte sich das nach nur 48 Stunden Dauermessung die Gabel erhebliche Korrosion erlitten hat.
+	Außerdem sieht die Vorschaltung keine Abschaltung des Messprozesses vor noch eine Umpolung der Gabel.
+	Deswegen muss die gesamte Vorschaltung stromlos geschaltet werden, um das Auflösen des Sensors zu verlangsamen. 
+	\subsubsection{Kommunikation über XBee}
+	
+	\subsubsection{Stromversorgung}
+	
+	
+	\subsection{Logik}
+	
 		\subsubsection{Mikrocontroller}
 	
 		\subsubsection{Websteuerung}
@@ -48,11 +85,8 @@ Beim Schwerkraftpumpen wird die Schwerkraft genutzt um das Wasser zu verteilen. 
 	\subsection{Kostenplan}
 	
 	\subsection{Resüme - Do's And Dont's}	
-	
-
 
 
 \end{document}
-
 
 

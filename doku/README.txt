@@ -1,1 +1,1 @@
-Dieser Orderner ist für unsere Doku gedacht, die wir in Latex abgeben müssen. So weit ich noch weiß sollen es 6 - 8 Seiten sein.
+Dieser Ordner ist fÃ¼r unsere Doku gedacht, die wir in Latex abgeben mÃ¼ssen. Es mÃ¼ssen 6 Seiten sein.
