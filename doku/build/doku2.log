@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  20 FEB 2015 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  20 FEB 2015 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,93 +390,101 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
+)) (c:/texlive/2014/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box29
+)
 (C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPflanze\doku\build/do
 ku2.aux)
 \openout1 = `doku2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 12.
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 15.
+** WARNING: \and is valid only when in conference or peerreviewca
+modes (line 18).
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3]
+
+] [2] [3
+
+]
 (C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPflanze\doku\build/do
 ku2.aux) ) 
 Here is how much of TeX's memory you used:
- 2791 strings out of 493108
- 37557 string characters out of 6138446
- 104174 words of memory out of 5000000
- 6241 multiletter control sequences out of 15000+600000
- 111609 words of font info for 122 fonts, out of 8000000 for 9000
+ 2855 strings out of 493108
+ 38448 string characters out of 6138446
+ 102174 words of memory out of 5000000
+ 6298 multiletter control sequences out of 15000+600000
+ 113882 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,7n,26p,1071b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,7n,26p,872b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
+/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPfla
-nze\doku\build/doku2.pdf (3 pages, 60364 bytes).
+nze\doku\build/doku2.pdf (3 pages, 68475 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 35 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
