@@ -3,16 +3,22 @@
 \usepackage[T1]{fontenc}		
 \usepackage[ngerman]{babel}
 \usepackage{amsmath, amssymb}
+\usepackage{eurosym}
 
-
+\title{Pflanzengießanlage}
+%\subtitle{DIY14Pflanze}
 \date{\today}
+\author{Hofbauer, Christoph \and Fischer-Has, Markus \and Nagl, Matthias \and Schubäck, Stefan}
 
 %%\renewcommand{\iedlistdecl}{\settowidth{\labelwidth}{Hello}}
 
 \begin{document}
 
 
-%	\maketitle
+	\maketitle
+%	\tableofcontents
+
+
 \section{Idee}\label{refIdee}
 Auch unter den Studenten gibt es den einen oder anderen mit einem grünen Daumen, der seine WG will durch ein paar Pflanzen aufgewertet hat. Wenn nur nicht das ständige Gießen wäre. Vor jedem längeren Urlaub stellt sich die Frage, was machen mit den ganzen Pflanzen? Den Nachbarn fragen und hoffen er ist da und verlässlich. Die Pflanzen "Absaufen" lassen und hoffen, dass die sich das was einteilen? Beides keine zufriedenstellende Lösung. Wieso lässt man sich die Pflanze nicht selber gießen?
 
@@ -33,25 +39,31 @@ Das System lässt sich in drei Bereiche einteilen. Zum ersten der Mechanik mit H
 	\subsubsection{Wassertransport und Gefäß}
 	Um den Einsatzbereich so flexibel wie möglich zu halten haben wir uns für ein Pumpensystem entschieden. Dadurch ist die Anordnung der Pflanze relativ zum Wassertank nicht relevant. Der hiermit einhergehen erhöhte Strombedarf ist zu verkraften, da unser System nicht auf Batterien angewiesen ist.
 	
-	Für den Wassertransport haben wir uns für eine Zahnradpumpe entschieden. Diese setzte sich gegenüber anderen Lösungen vor allem wegen ihrer selbstsaugenden Eigenschaft durch. Selbstsaugend bedeutet, dass eine mit Luft gefüllten Wasserleitung und Pumpe Wasser ansaugen und fördern kann. Als Alternativen wurden Ventile und Kreiselpumpen angedacht. Die Kreiselpumpe konnte trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind. Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wassers genutzt werden. Das Gefäß ist frei wählbar deswegen wurde hier ein fünf-Liter-Weinballon gewählt. In den der Schlauch gesteckt wird. Auf der anderen Seite wird das Schlauchende mit einem durchbohrten Kantholz in der Pflanzenerde befestigt.
+	Für den Wassertransport haben wir uns für eine Zahnradpumpe entschieden. Diese setzte sich gegenüber anderen Lösungen vor allem wegen ihrer selbstsaugenden Eigenschaft durch.
+	 Selbstsaugend bedeutet, dass eine mit Luft gefüllten Wasserleitung und Pumpe Wasser ansaugen und fördern kann. Als Alternativen wurden Ventile und Kreiselpumpen angedacht. 
+	 Die Kreiselpumpe konnte trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. 
+	 Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind. 
+	 Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. 
+	 Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wassers genutzt werden. Das Gefäß ist frei wählbar deswegen wurde hier ein fünf-Liter-Weinballon gewählt. 
+	 In den der Schlauch gesteckt wird. Auf der anderen Seite wird das Schlauchende mit einem durchbohrten Kantholz in der Pflanzenerde befestigt.
 	
 	Die Nachteile der Zahnradpumpe (Stromverbrauch und Lärm) haben wir dadurch minimiert, dass das Gießsystem über ein Netzgerät mit Strom versorgt wird ist der erhöhte Stromverbrauch zwar unschön aber vertretbar. Um den Geräuschpegel zu minimieren wird über einen Helligkeitssensor verhindert, dass in der Nacht gegossen wird. Dies wird im Abschnitt~\ref{sensorik} näher erläutert.
 	
-	\begin{table*}[!h]
+	\begin{table*}[!t]
 	
 
-	\begin{tabular}{|lcccc|}
+	\begin{tabular}{|lccccc|}
 	\hline
-	\textit{Pumpentyp} & \textit{selbstsaugend} & \textit{Lautstärke} & \textit{Stromverbrauch} & \textit{Förderleistung} \\ \hline
-	Zahnradpumpe & ja & sehr laut & @12V 2,8A & gering (XXXX l/min)\\
-	Kreiselpumpe & nein & mittel laut & @12V 600mA & groß (XXXX l/min)\\
-	Ventil & nein & leises Klacken & @12V 80 mA & keine eigene \\
+	\textit{Pumpentyp} & \textit{selbstsaugend} & \textit{Lautstärke} & \textit{Stromverbrauch} & \textit{Förderleistung} & \textit{Preis} \\ \hline
+	Zahnradpumpe & ja & sehr laut & @12V 2,8A & gering (XXXX l/min)& 2,95 \euro  \\
+	Kreiselpumpe & nein & mittel laut & @12V 600mA & groß (XXXX l/min)& 2,95 \euro \\
+	Ventil & nein & leises Klacken & @12V 80 mA & keine eigene & 4,95 \euro \\
 	\hline
 	\end{tabular}
 	\caption{Vergleich zwischen Wasserpumpen und Ventil}
 	\label{Vergleich zwischen Wasserpumpen und Ventil}
 	
-	\end{table*}	%
+\end{table*}	
 	
 	\subsubsection{Gehäuse}
 	Das Gehäuse wurde möglichst klein, aber genügend Platz für die Elektronik konzipiert.
@@ -70,6 +82,10 @@ Das System lässt sich in drei Bereiche einteilen. Zum ersten der Mechanik mit H
 			\item Stromversorung
 		\end{itemize}
 	werden im folgenden erläutert. 
+	
+	\subsubsection{Arduino Nano}
+	Als Kern des Projektes steht ein Arduino Nano Nachbau, dieser sticht durch seine geringe Größe und günstigen Preis aus der Arduino kompatiblen Boards heraus. 
+	Er besitzt einen ATmega168 Microcontroller
 		
 	\subsubsection{Senorschaltung} \label{sensorik}
 	Für den Helligkeitssensor wird ein einfacher Photo-widerstand verwendet, der über einen Spannungsteiler an einem der Analogen Pins des Arduino Bords angeschlossen ist. Der Pin verfügt über einen 10Bit AD Konverter und gibt demnach einen Integerwert von 0 - 1023 zurück. 
@@ -109,12 +125,22 @@ Das System lässt sich in drei Bereiche einteilen. Zum ersten der Mechanik mit H
 		
 	
 		\subsubsection{Websteuerung}
+		
+			\section{Sparversion}
+	In der der günstigeren Variante der Gießanlage wurde alles, wurde die Konstruktion auf das wesentlichste beschränkt,das Gießen.
+	\subsection{Aufbau}
+	In dieser Version wird auf das Display und die Kommunikation verzichtet.
 	
-	\subsection{BOM - Bill of Matirial}
+	\subsection{Logik}
+	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C programmiert.
+	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
+	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie. 
 	
-	\subsection{Kostenplan}
+	\section{BOM - Bill of Matirial}
 	
-	\subsection{Resüme - Do's And Dont's}	
+	\section{Kostenplan}
+	
+	\section{Resüme - Do's And Dont's}	
 
 
 \end{document}
