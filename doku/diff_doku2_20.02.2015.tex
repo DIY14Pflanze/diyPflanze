@@ -1,0 +1,18 @@
+	\subsubsection{Sensorik}
+	Sensorisch erfasst werden die Helligkeit und die Bodenfeuchtigkeit. 
+	Um eine Pflanze mit Wasser zu versorgen reicht es zu wissen wie feucht der Boden ist. 
+	Aber um Rücksicht auf die Bewohner einer Wohnung zu nehmen ist zusätzlich ein Helligkeitssensor verbaut, dieser soll dafür sorgen, dass bei Dunkelheit im Raum eine "Nachtruhe" gehalten wird.
+	Der Bodenfeuchtesensor bestimmt den Wassergehalt des Bodens über einen Widerstand zwischen zwei Zinken einer Messgabel. 
+	Leider zeigte sich das nach nur 48 Stunden Dauermessung die Gabel erhebliche Korrosion erlitten hat.
+	Außerdem sieht die Vorschaltung keine Abschaltung des Messprozesses vor noch eine Umpolung der Gabel.
+	Deswegen muss die gesamte Vorschaltung stromlos geschaltet werden, um das Auflösen des Sensors zu verlangsamen. 
+	
+	\subsubsection{Stromversorgung}
+	Es werden drei Spannungslevel in der Gießanlage benötigt. 
+	Einmal 12 Volt zum Betreiben der Pumpe, zum zweiten 5 Volt für den Microcontroller und die Sensorik und  zuletzt  3,3 Volt für das XBee-Modul. 
+	Deswegen wird das System so ausgelegt, dass 12 Volt Eingangsspannung aufnimmt. 
+	Das Arduino Nano erzeugt daraus mit Hilfe zweier Linearwandlern die Spannungen 5 Volt und 3,3 Volt.
+	
+
+
+
