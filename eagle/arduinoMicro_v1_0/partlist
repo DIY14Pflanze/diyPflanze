@@ -1,0 +1,28 @@
+Partlist
+
+Exported from Nano_gies.sch at 16.01.2015 18:36:16
+
+EAGLE Version 7.1.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part        Value          Device        Package      Library        Sheet
+
+BODENSENSOR                MA04-1        MA04-1       con-lstb       1
+D1                         DIODE-DO214AC DO214AC      diode          1
+DISPLAY                    MA04-1        MA04-1       con-lstb       1
+DISPLAY_IO  332-02         332-02        332-02       con-garry      1
+MANUAL_GIES 332-02         332-02        332-02       con-garry      1
+PHOTOSENSOR 332-02         332-02        332-02       con-garry      1
+Q1          BSS138LT1      BSS138LT1     SOT23        transistor-fet 1
+Q2          BSS138LT1      BSS138LT1     SOT23        transistor-fet 1
+Q3          BUZ10          BUZ10         TO220        transistor-fet 1
+R1                         R-EU_M0805    M0805        rcl            1
+R3                         R-EU_M0805    M0805        rcl            1
+R4                         R-EU_M0805    M0805        rcl            1
+R5                         R-EU_M0805    M0805        rcl            1
+R6                         R-EU_M0805    M0805        rcl            1
+U$1         ARDUINOMICRO   ARDUINOMICRO  ARDUINOMICRO adafruit       1
+VENTIL                     W237-02P      W237-132     con-wago-508   1
+V_IN                       W237-02P      W237-132     con-wago-508   1
+XB1         XBEE           XBEE          XBEE         maxstream      1
