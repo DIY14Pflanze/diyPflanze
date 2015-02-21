@@ -2020,6 +2020,8 @@ design rules under a new name.</description>
 <wire x1="30.31" y1="48.09" x2="29.21" y2="46.99" width="0.3048" layer="16"/>
 <wire x1="29.21" y1="46.99" x2="29.21" y2="43.5" width="0.3048" layer="16"/>
 <wire x1="29.21" y1="43.5" x2="30.37" y2="42.34" width="0.3048" layer="16"/>
+<contactref element="U$1" pad="P$33"/>
+<wire x1="30.37" y1="42.34" x2="82.55" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TXD">
 <contactref element="Q2" pad="2"/>

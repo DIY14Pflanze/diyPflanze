@@ -1934,7 +1934,7 @@ design rules under a new name.</description>
 <vertex x="97.79" y="8.89"/>
 <vertex x="29.21" y="8.89"/>
 </polygon>
-<wire x1="90.17" y1="40.64" x2="87.63" y2="44.45" width="0.3048" layer="16"/>
+<wire x1="90.17" y1="40.64" x2="87.63" y2="44.45" width="0" layer="19" extent="1-16"/>
 <wire x1="87.63" y1="44.45" x2="86.63" y2="44.45" width="0.3048" layer="16"/>
 <wire x1="86.63" y1="44.45" x2="86.36" y2="44.18" width="0.3048" layer="16"/>
 </signal>

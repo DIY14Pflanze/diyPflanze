@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  21 FEB 2015 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  21 FEB 2015 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/Stefan/SkyDrive/Dokumente/Uni/03_WS14_15/diy/diyPflanze/doku/doku2.t
-ex
-
-(c:/Users/Stefan/SkyDrive/Dokumente/Uni/03_WS14_15/diy/diyPflanze/doku/doku2.te
-x
+**doku2.tex
+(./doku2.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 79 languages loaded.
 (c:/texlive/2014/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -98,12 +95,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
+
 (c:/texlive/2014/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
+
 (c:/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
@@ -253,6 +252,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
+
 (c:/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
@@ -283,6 +283,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
+
 (c:/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
@@ -306,21 +307,28 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (c:/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+))
+(c:/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
 (c:/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 100.
+
 (c:/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)) (c:/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+))
+(c:/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/03/24 3.9k The Babel package
+
 (c:/texlive/2014/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+
 (c:/texlive/2014/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+
 (c:/texlive/2014/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count92
@@ -329,20 +337,25 @@ File: babel.def 2014/03/24 3.9k Babel common definitions
 \l@naustrian = a dialect from \language\l@ngerman 
 \l@nswissgerman = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 88.
-))) (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+)))
+(c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
+
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
+
 (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen118
-)) (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen119
-) (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
@@ -382,114 +395,230 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
-) (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(c:/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/texlive/2014/texmf-dist/tex/latex/eurosym/eurosym.sty
+))
+(c:/texlive/2014/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box29
-) (c:/texlive/2014/texmf-dist/tex/latex/sttools/stfloats.sty
-Package: stfloats 2012/05/29 v1.1 Improve float mechanism and baselineskip sett
-ings
-\@dblbotnum=\count105
-\c@dblbotnumber=\count106
 )
-(C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPflanze\doku\build/do
-ku2.aux)
+(c:/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(c:/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(c:/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(c:/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+(c:/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (./doku2.aux)
 \openout1 = `doku2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 23.
+
+(c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count106
+\scratchdimen=\dimen129
+\scratchbox=\box30
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen130
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks24
+) (c:/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(c:/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(c:/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(c:/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(c:/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 20).
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+modes (line 26).
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+<bilder/v1SchaltplanMicro.JPG, id=1, 626.34pt x 252.945pt>
+File: bilder/v1SchaltplanMicro.JPG Graphic file (type jpg)
 
+<use bilder/v1SchaltplanMicro.JPG>
+Package pdftex.def Info: bilder/v1SchaltplanMicro.JPG used on input line 98.
+(pdftex.def)             Requested size: 464.39685pt x 187.55075pt.
+ [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3
 
 ]
-(C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPflanze\doku\build/do
-ku2.aux) ) 
+<bilder/_feuchteSensor1.jpg, id=9, 1613.02625pt x 1210.5225pt>
+File: bilder/_feuchteSensor1.jpg Graphic file (type jpg)
+
+<use bilder/_feuchteSensor1.jpg>
+Package pdftex.def Info: bilder/_feuchteSensor1.jpg used on input line 125.
+(pdftex.def)             Requested size: 201.60077pt x 151.278pt.
+
+<bilder/_fechtesensorVergleich0.jpg, id=10, 1553.805pt x 2071.74pt>
+File: bilder/_fechtesensorVergleich0.jpg Graphic file (type jpg)
+
+<use bilder/_fechtesensorVergleich0.jpg>
+Package pdftex.def Info: bilder/_fechtesensorVergleich0.jpg used on input line 
+137.
+(pdftex.def)             Requested size: 201.60077pt x 268.79825pt.
+ [2 <./bilder/v1SchaltplanMicro.JPG> <./bilder/_feuchteSensor1.jpg>] [3 <./bild
+er/_fechtesensorVergleich0.jpg>]
+[4
+
+] (./doku2.aux) ) 
 Here is how much of TeX's memory you used:
- 2877 strings out of 493108
- 38841 string characters out of 6138446
- 102174 words of memory out of 5000000
- 6315 multiletter control sequences out of 15000+600000
- 116604 words of font info for 127 fonts, out of 8000000 for 9000
+ 4155 strings out of 493108
+ 57287 string characters out of 6138446
+ 127821 words of memory out of 5000000
+ 7528 multiletter control sequences out of 15000+600000
+ 115468 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,26p,933b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dist/fonts
-/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on C:\Users\Stefan\SkyDrive\Dokumente\Uni\03_WS14_15\diy\diyPfla
-nze\doku\build/doku2.pdf (3 pages, 68988 bytes).
+ 37i,8n,26p,741b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dis
+t/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on doku2.pdf (4 pages, 3036326 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
