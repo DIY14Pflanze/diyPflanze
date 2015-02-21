@@ -75,7 +75,8 @@ Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wa
 		Preis			&2,95 \euro	& 2,95 \euro	&	4,95 \euro\\
 		\hline		
 		\end{tabular}
-	\caption{Vergleich zwischen Wasserpumpen und Ventil}
+		
+	\caption{Vergleich Wasserpumpen und Ventil}
 	\label{Vergleich zwischen Wasserpumpen und Ventil}
 
 \end{table*}	
@@ -95,25 +96,22 @@ Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wa
 	Im folgenden wird die Funktionsweise auf Basis der Version 1.0 erläutert, an gegebener Stelle wird auf die  Anpassungen eingegangen die bereits umgesetzt wurden bzw. noch in Planung sind. 
 \begin{figure*}
 	\centering
-	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro.JPG}
+	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
 	\caption{Schaltpaln V1.0 mit Arduino Micro}
-	\label{fig-Schaltplanv1.1}
+	\label{fig-Schaltplanv1.0}
 \end{figure*}
 
 \subsection{Hauptplatine}
 
 
 
-In Abbildung XXX ist die Version 1.0 des Layouts und des Schaltplans zu sehen. Die drei Funktionsblöcke
+In Abbildung \ref{fig-Schaltplanv1.0} ist die Version 1.0 des Layouts und des Schaltplans zu sehen. Die drei Funktionsblöcke
 \begin{itemize}
 		\item Senorschaltung
 		\item Kommunikationsschaltung
 		\item Stromversorung
 \end{itemize}
 werden im folgenden erläutert. 
-
-
-		
 		
 			
 \subsubsection{Senorschaltung} \label{sensorik}
@@ -135,7 +133,7 @@ Anpassung zu Version 1.1:
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{bilder/_fechtesensorVergleich0.jpg}
-	\caption{Vergleich neuer Sensor mit 48h Dauerbetrieb}
+	\caption{Vergleich neuer Sensor und Sernsor mit 48h Dauerbetrieb}
 	\label{fig-SensorVergleich}
 \end{figure}
 Leider zeigte sich, dass nach nur 48 Stunden Dauermessung die Gabel erhebliche Korrosion erlitten hat, Abbildung \ref{fig-SensorVergleich} zeigt dies deutlich.
@@ -143,14 +141,21 @@ Die Vorschaltung sieht keine Abschaltung des Messprozesses vor noch eine Umpolun
 Beim Routing der Platine wurde die Verbindung MANUALGIES2 zu Pin 7 vergessen, weswegen diese nachträglich durch eine Drahtbrücke verbessert wurde.
 	
 \subsection{Stromversorgung}
-Eine Stromversorgung über USB ist nicht möglich, da die Pumpe in Volllast über 2 Ampere benötigt. Um den Strom zu begrenzen haben wir einen \begin{math}5~\Omega\end{math} Lastwiderstand in Reihe geschallten. Die Ansteuerung der Pumpe mit dem Mikrocontroller wurde über eine Transistorschaltung Gelöst. 
+Eine Stromversorgung über USB ist nicht möglich, da die Pumpe in Volllast 2,8~A benötigt. Um den Strom zu begrenzen haben wir einen \begin{math}5~\Omega\end{math} Lastwiderstand in Reihe geschallten. Die Ansteuerung der Pumpe über dem Mikrocontroller wurde über eine Transistorschaltung Gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}). Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdiode über die Anschlüsse \emph{VENTIL-1} und \emph{VENTIL-2} vor Überspannung zu schützen, die beim abgeschaltet des gesamten Systems auftreten. Da die Pumpe jedoch nur für einen kurzen Zeitraum (Standardeinstellung 5 sekunden) in Betrieb ist, wurde davon abgesehen. 
 
-Daher wird die Stromversorgung extern über ein 12V Netzteil betrieben. Für die Kommunikation mit einem Computer wurde ein xBee Modul verbaut, welches nur mit 3,3 V betrieben werden darf. Auch die Datenleitungen dürfen nur mit 3,3 V betrieben werden. Hierfür war als ein Pegelwandler notwendig.
-		
 \subsection{Kommunikation}
-Ziel der Kommunikation zwischen Mikrocontroller und Computer ist es, die Messdaten zu übertragen und die Möglichkeit die Grenzwerte ab wann gegossen werden soll bzw. wie lange gegossen werden auch nachträglich zu ändern. Hierfür sollten die Variablen über eine Serial-read neue beschrieben werden. Genauso soll der Mikrocontroller die Messwerte der aktuellen  Feuchtigkeit übermitteln können. Die Kommunikation über das XBee Modul hat zu stärkeren Problemen geführt. Mit der Version 1.0 konnte keine Verbindung mit den PC hergestellt werden.
+Ziel der Kommunikation ist es, eine Möglichkeit zu haben das Gießsystem im laufenden Betrieb einzustellen. Jede Pflanze braucht unterschiedlich viel Wasser. Genauso hat die Zusammensetzung der Erde einen Einfluss auf den gemessenen Widerstand des Feuchtigkeitssensors. Diese Werte müssen daher für jede Pflanze extra einstellbar sein. 
+Wir haben uns für eine Drahtlose Kommunikation entschieden und haben uns auf den XBee Standard geeinigt. Das XBee Modul wurde direkt, d.h. ohne Verwendung eines \emph{Arduino XBEE-Shields}, mit dem Arduino verbunden. Hierfür ist es notwendig einen Pegelwandlung von 5\,V auf 3,3\,V vorzunehmen, da die Logik-Pins des XBee Moduls nicht mit 5\,V betrieben werden können. Bei dieser Pegelschaltung ist uns in Version 1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. Der Fehler war, dass für die Pegelwandlung für den Anschuss TX, der Transistor falsch beschaltet wurde. Auf dem \emph{Gate} des Transistors wurde das falsche Spannungspotential geschalteten. Dieser Fehler wird für die Version 1.1 behoben und noch getestet.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{bilder/v1SchaltplanXbee.jpg}
+	\caption{Pegelwandler mit Small-Signal-Transistor BSS138W }
+	\label{fig-Pegel}
+\end{figure}
+
+
 		
-Die zweite Kommunikation mit dem Menschen wird über das Display ermöglicht. Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. Bei dem Display Handelt es sich um ein 2 zeiliges LCD-Display mit jeweils 16 Zeichen. Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C-Schnittstelle bewerkstelligt. Hierfür haben wir die frei verfügbare LiquidCrystal\_I2C Libary von fderbrabander verwendet.\footnote{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}
+Die zweite Schnittstelle mit dem Menschen wird über ein Display ermöglicht. Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. Bei dem Display Handelt es sich um ein 2 Zeiliges LCD-Display mit jeweils 16 Zeichen. Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C-Schnittstelle bewerkstelligt. Hierfür haben wir die frei verfügbare LiquidCrystal\_I2C Libary von fderbrabander verwendet.\footnote{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}
 		
 \subsection{Mikrocontroller}
 In der Version 1.0 wurde ein vorhandener Arduino Micro verwendet. Für Version 1.1 wird jedoch auf ein Arduino Nano Nachbau zurückgegriffen, da dieser im Vergleich günstiger war. Der Arduino Nano für die Version 1.1 besitzt eien ATmega168 Mikrocontroller
@@ -176,7 +181,7 @@ In der Version 1.0 wurde ein vorhandener Arduino Micro verwendet. Für Version 1
 	\subsection{Setuptool}
 	Da die Erde in jeder Pflanze eine andere Zusammensetzung hat und jede Pflanze unterschiedlich viel Wasser benötigt ist es notwendig die Grenzwerte für die Feuchtigkeit und die Wassermenge einzustellen. Hierfür gibt es ein Cmd-Tool welches über die 
 	
-			\section{Sparversion}
+\section{Sparversion}
 	In der der günstigeren Variante der Gießanlage wurde alles, wurde die Konstruktion auf das wesentlichste beschränkt,das Gießen.
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
@@ -186,7 +191,7 @@ In der Version 1.0 wurde ein vorhandener Arduino Micro verwendet. Für Version 1
 	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
 	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie. 
 	
-	\section{BOM - Bill of Matirial}
+\section{BOM - Bill of Matirial}
 	
 	\section{Kostenplan}
 	
