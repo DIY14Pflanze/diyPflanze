@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  21 FEB 2015 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  22 FEB 2015 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -563,67 +563,81 @@ e
 ))
 ** WARNING: \and is valid only when in conference or peerreviewca
 modes (line 26).
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
 
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<bilder/v1SchaltplanMicro0.JPG, id=1, 1098.1025pt x 498.86375pt>
-File: bilder/v1SchaltplanMicro0.JPG Graphic file (type jpg)
+Underfull \hbox (badness 2042) in paragraph at lines 47--48
+\T1/ptm/m/n/10 fal-len Ein-schrän-kun-gen bzgl. Wit-te-rungs-be-stän-dig-keit
+ []
 
-<use bilder/v1SchaltplanMicro0.JPG>
-Package pdftex.def Info: bilder/v1SchaltplanMicro0.JPG used on input line 99.
-(pdftex.def)             Requested size: 464.39685pt x 210.96764pt.
- [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<bilder/_feuchteSensor1.jpg, id=9, 1613.02625pt x 1210.5225pt>
+<bilder/_boxFron1.jpg, id=11, 2235.35126pt x 1676.2625pt>
+File: bilder/_boxFron1.jpg Graphic file (type jpg)
+
+<use bilder/_boxFron1.jpg>
+Package pdftex.def Info: bilder/_boxFron1.jpg used on input line 120.
+(pdftex.def)             Requested size: 201.60077pt x 151.16405pt.
+
+<bilder/_feuchteSensor1.jpg, id=12, 1613.02625pt x 1210.5225pt>
 File: bilder/_feuchteSensor1.jpg Graphic file (type jpg)
 
 <use bilder/_feuchteSensor1.jpg>
-Package pdftex.def Info: bilder/_feuchteSensor1.jpg used on input line 123.
+Package pdftex.def Info: bilder/_feuchteSensor1.jpg used on input line 141.
 (pdftex.def)             Requested size: 201.60077pt x 151.278pt.
 
-<bilder/_fechtesensorVergleich0.jpg, id=10, 1553.805pt x 2071.74pt>
+<bilder/_fechtesensorVergleich0.jpg, id=13, 1553.805pt x 2071.74pt>
 File: bilder/_fechtesensorVergleich0.jpg Graphic file (type jpg)
 
 <use bilder/_fechtesensorVergleich0.jpg>
 Package pdftex.def Info: bilder/_fechtesensorVergleich0.jpg used on input line 
-135.
+155.
 (pdftex.def)             Requested size: 201.60077pt x 268.79825pt.
- [2 <./bilder/v1SchaltplanMicro0.JPG> <./bilder/_feuchteSensor1.jpg>]
-<bilder/v1SchaltplanXbee.jpg, id=16, 478.03593pt x 361.35pt>
+ [2 <./bilder/_boxFron1.jpg> <./bilder/_feuchteSensor1.jpg>]
+<bilder/v1SchaltplanXbee.jpg, id=18, 478.03593pt x 361.35pt>
 File: bilder/v1SchaltplanXbee.jpg Graphic file (type jpg)
 
 <use bilder/v1SchaltplanXbee.jpg>
-Package pdftex.def Info: bilder/v1SchaltplanXbee.jpg used on input line 151.
+Package pdftex.def Info: bilder/v1SchaltplanXbee.jpg used on input line 168.
 (pdftex.def)             Requested size: 201.60077pt x 152.38902pt.
+
+<bilder/v1SchaltplanMicro0.JPG, id=19, 1098.1025pt x 498.86375pt>
+File: bilder/v1SchaltplanMicro0.JPG Graphic file (type jpg)
+
+<use bilder/v1SchaltplanMicro0.JPG>
+Package pdftex.def Info: bilder/v1SchaltplanMicro0.JPG used on input line 179.
+(pdftex.def)             Requested size: 464.39685pt x 210.96764pt.
  [3 <./bilder/_fechtesensorVergleich0.jpg> <./bilder/v1SchaltplanXbee.jpg>] [4
 
-] (./doku2.aux) ) 
+ <./bilder/v1SchaltplanMicro0.JPG>]
+(./doku2.aux) ) 
 Here is how much of TeX's memory you used:
- 4161 strings out of 493108
- 57450 string characters out of 6138446
- 127829 words of memory out of 5000000
- 7533 multiletter control sequences out of 15000+600000
- 115468 words of font info for 126 fonts, out of 8000000 for 9000
+ 4170 strings out of 493108
+ 57594 string characters out of 6138446
+ 127838 words of memory out of 5000000
+ 7538 multiletter control sequences out of 15000+600000
+ 118807 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,26p,796b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dis
-t/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on doku2.pdf (4 pages, 3219134 bytes).
+ 37i,8n,26p,798b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dist/
+fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/
+urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.
+pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/20
+14/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on doku2.pdf (4 pages, 5440724 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
