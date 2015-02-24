@@ -273,7 +273,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 \subsection{Kostenplan}
  Durch die geringen Kosten pro Entwicklungsstufe hatten wir genügend Geld um mehrere Iterationsstufen  zu durchlaufen.
  Deswegen benötigten wir für die gesamte Entwicklung etwas über hundert Euro.
- Ein einzelnes Modul kann für etwa 25\,\euro\ nachgebaut werden. 
+ Ein einzelnes Modul kann für etwa 45\,\euro\ nachgebaut werden. 
  Die Kosten setzen sich nach Tabelle\,\ref{Kosten für eine Giessanlage} zusammen.
  
  Nicht berücksichtigt sind das Wassergefäß, die zwei \begin{math}4mm\end{math}\,-Schlauch"-stücke und Befestigung in der Pflanze.
@@ -289,13 +289,16 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 			\hline
 \textit{Bauteil} & \textit{Kosten} & \textit{Bezugsquelle} \\
 \hline
-Zahnradpumpe & 2,95 \euro & Pollin \\
-Hauptplatine & ca. 10\euro & FabLAB \\
-Gehäuse	& ca. 4 \euro & FabLAB \\
-LCD-Display & ca. 6 \euro & ebay\\
+Arduino Nachbau & ca. 3 \euro & ebay \\
+LCD-Display & ca. 5 \euro & ebay\\
 Bodensensoren & ca. 2 \euro & ebay \\
+Zahnradpumpe & 2,95 \euro & Pollin \\
+XBee & ca. 23,55 \euro & Reichelt \\
+Hauptplatine & ca. 6 \euro & FabLAB \\
+Gehäuse	& ca. 4 \euro & FabLAB \\
+
 \hline
-Gesamt: & ca 25 \euro & \\
+Gesamt: & ca 45 \euro & \\
 \hline
 \end{tabular}
 \end{table}
@@ -304,17 +307,52 @@ Gesamt: & ca 25 \euro & \\
 	
 \section{Sparversion}
 	In der der günstigeren Variante der Gießanlage wurde alles, wurde die Konstruktion auf das wesentlichste beschränkt,das Gießen.
+	Auch hier wurde auf die Hardware von \glqq Arduino Nano\grqq\ gesetzt, diese wird aber nicht mehr mit der Arduino Software, sondern direkt Programmiert
 	
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
 	Dadurch wird viel der Verkabelung gespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
-	Was zu weniger Platz Bedarf des Systems führt und damit in ein kleineres Gehäuse passt.
+	Der Wegfall zu weniger Platz"-bedarf des Systems führt und damit in ein kleineres Gehäuse passt.
+		
+	\subsection{Elektronik}
+	Durch das wegfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
+	Dadurch reduziert sich die Größe der Hauptplatine auf \begin{math} 50 mm \times 35 mm \end{math}.
+		
 	\subsection{Logik}
-	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C programmiert.
+	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
 	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
 	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie.
-	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation über die Programmierung festgelegt werden.
-	  
+	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten  über die Programmierung festgelegt werden.
+	Außerdem wird der Microcontroller nicht mehr über die USB-Schnittstelle programmiert, sondern mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/}}, da der Bootloader der Arduino Software deinstalliert wird. 
+	
+	\subsection{Kostenplan}
+\begin{table}[h]
+	\centering
+	\onehalfspacing
+	\footnotesize
+	\caption{Kosten für eine  Sparversion Gießanlage}
+	\label{Kosten für eine Sparversion Giesanlage}
+		\begin{tabular}{|l|ll|}
+			\hline
+\textit{Bauteil} & \textit{Kosten} & \textit{Bezugsquelle} \\
+\hline
+Arduino Nachbau & ca. 3 \euro & ebay \\
+Bodensensoren & ca. 2 \euro & ebay \\
+Zahnradpumpe & 2,95 \euro & Pollin \\
+Gehäuse	& 1,50 \euro & Pollin \\
+Hauptplatine & ca. 5,5 \euro & FabLAB \\
+\hline
+Gesamt: & ca 15 \euro & \\
+\hline
+\end{tabular}
+\end{table}
+	
+	  	
+	Allein auf Grund des fehlenden XBee-Moduls halbiert sich der Preis der Anlage.
+	Dazu kommt das fehlende Display, das kleinere Gehäuse und günstigere Hauptplatine.
+	So ist dieser Nachbau bei ca. 15 \euro laut Tabelle \ref{Kosten für eine Sparversion Giesanlage}.
+	 
+
 	
 	\section{Resüme - Do's And Dont's}	
 
