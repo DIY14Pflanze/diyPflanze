@@ -293,7 +293,7 @@ Arduino Nachbau & ca. 3 \euro & ebay \\
 LCD-Display & ca. 5 \euro & ebay\\
 Bodensensoren & ca. 2 \euro & ebay \\
 Zahnradpumpe & 2,95 \euro & Pollin \\
-XBee & ca. 23,55 \euro & Reichelt \\
+XBee &  23,55 \euro & Reichelt \\
 Hauptplatine & ca. 6 \euro & FabLAB \\
 Gehäuse	& ca. 4 \euro & FabLAB \\
 
@@ -306,9 +306,11 @@ Gesamt: & ca 45 \euro & \\
 	
 	
 \section{Sparversion}
-	In der der günstigeren Variante der Gießanlage wurde alles, wurde die Konstruktion auf das wesentlichste beschränkt,das Gießen.
-	Auch hier wurde auf die Hardware von \glqq Arduino Nano\grqq\ gesetzt, diese wird aber nicht mehr mit der Arduino Software, sondern direkt Programmiert
-	
+	Um Strom zu sparen, die Größe zu schrumpfen und Kosten günstiger zu werden, haben wir die \glqq Sparversion\grqq entwickelt.
+	In dieser Variante der Gießanlage wurde die Anlage auf das wesentlichste beschränkt,das Gießen.
+	Sie wurde so konzipiert, dass sie genau auf eine Pflanze zugeschnitten ist.
+	Sie kann nur durch erneutes Programmieren auf andere Pflanzen und Böden angelernt werden. 	
+		
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
 	Dadurch wird viel der Verkabelung gespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
@@ -316,14 +318,17 @@ Gesamt: & ca 45 \euro & \\
 		
 	\subsection{Elektronik}
 	Durch das wegfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
-	Dadurch reduziert sich die Größe der Hauptplatine auf \begin{math} 50 mm \times 35 mm \end{math}.
+	Dadurch reduziert sich die Größe der Hauptplatine auf \begin{math} 55 mm \times 32 mm \end{math}.
+	Dies entspricht nicht nicht mal der Hälfte der Fläche der Version 1.1 mit \begin{math} 56 mm \times 65 mm \end{math}.
+	
 		
 	\subsection{Logik}
 	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
 	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
 	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie.
-	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten  über die Programmierung festgelegt werden.
-	Außerdem wird der Microcontroller nicht mehr über die USB-Schnittstelle programmiert, sondern mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/}}, da der Bootloader der Arduino Software deinstalliert wird. 
+	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten über die Programmierung festgelegt werden.
+	Durch das Wegfallen der Arduino Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
+	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/}} wird der Microcontroller direkt mit den Binärcode beschrieben.
 	
 	\subsection{Kostenplan}
 \begin{table}[h]
@@ -350,7 +355,8 @@ Gesamt: & ca 15 \euro & \\
 	  	
 	Allein auf Grund des fehlenden XBee-Moduls halbiert sich der Preis der Anlage.
 	Dazu kommt das fehlende Display, das kleinere Gehäuse und günstigere Hauptplatine.
-	So ist dieser Nachbau bei ca. 15 \euro laut Tabelle \ref{Kosten für eine Sparversion Giesanlage}.
+	So ist der Nachbau der Sparversion ca. 15 \euro\ teuer. 
+	In Tabelle \ref{Kosten für eine Sparversion Giesanlage} sind die Kosten nochmal zusammen getragen.
 	 
 
 	

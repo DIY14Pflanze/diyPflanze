@@ -1,0 +1,32 @@
+Partlist
+
+Exported from Nano XBee.sch at 12.02.2015 10:09:27
+
+EAGLE Version 7.0.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part              Value          Device      Package  Library        Sheet
+
+BUTTON_DISPLAY                   PINHD-1X2   1X02     pinhead        1
+BUTTON_GIES                      PINHD-1X2   1X02     pinhead        1
+DISPLAY                          PINHD-1X4   1X04     pinhead        1
+PHOTOSENSOR                      PINHD-1X2   1X02     pinhead        1
+Q1                BSS138W        BSS138W     SOT323-R transistor-fet 1
+Q2                BSS138W        BSS138W     SOT323-R transistor-fet 1
+Q3                FDN302P        FDN302P     SSOT-3   transistor-fet 1
+Q5                FDN302P        FDN302P     SSOT-3   transistor-fet 1
+R1                               R-EU_0207/7 0207/7   rcl            1
+R2                               R-EU_M0805  M0805    rcl            1
+R3                               R-EU_M0805  M0805    rcl            1
+R4                               R-EU_M0805  M0805    rcl            1
+R5                               R-EU_M0805  M0805    rcl            1
+R6                               R-EU_M0805  M0805    rcl            1
+R7                               R-EU_M0805  M0805    rcl            1
+R8                               R-EU_M0805  M0805    rcl            1
+SOILSENSOR                       PINHD-1X4   1X04     pinhead        1
+U$1               ARDUINONANO    ARDUINONANO PDIP-32  jet-lib        1
+VENTIL                           AK500/2     AK500/2  con-ptr500     1
+VENTIL_TRANSISTOR VND7NV04-1     VND7NV04-1  IPAK     transistor-fet 1
+V_IN_12V                         AK500/2     AK500/2  con-ptr500     1
+XB1               XBEE           XBEE        XBEE     maxstream      1
