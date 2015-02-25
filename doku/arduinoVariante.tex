@@ -1,4 +1,3 @@
-
 \section{Arduino Variante}
 
 In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. Das Gießsystem besteht aus der Steuereinheit, dem Wasserbehälter sowie der Pumpe mit dem Schlauchsystem. Aus dem Steuergerät wird der Sensor über einen Chin"~Anschluss herausgeführt. Auf der linken Seite wird das Netzteil mit einem Hohlstecker verbunden. 
@@ -14,7 +13,7 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 	
 \end{itemize}
 
-	\begin{figure}[!h]
+	\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\linewidth]{bilder/Bild_Aufbau.eps}	
 	\caption{Schematischer Aufbau der Gießanlage}
@@ -153,6 +152,14 @@ Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen w
 	\caption{Pegelwandler mit Small-Signal-Transistor BSS138W }
 	\label{fig-Pegel}
 \end{figure}
+
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=0.85\linewidth]{bilder/v1SchaltplanMicro0.JPG}
+	\caption{Schaltpaln V1.0 mit Arduino Micro}
+	\label{fig-Schaltplanv1.0}
+\end{figure*}
+
 		
 Die zweite Schnittstelle mit dem Menschen wird über ein Display ermöglicht. 
 Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. 
@@ -160,12 +167,6 @@ Bei dem Display Handelt es sich um ein 2 Zeiliges LCD"~Display mit jeweils 16 Ze
 Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
 Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
 
-\begin{figure*}[!h]
-	\centering
-	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
-	\caption{Schaltpaln V1.0 mit Arduino Micro}
-	\label{fig-Schaltplanv1.0}
-\end{figure*}
 
 	
 \subsubsection{Stromversorgung}
@@ -199,10 +200,10 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	\centering
 	\includegraphics[width=\linewidth]{diagramme/AV_Ablaufdiagramm.pdf}
 	\caption{Programmablauf der Arduino Version}
-	\label{fig-SV_Ablaufplan}
+	\label{fig-AV_Ablaufplan}
 \end{figure}
 	
-In Abbildung \ref{fig-SV_Ablaufplan} ist der Ablauf des Arudinoprogramms in der Loop"~Methode zu sehen.
+In Abbildung \ref{fig-AV_Ablaufplan} ist der Ablauf des Arudinoprogramms in der Loop"~Methode zu sehen.
 Wie in Abschnitt \ref{sensorik} beschrieben, führt eine dauerhafte Messung der Bodenfeuchtigkeit zu einer schnellen Zersetzung des Sensors.
 Aus diesem Grund wird die Messung nur einmal in einem Intervall von ca. 4 Stunden durchgeführt. Für die Intervallabfrage in der methode messung() wird die Funktion millis() verwendet. Diese Funktion gibt einen unsigned Long Wert zurück, der der Laufzeit des Arduino in Millisekunden entspricht. Nach ungefähr 49 Tagen wird der Counter einen Überlauf erzeugen und beginnt von vorne zu zählen. Damit dieser Überlauf keine Auswirkungen auf das Gießsystem hat, wird die Abfrage des Messintervalls wie folgt  ausgeführt.
 
@@ -232,7 +233,7 @@ Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird �
 Abschließend in der Kette wird eine Methode zum anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese Zeigt die Einstellung an, die mit der Mode Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, usw.). Die Ausgegrauten Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version 1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version 1.1 abgebildet.
 
 	
-%\subsection{BOM - Bill of Matirial}
+
 	
 \subsection{Kostenplan}
  Durch die geringen Kosten pro Entwicklungsstufe hatten wir genügend Geld um mehrere Iterationsstufen  zu durchlaufen.
@@ -243,7 +244,7 @@ Abschließend in der Kette wird eine Methode zum anzeigen der Messwerte auf dem 
  Nicht berücksichtigt sind das Wassergefäß, die zwei \begin{math}4mm\end{math}\,-Schlauch"-stücke und Befestigung in der Pflanze.
  Bei diesen handelt es sich um Reste oder Lagerfunde die von Wert von unter 1\,\euro\ sind. 
  
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 	\onehalfspacing
 	\footnotesize

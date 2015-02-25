@@ -19,11 +19,13 @@
 	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten über die Programmierung festgelegt werden.
 	\subsubsection{Programmierwerkzeuge}
 	Durch das Wegfallen der Arduino Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
-	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} wird der Microcontroller direkt mit den Binärcode beschrieben.
+	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} wird der Microcontroller direkt mit den Binärcode beschrieben. 
+	Dazu wird der AVRISP mkII während des Betriebs des \glqq Arduino Nano\grqq\ an die ISP angesteckt. 
+	Mit Hilfe der ISP-Schnittstelle lässt sich der Mikrocontroller direkt rogrammieren.
 	\subsubsection{Logik}
-		\begin{figure}[!t]
+		\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Diagramme/SV_Ablaufdiagramm.png}
+	\includegraphics[width=0.8\linewidth]{Diagramme/SV_Ablaufdiagramm.png}
 	\caption{Ablaufplan des Programms der Sparversion}
 	\label{fig-SV_Ablaufplan}
 \end{figure}
@@ -40,7 +42,7 @@
 	Dazu wird der Sensor in den trockenen Boden gesteckt und über die Vorschaltung mit Strom versorgt.
 	Die Spannungsquelle an der Vorschaltung auf 5\,V gestellt und mit einem Multimeter die Spannung zwischen analog Ausgang und Grund gemessen.
 	Nun wird solange gegossen bis die Erde feucht genug erscheint, die dazu passende Spannung wird notiert.
-	Mit Hilfe der Formel \begin{math} {Messwert \over 5,0\,V} \times 1023 \end{math} wird der Wert errechnet, der in das Programm in die Definiton von 
+	Mit Hilfe der Formel \begin{math} { \frac{Messwert}{5,0\,V} } \times 1023 \end{math} wird der Wert errechnet, der in das Programm in die Definiton 
 	\begin{verbatim}
 	#define FEUCHTE	
 	\end{verbatim} 
