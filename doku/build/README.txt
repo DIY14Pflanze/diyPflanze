@@ -1,0 +1,1 @@
+Dieser Ordner ist für unsere Doku gedacht, die wir in Latex abgeben müssen. Es müssen 6 Seiten sein.
