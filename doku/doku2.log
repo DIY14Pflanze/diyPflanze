@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  25 FEB 2015 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  25 FEB 2015 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,113 +686,124 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 2.
+Package epstopdf Info: Source file: <bilder/Bild_Aufbau.eps>
+(epstopdf)                    date: 2015-02-25 16:58:55
+(epstopdf)                    size: 3963366 bytes
+(epstopdf)             Output file: <bilder/Bild_Aufbau-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-02-25 16:59:54
+(epstopdf)                    size: 25717 bytes
+(epstopdf)             Command: <repstopdf --outfile=bilder/Bild_Aufbau-eps-con
+verted-to.pdf bilder/Bild_Aufbau.eps>
+(epstopdf)             \includegraphics on input line 16.
+Package epstopdf Info: Output file is already uptodate.
 
-<bilder/_boxFron1.jpg, id=72, 2235.35126pt x 1676.2625pt>
-File: bilder/_boxFron1.jpg Graphic file (type jpg)
+<bilder/Bild_Aufbau-eps-converted-to.pdf, id=76, 1551.7975pt x 1100.11pt>
+File: bilder/Bild_Aufbau-eps-converted-to.pdf Graphic file (type pdf)
 
-<use bilder/_boxFron1.jpg>
-Package pdftex.def Info: bilder/_boxFron1.jpg used on input line 15.
-(pdftex.def)             Requested size: 201.60077pt x 151.16405pt.
+<use bilder/Bild_Aufbau-eps-converted-to.pdf>
+Package pdftex.def Info: bilder/Bild_Aufbau-eps-converted-to.pdf used on input 
+line 16.
+(pdftex.def)             Requested size: 201.60077pt x 142.9186pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 20.
+(babel)             in language append on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 20.
+(babel)             in language append on input line 21.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 39.
+(babel)             in language append on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 39.
+(babel)             in language append on input line 40.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 39.
+(babel)             in language append on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 39.
+(babel)             in language append on input line 40.
  [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./bilder/_boxFron1.jpg>]
+ <./bilder/Bild_Aufbau-eps-converted-to.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 63.
+(babel)             in language append on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 63.
+(babel)             in language append on input line 64.
+
+<bilder/_boxFron1.jpg, id=98, 2235.35126pt x 1676.2625pt>
 File: bilder/_boxFron1.jpg Graphic file (type jpg)
- <use bilder/_boxFron1.jpg>
-Package pdftex.def Info: bilder/_boxFron1.jpg used on input line 76.
+
+<use bilder/_boxFron1.jpg>
+Package pdftex.def Info: bilder/_boxFron1.jpg used on input line 78.
 (pdftex.def)             Requested size: 201.60077pt x 151.16405pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 87.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 87.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 94.
+(babel)             in language append on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 94.
-<bilder/_feuchteSensor1.jpg, id=90, 1613.02625pt x 1210.5225pt>
+(babel)             in language append on input line 96.
+<bilder/_feuchteSensor1.jpg, id=101, 1613.02625pt x 1210.5225pt>
 File: bilder/_feuchteSensor1.jpg Graphic file (type jpg)
 
 <use bilder/_feuchteSensor1.jpg>
-Package pdftex.def Info: bilder/_feuchteSensor1.jpg used on input line 101.
+Package pdftex.def Info: bilder/_feuchteSensor1.jpg used on input line 103.
 (pdftex.def)             Requested size: 201.60077pt x 151.278pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 114.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 111.
- [2 <./bilder/_feuchteSensor1.jpg>]
-<bilder/_fechtesensorVergleich0.jpg, id=103, 1553.805pt x 2071.74pt>
+(babel)             in language append on input line 114.
+ [2 <./bilder/_boxFron1.jpg> <./bilder/_feuchteSensor1.jpg>]
+<bilder/_fechtesensorVergleich0.jpg, id=114, 1553.805pt x 2071.74pt>
 File: bilder/_fechtesensorVergleich0.jpg Graphic file (type jpg)
 
 <use bilder/_fechtesensorVergleich0.jpg>
 Package pdftex.def Info: bilder/_fechtesensorVergleich0.jpg used on input line 
-123.
+125.
 (pdftex.def)             Requested size: 201.60077pt x 268.79825pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 129.
+(babel)             in language append on input line 131.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 129.
+(babel)             in language append on input line 131.
 
-<bilder/v1SchaltplanXbee.jpg, id=106, 450.18187pt x 354.57469pt>
+<bilder/v1SchaltplanXbee.jpg, id=117, 450.18187pt x 354.57469pt>
 File: bilder/v1SchaltplanXbee.jpg Graphic file (type jpg)
 
 <use bilder/v1SchaltplanXbee.jpg>
-Package pdftex.def Info: bilder/v1SchaltplanXbee.jpg used on input line 147.
+Package pdftex.def Info: bilder/v1SchaltplanXbee.jpg used on input line 149.
 (pdftex.def)             Requested size: 201.60077pt x 158.78886pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 161.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 161.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 168.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 168.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 168.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 168.
- [3 <./bilder/_fechtesensorVergleich0.jpg> <./bilder/v1SchaltplanXbee.jpg>]
-<bilder/v1SchaltplanMicro0.JPG, id=119, 1098.1025pt x 498.86375pt>
+
+<bilder/v1SchaltplanMicro0.JPG, id=120, 1098.1025pt x 498.86375pt>
 File: bilder/v1SchaltplanMicro0.JPG Graphic file (type jpg)
 
 <use bilder/v1SchaltplanMicro0.JPG>
-Package pdftex.def Info: bilder/v1SchaltplanMicro0.JPG used on input line 172.
+Package pdftex.def Info: bilder/v1SchaltplanMicro0.JPG used on input line 162.
 (pdftex.def)             Requested size: 464.39685pt x 210.96764pt.
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 170.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 170.
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 177.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 177.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 206.
+(babel)             in language append on input line 177.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 206.
+(babel)             in language append on input line 177.
+ [3 <./bilder/_fechtesensorVergleich0.jpg> <./bilder/v1SchaltplanXbee.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 208.
+(babel)             in language append on input line 179.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 208.
+(babel)             in language append on input line 179.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 210.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 210.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -803,22 +814,41 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 8.
+(babel)             in language append on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 8.
+(babel)             in language append on input line 7.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 13.
+(babel)             in language append on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 13.
+(babel)             in language append on input line 11.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 19.
+(babel)             in language append on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 19.
+(babel)             in language append on input line 15.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 21.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 24.
 
+<Diagramme/SV_Ablaufdiagramm.png, id=135, 285.34605pt x 258.2448pt>
+File: Diagramme/SV_Ablaufdiagramm.png Graphic file (type png)
+
+<use Diagramme/SV_Ablaufdiagramm.png>
+Package pdftex.def Info: Diagramme/SV_Ablaufdiagramm.png used on input line 28.
+
+(pdftex.def)             Requested size: 201.60077pt x 182.4527pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 34.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 34.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -847,13 +877,22 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 75.
  [5
 
- <./bilder/v1SchaltplanMicro0.JPG>]
+ <./Diagramme/SV_Ablaufdiagramm.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 75.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 75.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 75.
+ [6 <./bilder/v1SchaltplanMicro0.JPG>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./doku2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `doku2.out' has not changed.
-(rerunfilecheck)             Checksum: 44F17D40495605548E19EF669AB2B45E;1022.
+(rerunfilecheck)             Checksum: A426302CE25C58D11F852192AB4B431D;1104.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -861,13 +900,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 7724 strings out of 493108
- 111500 string characters out of 6138446
- 207527 words of memory out of 5000000
- 11031 multiletter control sequences out of 15000+600000
+ 7742 strings out of 493108
+ 111955 string characters out of 6138446
+ 207592 words of memory out of 5000000
+ 11041 multiletter control sequences out of 15000+600000
  118924 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,32p,429b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,32p,429b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -892,10 +931,10 @@ onts/cm/cmsy7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/eurosym/feymr1
 2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on doku2.pdf (5 pages, 5466195 bytes).
+Output written on doku2.pdf (6 pages, 5688913 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 
