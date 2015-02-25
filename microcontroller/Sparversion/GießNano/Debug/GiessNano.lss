@@ -1,0 +1,582 @@
+
+GiessNano.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000008  00800100  00000452  000004e6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000452  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000001  00800108  00800108  000004ee  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000004ee  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  0000051e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000001fc  00000000  00000000  0000056e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000012b  00000000  00000000  0000076a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000180  00000000  00000000  00000895  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000bc  00000000  00000000  00000a18  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000190  00000000  00000000  00000ad4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001ae  00000000  00000000  00000c64  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000058  00000000  00000000  00000e12  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__vector_1>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 53 00 	jmp	0xa6	; 0xa6 <__vector_9>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e2 e5       	ldi	r30, 0x52	; 82
+  7c:	f4 e0       	ldi	r31, 0x04	; 4
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a8 30       	cpi	r26, 0x08	; 8
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+
+0000008a <__do_clear_bss>:
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a8 e0       	ldi	r26, 0x08	; 8
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	a9 30       	cpi	r26, 0x09	; 9
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 9d 00 	call	0x13a	; 0x13a <main>
+  9e:	0c 94 27 02 	jmp	0x44e	; 0x44e <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <__vector_9>:
+uint16_t ADC_Read_Avg( uint8_t channel, uint8_t nsamples );
+void ADC_Init(void);
+
+
+ISR(TIMER2_OVF_vect)
+{
+  a6:	1f 92       	push	r1
+  a8:	0f 92       	push	r0
+  aa:	0f b6       	in	r0, 0x3f	; 63
+  ac:	0f 92       	push	r0
+  ae:	11 24       	eor	r1, r1
+	
+}
+  b0:	0f 90       	pop	r0
+  b2:	0f be       	out	0x3f, r0	; 63
+  b4:	0f 90       	pop	r0
+  b6:	1f 90       	pop	r1
+  b8:	18 95       	reti
+
+000000ba <__vector_1>:
+
+ ISR(INT0_vect)
+ {
+  ba:	1f 92       	push	r1
+  bc:	0f 92       	push	r0
+  be:	0f b6       	in	r0, 0x3f	; 63
+  c0:	0f 92       	push	r0
+  c2:	11 24       	eor	r1, r1
+  c4:	8f 93       	push	r24
+	 aa=1;
+  c6:	81 e0       	ldi	r24, 0x01	; 1
+  c8:	80 93 08 01 	sts	0x0108, r24
+ }
+  cc:	8f 91       	pop	r24
+  ce:	0f 90       	pop	r0
+  d0:	0f be       	out	0x3f, r0	; 63
+  d2:	0f 90       	pop	r0
+  d4:	1f 90       	pop	r1
+  d6:	18 95       	reti
+
+000000d8 <ADC_Init>:
+
+/* ADC initialisieren */
+void ADC_Init(void) {
+ 
+  
+  ADMUX = (1<<REFS0);    // die 5V als Referenz waehlen:
+  d8:	80 e4       	ldi	r24, 0x40	; 64
+  da:	80 93 7c 00 	sts	0x007C, r24
+  
+  ADCSRA = (1<<ADPS1) | (1<<ADPS0);     // Frequenzvorteiler
+  de:	ea e7       	ldi	r30, 0x7A	; 122
+  e0:	f0 e0       	ldi	r31, 0x00	; 0
+  e2:	83 e0       	ldi	r24, 0x03	; 3
+  e4:	80 83       	st	Z, r24
+  ADCSRA |= (1<<ADEN);                  // ADC aktivieren
+  e6:	80 81       	ld	r24, Z
+  e8:	80 68       	ori	r24, 0x80	; 128
+  ea:	80 83       	st	Z, r24
+ 
+  /* nach Aktivieren des ADC wird ein "Dummy-Readout" empfohlen, man liest
+     also einen Wert und verwirft diesen, um den ADC "warmlaufen zu lassen" */
+ 
+  ADCSRA |= (1<<ADSC);                  // eine ADC-Wandlung 
+  ec:	80 81       	ld	r24, Z
+  ee:	80 64       	ori	r24, 0x40	; 64
+  f0:	80 83       	st	Z, r24
+  while (ADCSRA & (1<<ADSC) ) {         // auf Abschluss der Konvertierung warten
+  f2:	80 81       	ld	r24, Z
+  f4:	86 fd       	sbrc	r24, 6
+  f6:	fd cf       	rjmp	.-6      	; 0xf2 <ADC_Init+0x1a>
+  }
+  /* ADCW muss einmal gelesen werden, sonst wird Ergebnis der nächsten
+     Wandlung nicht übernommen. */
+  (void) ADCW;
+  f8:	80 91 78 00 	lds	r24, 0x0078
+  fc:	90 91 79 00 	lds	r25, 0x0079
+ 100:	08 95       	ret
+
+00000102 <init>:
+
+
+void init(void)
+{
+	
+	ADC_Init();
+ 102:	0e 94 6c 00 	call	0xd8	; 0xd8 <ADC_Init>
+	DDRC |= (1 << PC2)|(1<<PC1);
+ 106:	87 b1       	in	r24, 0x07	; 7
+ 108:	86 60       	ori	r24, 0x06	; 6
+ 10a:	87 b9       	out	0x07, r24	; 7
+	
+	
+	DDRD &= ~(1 << PD2); // INT0: input...
+ 10c:	52 98       	cbi	0x0a, 2	; 10
+	PORTD |= (1 << PD2); // ...with pullup.
+ 10e:	5a 9a       	sbi	0x0b, 2	; 11
+	
+	// level interrupt INT0 (low level)
+	MCUCR &= ~((1 << ISC01) | (1 << ISC00));
+ 110:	85 b7       	in	r24, 0x35	; 53
+ 112:	8c 7f       	andi	r24, 0xFC	; 252
+ 114:	85 bf       	out	0x35, r24	; 53
+	
+	
+	
+	// Timer 0 konfigurieren
+	
+	TCCR2A |= (1<<CS02);
+ 116:	e0 eb       	ldi	r30, 0xB0	; 176
+ 118:	f0 e0       	ldi	r31, 0x00	; 0
+ 11a:	80 81       	ld	r24, Z
+ 11c:	84 60       	ori	r24, 0x04	; 4
+ 11e:	80 83       	st	Z, r24
+	TCCR2A |= (1<<CS00); // Prescaler 1024
+ 120:	80 81       	ld	r24, Z
+ 122:	81 60       	ori	r24, 0x01	; 1
+ 124:	80 83       	st	Z, r24
+
+	
+	// Overflow Interrupt erlauben
+	TIMSK2 |= (1<<TOIE2);
+ 126:	e0 e7       	ldi	r30, 0x70	; 112
+ 128:	f0 e0       	ldi	r31, 0x00	; 0
+ 12a:	80 81       	ld	r24, Z
+ 12c:	81 60       	ori	r24, 0x01	; 1
+ 12e:	80 83       	st	Z, r24
+	
+
+	set_sleep_mode (SLEEP_MODE_ADC);
+ 130:	83 b7       	in	r24, 0x33	; 51
+ 132:	81 7f       	andi	r24, 0xF1	; 241
+ 134:	82 60       	ori	r24, 0x02	; 2
+ 136:	83 bf       	out	0x33, r24	; 51
+ 138:	08 95       	ret
+
+0000013a <main>:
+}
+
+
+int main(void)
+{
+	init();
+ 13a:	0e 94 81 00 	call	0x102	; 0x102 <init>
+	sleep_enable();
+ 13e:	83 b7       	in	r24, 0x33	; 51
+ 140:	81 60       	ori	r24, 0x01	; 1
+ 142:	83 bf       	out	0x33, r24	; 51
+	PORTC |= (1 << PC1);
+ 144:	41 9a       	sbi	0x08, 1	; 8
+	while(counter>= 1){
+ 146:	20 91 00 01 	lds	r18, 0x0100
+ 14a:	30 91 01 01 	lds	r19, 0x0101
+ 14e:	40 91 02 01 	lds	r20, 0x0102
+ 152:	50 91 03 01 	lds	r21, 0x0103
+ 156:	60 91 04 01 	lds	r22, 0x0104
+ 15a:	70 91 05 01 	lds	r23, 0x0105
+ 15e:	80 91 06 01 	lds	r24, 0x0106
+ 162:	90 91 07 01 	lds	r25, 0x0107
+ 166:	a0 e0       	ldi	r26, 0x00	; 0
+ 168:	0e 94 1b 02 	call	0x436	; 0x436 <__cmpdi2_s8>
+ 16c:	09 f4       	brne	.+2      	; 0x170 <main+0x36>
+ 16e:	3a c0       	rjmp	.+116    	; 0x1e4 <main+0xaa>
+		cli();
+ 170:	f8 94       	cli
+		counter--;
+ 172:	20 91 00 01 	lds	r18, 0x0100
+ 176:	30 91 01 01 	lds	r19, 0x0101
+ 17a:	40 91 02 01 	lds	r20, 0x0102
+ 17e:	50 91 03 01 	lds	r21, 0x0103
+ 182:	60 91 04 01 	lds	r22, 0x0104
+ 186:	70 91 05 01 	lds	r23, 0x0105
+ 18a:	80 91 06 01 	lds	r24, 0x0106
+ 18e:	90 91 07 01 	lds	r25, 0x0107
+ 192:	af ef       	ldi	r26, 0xFF	; 255
+ 194:	0e 94 0f 02 	call	0x41e	; 0x41e <__adddi3_s8>
+ 198:	20 93 00 01 	sts	0x0100, r18
+ 19c:	30 93 01 01 	sts	0x0101, r19
+ 1a0:	40 93 02 01 	sts	0x0102, r20
+ 1a4:	50 93 03 01 	sts	0x0103, r21
+ 1a8:	60 93 04 01 	sts	0x0104, r22
+ 1ac:	70 93 05 01 	sts	0x0105, r23
+ 1b0:	80 93 06 01 	sts	0x0106, r24
+ 1b4:	90 93 07 01 	sts	0x0107, r25
+		sei();
+ 1b8:	78 94       	sei
+		sleep_cpu();
+ 1ba:	88 95       	sleep
+int main(void)
+{
+	init();
+	sleep_enable();
+	PORTC |= (1 << PC1);
+	while(counter>= 1){
+ 1bc:	20 91 00 01 	lds	r18, 0x0100
+ 1c0:	30 91 01 01 	lds	r19, 0x0101
+ 1c4:	40 91 02 01 	lds	r20, 0x0102
+ 1c8:	50 91 03 01 	lds	r21, 0x0103
+ 1cc:	60 91 04 01 	lds	r22, 0x0104
+ 1d0:	70 91 05 01 	lds	r23, 0x0105
+ 1d4:	80 91 06 01 	lds	r24, 0x0106
+ 1d8:	90 91 07 01 	lds	r25, 0x0107
+ 1dc:	a0 e0       	ldi	r26, 0x00	; 0
+ 1de:	0e 94 1b 02 	call	0x436	; 0x436 <__cmpdi2_s8>
+ 1e2:	31 f6       	brne	.-116    	; 0x170 <main+0x36>
+	while(1){
+		
+		PORTC &= ~(1<<PC1);
+		
+		cli();
+		counter=0x00100000; //0x00949000 entspricht einem Tag;
+ 1e4:	e0 e1       	ldi	r30, 0x10	; 16
+		sleep_cpu();
+	}
+	
+	while(1){
+		
+		PORTC &= ~(1<<PC1);
+ 1e6:	41 98       	cbi	0x08, 1	; 8
+		
+		cli();
+ 1e8:	f8 94       	cli
+		counter=0x00100000; //0x00949000 entspricht einem Tag;
+ 1ea:	10 92 00 01 	sts	0x0100, r1
+ 1ee:	10 92 01 01 	sts	0x0101, r1
+ 1f2:	e0 93 02 01 	sts	0x0102, r30
+ 1f6:	10 92 03 01 	sts	0x0103, r1
+ 1fa:	10 92 04 01 	sts	0x0104, r1
+ 1fe:	10 92 05 01 	sts	0x0105, r1
+ 202:	10 92 06 01 	sts	0x0106, r1
+ 206:	10 92 07 01 	sts	0x0107, r1
+		sei();
+ 20a:	78 94       	sei
+		
+		while(counter>=0x300){
+ 20c:	20 91 00 01 	lds	r18, 0x0100
+ 210:	30 91 01 01 	lds	r19, 0x0101
+ 214:	40 91 02 01 	lds	r20, 0x0102
+ 218:	50 91 03 01 	lds	r21, 0x0103
+ 21c:	60 91 04 01 	lds	r22, 0x0104
+ 220:	70 91 05 01 	lds	r23, 0x0105
+ 224:	80 91 06 01 	lds	r24, 0x0106
+ 228:	90 91 07 01 	lds	r25, 0x0107
+ 22c:	2f 3f       	cpi	r18, 0xFF	; 255
+ 22e:	32 40       	sbci	r19, 0x02	; 2
+ 230:	41 05       	cpc	r20, r1
+ 232:	51 05       	cpc	r21, r1
+ 234:	61 05       	cpc	r22, r1
+ 236:	71 05       	cpc	r23, r1
+ 238:	81 05       	cpc	r24, r1
+ 23a:	91 05       	cpc	r25, r1
+ 23c:	09 f0       	breq	.+2      	; 0x240 <main+0x106>
+ 23e:	08 f4       	brcc	.+2      	; 0x242 <main+0x108>
+ 240:	41 c0       	rjmp	.+130    	; 0x2c4 <main+0x18a>
+			sleep_cpu();
+ 242:	88 95       	sleep
+	
+			cli();
+ 244:	f8 94       	cli
+			counter--;
+ 246:	20 91 00 01 	lds	r18, 0x0100
+ 24a:	30 91 01 01 	lds	r19, 0x0101
+ 24e:	40 91 02 01 	lds	r20, 0x0102
+ 252:	50 91 03 01 	lds	r21, 0x0103
+ 256:	60 91 04 01 	lds	r22, 0x0104
+ 25a:	70 91 05 01 	lds	r23, 0x0105
+ 25e:	80 91 06 01 	lds	r24, 0x0106
+ 262:	90 91 07 01 	lds	r25, 0x0107
+ 266:	af ef       	ldi	r26, 0xFF	; 255
+ 268:	0e 94 0f 02 	call	0x41e	; 0x41e <__adddi3_s8>
+ 26c:	20 93 00 01 	sts	0x0100, r18
+ 270:	30 93 01 01 	sts	0x0101, r19
+ 274:	40 93 02 01 	sts	0x0102, r20
+ 278:	50 93 03 01 	sts	0x0103, r21
+ 27c:	60 93 04 01 	sts	0x0104, r22
+ 280:	70 93 05 01 	sts	0x0105, r23
+ 284:	80 93 06 01 	sts	0x0106, r24
+ 288:	90 93 07 01 	sts	0x0107, r25
+			sei();
+ 28c:	78 94       	sei
+		
+		cli();
+		counter=0x00100000; //0x00949000 entspricht einem Tag;
+		sei();
+		
+		while(counter>=0x300){
+ 28e:	20 91 00 01 	lds	r18, 0x0100
+ 292:	30 91 01 01 	lds	r19, 0x0101
+ 296:	40 91 02 01 	lds	r20, 0x0102
+ 29a:	50 91 03 01 	lds	r21, 0x0103
+ 29e:	60 91 04 01 	lds	r22, 0x0104
+ 2a2:	70 91 05 01 	lds	r23, 0x0105
+ 2a6:	80 91 06 01 	lds	r24, 0x0106
+ 2aa:	90 91 07 01 	lds	r25, 0x0107
+ 2ae:	2f 3f       	cpi	r18, 0xFF	; 255
+ 2b0:	32 40       	sbci	r19, 0x02	; 2
+ 2b2:	41 05       	cpc	r20, r1
+ 2b4:	51 05       	cpc	r21, r1
+ 2b6:	61 05       	cpc	r22, r1
+ 2b8:	71 05       	cpc	r23, r1
+ 2ba:	81 05       	cpc	r24, r1
+ 2bc:	91 05       	cpc	r25, r1
+ 2be:	11 f0       	breq	.+4      	; 0x2c4 <main+0x18a>
+ 2c0:	08 f0       	brcs	.+2      	; 0x2c4 <main+0x18a>
+ 2c2:	bf cf       	rjmp	.-130    	; 0x242 <main+0x108>
+		}
+		
+		//todo: Sensoren hochfahren
+		
+		
+			while(counter>=0x200){
+ 2c4:	20 91 00 01 	lds	r18, 0x0100
+ 2c8:	30 91 01 01 	lds	r19, 0x0101
+ 2cc:	40 91 02 01 	lds	r20, 0x0102
+ 2d0:	50 91 03 01 	lds	r21, 0x0103
+ 2d4:	60 91 04 01 	lds	r22, 0x0104
+ 2d8:	70 91 05 01 	lds	r23, 0x0105
+ 2dc:	80 91 06 01 	lds	r24, 0x0106
+ 2e0:	90 91 07 01 	lds	r25, 0x0107
+ 2e4:	2f 3f       	cpi	r18, 0xFF	; 255
+ 2e6:	31 40       	sbci	r19, 0x01	; 1
+ 2e8:	41 05       	cpc	r20, r1
+ 2ea:	51 05       	cpc	r21, r1
+ 2ec:	61 05       	cpc	r22, r1
+ 2ee:	71 05       	cpc	r23, r1
+ 2f0:	81 05       	cpc	r24, r1
+ 2f2:	91 05       	cpc	r25, r1
+ 2f4:	09 f0       	breq	.+2      	; 0x2f8 <main+0x1be>
+ 2f6:	08 f4       	brcc	.+2      	; 0x2fa <main+0x1c0>
+ 2f8:	41 c0       	rjmp	.+130    	; 0x37c <main+0x242>
+				sleep_cpu();
+ 2fa:	88 95       	sleep
+				
+				cli();
+ 2fc:	f8 94       	cli
+				counter--;
+ 2fe:	20 91 00 01 	lds	r18, 0x0100
+ 302:	30 91 01 01 	lds	r19, 0x0101
+ 306:	40 91 02 01 	lds	r20, 0x0102
+ 30a:	50 91 03 01 	lds	r21, 0x0103
+ 30e:	60 91 04 01 	lds	r22, 0x0104
+ 312:	70 91 05 01 	lds	r23, 0x0105
+ 316:	80 91 06 01 	lds	r24, 0x0106
+ 31a:	90 91 07 01 	lds	r25, 0x0107
+ 31e:	af ef       	ldi	r26, 0xFF	; 255
+ 320:	0e 94 0f 02 	call	0x41e	; 0x41e <__adddi3_s8>
+ 324:	20 93 00 01 	sts	0x0100, r18
+ 328:	30 93 01 01 	sts	0x0101, r19
+ 32c:	40 93 02 01 	sts	0x0102, r20
+ 330:	50 93 03 01 	sts	0x0103, r21
+ 334:	60 93 04 01 	sts	0x0104, r22
+ 338:	70 93 05 01 	sts	0x0105, r23
+ 33c:	80 93 06 01 	sts	0x0106, r24
+ 340:	90 93 07 01 	sts	0x0107, r25
+				sei();
+ 344:	78 94       	sei
+		}
+		
+		//todo: Sensoren hochfahren
+		
+		
+			while(counter>=0x200){
+ 346:	20 91 00 01 	lds	r18, 0x0100
+ 34a:	30 91 01 01 	lds	r19, 0x0101
+ 34e:	40 91 02 01 	lds	r20, 0x0102
+ 352:	50 91 03 01 	lds	r21, 0x0103
+ 356:	60 91 04 01 	lds	r22, 0x0104
+ 35a:	70 91 05 01 	lds	r23, 0x0105
+ 35e:	80 91 06 01 	lds	r24, 0x0106
+ 362:	90 91 07 01 	lds	r25, 0x0107
+ 366:	2f 3f       	cpi	r18, 0xFF	; 255
+ 368:	31 40       	sbci	r19, 0x01	; 1
+ 36a:	41 05       	cpc	r20, r1
+ 36c:	51 05       	cpc	r21, r1
+ 36e:	61 05       	cpc	r22, r1
+ 370:	71 05       	cpc	r23, r1
+ 372:	81 05       	cpc	r24, r1
+ 374:	91 05       	cpc	r25, r1
+ 376:	11 f0       	breq	.+4      	; 0x37c <main+0x242>
+ 378:	08 f0       	brcs	.+2      	; 0x37c <main+0x242>
+ 37a:	bf cf       	rjmp	.-130    	; 0x2fa <main+0x1c0>
+			}
+			// PORTC
+		
+		if(1){ //genuegend Hellkeitvorhanden
+			if(1){//Feuchtigkeit hoch genug
+			PORTC |= (1 << PC1);//Ventil auf
+ 37c:	41 9a       	sbi	0x08, 1	; 8
+			}
+		}
+		
+		while(counter>=1){
+ 37e:	20 91 00 01 	lds	r18, 0x0100
+ 382:	30 91 01 01 	lds	r19, 0x0101
+ 386:	40 91 02 01 	lds	r20, 0x0102
+ 38a:	50 91 03 01 	lds	r21, 0x0103
+ 38e:	60 91 04 01 	lds	r22, 0x0104
+ 392:	70 91 05 01 	lds	r23, 0x0105
+ 396:	80 91 06 01 	lds	r24, 0x0106
+ 39a:	90 91 07 01 	lds	r25, 0x0107
+ 39e:	a0 e0       	ldi	r26, 0x00	; 0
+ 3a0:	0e 94 1b 02 	call	0x436	; 0x436 <__cmpdi2_s8>
+ 3a4:	09 f4       	brne	.+2      	; 0x3a8 <main+0x26e>
+ 3a6:	1f cf       	rjmp	.-450    	; 0x1e6 <main+0xac>
+			sleep_cpu();
+ 3a8:	88 95       	sleep
+			cli();
+ 3aa:	f8 94       	cli
+			counter--;
+ 3ac:	20 91 00 01 	lds	r18, 0x0100
+ 3b0:	30 91 01 01 	lds	r19, 0x0101
+ 3b4:	40 91 02 01 	lds	r20, 0x0102
+ 3b8:	50 91 03 01 	lds	r21, 0x0103
+ 3bc:	60 91 04 01 	lds	r22, 0x0104
+ 3c0:	70 91 05 01 	lds	r23, 0x0105
+ 3c4:	80 91 06 01 	lds	r24, 0x0106
+ 3c8:	90 91 07 01 	lds	r25, 0x0107
+ 3cc:	af ef       	ldi	r26, 0xFF	; 255
+ 3ce:	0e 94 0f 02 	call	0x41e	; 0x41e <__adddi3_s8>
+ 3d2:	20 93 00 01 	sts	0x0100, r18
+ 3d6:	30 93 01 01 	sts	0x0101, r19
+ 3da:	40 93 02 01 	sts	0x0102, r20
+ 3de:	50 93 03 01 	sts	0x0103, r21
+ 3e2:	60 93 04 01 	sts	0x0104, r22
+ 3e6:	70 93 05 01 	sts	0x0105, r23
+ 3ea:	80 93 06 01 	sts	0x0106, r24
+ 3ee:	90 93 07 01 	sts	0x0107, r25
+			sei();
+ 3f2:	78 94       	sei
+			if(1){//Feuchtigkeit hoch genug
+			PORTC |= (1 << PC1);//Ventil auf
+			}
+		}
+		
+		while(counter>=1){
+ 3f4:	20 91 00 01 	lds	r18, 0x0100
+ 3f8:	30 91 01 01 	lds	r19, 0x0101
+ 3fc:	40 91 02 01 	lds	r20, 0x0102
+ 400:	50 91 03 01 	lds	r21, 0x0103
+ 404:	60 91 04 01 	lds	r22, 0x0104
+ 408:	70 91 05 01 	lds	r23, 0x0105
+ 40c:	80 91 06 01 	lds	r24, 0x0106
+ 410:	90 91 07 01 	lds	r25, 0x0107
+ 414:	a0 e0       	ldi	r26, 0x00	; 0
+ 416:	0e 94 1b 02 	call	0x436	; 0x436 <__cmpdi2_s8>
+ 41a:	31 f6       	brne	.-116    	; 0x3a8 <main+0x26e>
+ 41c:	e4 ce       	rjmp	.-568    	; 0x1e6 <main+0xac>
+
+0000041e <__adddi3_s8>:
+ 41e:	00 24       	eor	r0, r0
+ 420:	a7 fd       	sbrc	r26, 7
+ 422:	00 94       	com	r0
+ 424:	2a 0f       	add	r18, r26
+ 426:	30 1d       	adc	r19, r0
+ 428:	40 1d       	adc	r20, r0
+ 42a:	50 1d       	adc	r21, r0
+ 42c:	60 1d       	adc	r22, r0
+ 42e:	70 1d       	adc	r23, r0
+ 430:	80 1d       	adc	r24, r0
+ 432:	90 1d       	adc	r25, r0
+ 434:	08 95       	ret
+
+00000436 <__cmpdi2_s8>:
+ 436:	00 24       	eor	r0, r0
+ 438:	a7 fd       	sbrc	r26, 7
+ 43a:	00 94       	com	r0
+ 43c:	2a 17       	cp	r18, r26
+ 43e:	30 05       	cpc	r19, r0
+ 440:	40 05       	cpc	r20, r0
+ 442:	50 05       	cpc	r21, r0
+ 444:	60 05       	cpc	r22, r0
+ 446:	70 05       	cpc	r23, r0
+ 448:	80 05       	cpc	r24, r0
+ 44a:	90 05       	cpc	r25, r0
+ 44c:	08 95       	ret
+
+0000044e <_exit>:
+ 44e:	f8 94       	cli
+
+00000450 <__stop_program>:
+ 450:	ff cf       	rjmp	.-2      	; 0x450 <__stop_program>
