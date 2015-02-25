@@ -1,18 +1,17 @@
-\BOOKMARK [1][-]{section.1}{Idee}{}% 1
-\BOOKMARK [1][-]{section.2}{Eingrenzung}{}% 2
-\BOOKMARK [1][-]{section.3}{Arduino Variante}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Wassertransport}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Geh\344use}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Elektronik}{section.3}% 6
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Sensorik}{subsection.3.3}% 7
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Kommunikation}{subsection.3.3}% 8
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Stromversorgung}{subsection.3.3}% 9
-\BOOKMARK [2][-]{subsection.3.4}{Programm}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.5}{BOM - Bill of Matirial}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.6}{Kostenplan}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{Sparversion}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{Aufbau}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.2}{Elektronik}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.3}{Logik}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.4}{Kostenplan}{section.4}% 17
-\BOOKMARK [1][-]{section.5}{Res\374me - Do's And Dont's}{}% 18
+\BOOKMARK [1][-]{section.1}{Eingrenzung}{}% 1
+\BOOKMARK [1][-]{section.2}{Arduino Variante}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Wassertransport}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Geh\344use}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Elektronik}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Sensorik}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Kommunikation}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Stromversorgung}{subsection.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Programm}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{BOM - Bill of Matirial}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{Kostenplan}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Sparversion}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Aufbau}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Elektronik}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Logik}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.4}{Kostenplan}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Res\374me - Do's And Dont's}{}% 17
