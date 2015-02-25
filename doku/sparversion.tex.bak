@@ -4,25 +4,32 @@
 	In dieser Variante der Gießanlage wurde die Anlage auf das wesentlichste beschränkt,das Gießen.
 	Sie wurde so konzipiert, dass sie genau auf eine Pflanze zugeschnitten ist.
 	Sie kann nur durch erneutes Programmieren auf andere Pflanzen und Böden angelernt werden. 	
-		
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
 	Dadurch wird viel der Verkabelung gespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
 	Der Wegfall zu weniger Platz"-bedarf des Systems führt und damit in ein kleineres Gehäuse passt.
-		
 	\subsection{Elektronik}
 	Durch das wegfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
 	Dadurch reduziert sich die Größe der Hauptplatine auf \begin{math} 55 mm \times 32 mm \end{math}.
 	Dies entspricht nicht nicht mal der Hälfte der Fläche der Version 1.1 mit \begin{math} 56 mm \times 65 mm \end{math}.
-	
-		
-	\subsection{Logik}
+	\subsection{Programmierung}
 	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
 	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
 	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie.
 	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten über die Programmierung festgelegt werden.
+	\subsubsection{Programmierwerkzeuge}
 	Durch das Wegfallen der Arduino Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
-	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/}} wird der Microcontroller direkt mit den Binärcode beschrieben.
+	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} wird der Microcontroller direkt mit den Binärcode beschrieben.
+	\subsubsection{Logik}
+	Der Ablaufplan \ref{fig-SV_Ablaufplan} der Sparversion wurde vereinfacht
+	
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Diagramme/SV_Ablaufdiagramm.png}
+	\caption{Ablaufplan des Programms der Sparversion}
+	\label{fig-SV_Ablaufplan}
+\end{figure}
+	
 	
 	\subsection{Kostenplan}
 

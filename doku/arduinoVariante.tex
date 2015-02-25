@@ -1,5 +1,17 @@
 
 \section{Arduino Variante}
+
+In Abbildung \ref{fig-SchemaAufbau} 
+
+
+\end{itemize}
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{bilder/Bild_Aufbau.eps}	
+	\caption{Schematischer Aufbau der Gießanlage}
+	\label{fig-SchemaAufbau}
+	\end{figure}
+
 Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino Variante. 
 Es wird hierzu auf folgende Bereiche eingegangen:
 
@@ -10,12 +22,7 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 	\item Anschließend gehen wir auf das Programm ein, mit dem entschieden wird wann der Zeitpunkt erreicht ist um die Pflanze zu gießen.
 	\item Abschließenden wir eine Kostenplan vorgestellt. 
 	
-\end{itemize}
-	\begin{figure}[!h]
-	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
-	\caption{Gehäuse Frontansicht}
-	\label{fig-Gehäuse}
-	\end{figure}
+
 
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu halten haben wir uns für ein Pumpensystem entschieden. 
@@ -73,6 +80,7 @@ In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 \end{itemize}	
 
 	\begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
 	\caption{Gehäuse Frontansicht}
 	\label{fig-Gehäuse}
@@ -154,7 +162,14 @@ Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen 
 Bei dem Display Handelt es sich um ein 2 Zeiliges LCD"~Display mit jeweils 16 Zeichen. 
 Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
 Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
-	
+
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
+	\caption{Schaltpaln V1.0 mit Arduino Micro}
+	\label{fig-Schaltplanv1.0}
+\end{figure*}
+
 	
 \subsubsection{Stromversorgung}
 
@@ -166,13 +181,6 @@ Dies führt zu geringerer Leistungsaufnahme und deutlichen Geräusch"-minderung.
 Die Ansteuerung der Pumpe über dem Mikrocontroller ist über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
 Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdiode über die Anschlüsse \emph{VENTIL-1} und \emph{VENTIL-2} vor Überspannung zu schützen, die beim Abschalten der Pumpe auftreten können. 
  
-
-\begin{figure*}
-	\centering
-	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
-	\caption{Schaltpaln V1.0 mit Arduino Micro}
-	\label{fig-Schaltplanv1.0}
-\end{figure*}
 
 \subsection{Programm}
 	

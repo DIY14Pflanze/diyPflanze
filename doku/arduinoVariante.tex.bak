@@ -1,5 +1,16 @@
 
 \section{Arduino Variante}
+
+
+
+\end{itemize}
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{bilder/Bild_Aufbau.eps}	
+	\caption{Gehäuse Frontansicht}
+	\label{fig-Gehäuse}
+	\end{figure}
+
 Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino Variante. 
 Es wird hierzu auf folgende Bereiche eingegangen:
 
@@ -10,12 +21,7 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 	\item Anschließend gehen wir auf das Programm ein, mit dem entschieden wird wann der Zeitpunkt erreicht ist um die Pflanze zu gießen.
 	\item Abschließenden wir eine Kostenplan vorgestellt. 
 	
-\end{itemize}
-	\begin{figure}[!h]
-	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
-	\caption{Gehäuse Frontansicht}
-	\label{fig-Gehäuse}
-	\end{figure}
+
 
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu halten haben wir uns für ein Pumpensystem entschieden. 
@@ -73,6 +79,7 @@ In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 \end{itemize}	
 
 	\begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
 	\caption{Gehäuse Frontansicht}
 	\label{fig-Gehäuse}
@@ -140,10 +147,7 @@ Abbildung \ref{fig-Pegel} zeigt die Umsetzung der Pegelschaltung. Die Lables \em
 \item Wird hingen auf der Seite des Mikrocontroller (TXD) ein LOW Signal angelegt, so wird über die die Diode im Transistor das Spannungspotenzial der Source solange reduziert, bis das Spannungsgefälle \emph{Gate"~zu"~Source} groß genug wird, damit der Transistor leitfähig wird. Sobald dieser Grenzwert überschritten wird, wird auch DOUT am Xbee auf LOW gezogen.
 \end{itemize}
 
-Bei dieser Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. 
-Der Fehler war, dass für die Pegelwandlung für den Anschuss TX, der Transistor falsch beschaltet wurde. 
-Auf dem \emph{Gate} des Transistors wurde das falsche Spannungspotential geschalteten. 
-Dieser Fehler ist für die Version~1.1 behoben.
+Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. Dieser Fehler ist für die Version~1.1 behoben.
 
 \begin{figure}
 	\centering
@@ -154,10 +158,17 @@ Dieser Fehler ist für die Version~1.1 behoben.
 		
 Die zweite Schnittstelle mit dem Menschen wird über ein Display ermöglicht. 
 Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. 
-Bei dem Display Handelt es sich um ein 2 Zeiliges LCD-Display mit jeweils 16 Zeichen. 
-Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C-Schnittstelle bewerkstelligt. 
-Hierfür haben wir die frei verfügbare LiquidCrystal\_I2C Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
-	
+Bei dem Display Handelt es sich um ein 2 Zeiliges LCD"~Display mit jeweils 16 Zeichen. 
+Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
+Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
+
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
+	\caption{Schaltpaln V1.0 mit Arduino Micro}
+	\label{fig-Schaltplanv1.0}
+\end{figure*}
+
 	
 \subsubsection{Stromversorgung}
 
@@ -166,16 +177,9 @@ Deswegen muss auf eine leistungsfähigere Energiequelle gesetzt werden.
 Wir entschieden uns für Netzteile mit 12\,V Ausgangs"-spannung um die Pumpe direkt anschließen zu können. 
 Um den Strom der Pumpe zu begrenzen haben wir einen \begin{math}5~\Omega\end{math} Lastwiderstand in Reihe geschaltet.
 Dies führt zu geringerer Leistungsaufnahme und deutlichen Geräusch"-minderung.
-Die Ansteuerung der Pumpe über dem Mikrocontroller wurde über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
+Die Ansteuerung der Pumpe über dem Mikrocontroller ist über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
 Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdiode über die Anschlüsse \emph{VENTIL-1} und \emph{VENTIL-2} vor Überspannung zu schützen, die beim Abschalten der Pumpe auftreten können. 
  
-
-\begin{figure*}
-	\centering
-	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanMicro0.JPG}
-	\caption{Schaltpaln V1.0 mit Arduino Micro}
-	\label{fig-Schaltplanv1.0}
-\end{figure*}
 
 \subsection{Programm}
 	
@@ -206,7 +210,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	
 
 	
-\subsection{BOM - Bill of Matirial}
+%\subsection{BOM - Bill of Matirial}
 	
 \subsection{Kostenplan}
  Durch die geringen Kosten pro Entwicklungsstufe hatten wir genügend Geld um mehrere Iterationsstufen  zu durchlaufen.
