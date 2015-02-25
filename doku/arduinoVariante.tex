@@ -16,7 +16,7 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 
 	\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/Bild_Aufbau.eps}	
+	\includegraphics[width=0.9\linewidth]{bilder/Bild_Aufbau.eps}	
 	\caption{Schematischer Aufbau der Gießanlage}
 	\label{fig-SchemaAufbau}
 	\end{figure}
@@ -78,7 +78,7 @@ In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 
 	\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
+	\includegraphics[width=0.9\linewidth]{bilder/_boxFron1.jpg}	
 	\caption{Gehäuse Frontansicht}
 	\label{fig-Gehäuse}
 	\end{figure}
@@ -103,7 +103,7 @@ Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widers
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/_feuchteSensor1.jpg}
+	\includegraphics[width=0.9\linewidth]{bilder/_feuchteSensor1.jpg}
 	\caption{Feuchtigkeitssensor mit Vorschaltung}
 	\label{fig-SensorVorschaltung}
 \end{figure}
@@ -125,7 +125,7 @@ Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden und
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/_fechtesensorVergleich0.jpg}
+	\includegraphics[width=0.9\linewidth]{bilder/_fechtesensorVergleich0.jpg}
 	\caption{Vergleich neuer Sensor und Sernsor mit 48h Dauerbetrieb}
 	\label{fig-SensorVergleich}
 \end{figure}
@@ -149,7 +149,7 @@ Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen w
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/v1SchaltplanXbee.jpg}
+	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanXbee.jpg}
 	\caption{Pegelwandler mit Small-Signal-Transistor BSS138W }
 	\label{fig-Pegel}
 \end{figure}
@@ -194,7 +194,15 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 			\item Übertragen/Empfangen von Einstellungen über xBee Verbindung
 		\end{itemize}
 		
-	In der ersten Version wurden die Messungen andauernd durchgeführt. 
+	
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagramme/AV_Ablaufdiagramm.pdf}
+	\caption{Programmablauf der Arduino Version}
+	\label{fig-SV_Ablaufplan}
+\end{figure}
+		
+	In der Version~1.0 wurden die Messungen andauernd durchgeführt. 
 	Wie aber bereits oben erläutert hat dies zu einer starken Korrosion am Feuchtigkeitssensor geführt. 
 	Aus diesem Grund wurde für die Version~1.1 einige Änderungen eingeführt. 
 	Anstelle bei jedem Aufruf der Loop() Methode eine Messung durchzuführen wird nur noch alle 4 Stunden eine Messung vorgenommen. 
