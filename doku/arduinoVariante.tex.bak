@@ -1,15 +1,10 @@
 
 \section{Arduino Variante}
 
+In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. 
 
 
-\end{itemize}
-	\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\linewidth]{bilder/Bild_Aufbau.eps}	
-	\caption{Gehäuse Frontansicht}
-	\label{fig-Gehäuse}
-	\end{figure}
+
 
 Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino Variante. 
 Es wird hierzu auf folgende Bereiche eingegangen:
@@ -21,7 +16,14 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 	\item Anschließend gehen wir auf das Programm ein, mit dem entschieden wird wann der Zeitpunkt erreicht ist um die Pflanze zu gießen.
 	\item Abschließenden wir eine Kostenplan vorgestellt. 
 	
+\end{itemize}
 
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{bilder/Bild_Aufbau.eps}	
+	\caption{Schematischer Aufbau der Gießanlage}
+	\label{fig-SchemaAufbau}
+	\end{figure}
 
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu halten haben wir uns für ein Pumpensystem entschieden. 
