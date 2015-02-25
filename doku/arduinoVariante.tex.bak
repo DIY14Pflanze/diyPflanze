@@ -227,18 +227,9 @@ mode = (mode + 1) % ANZAHL_MODE;
 
 \end{lstlisting}
 
-Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird über die Variabel \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben). Iat das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist die Methode Gießen() mit dem Paramter False aufgerufen und die Variabel \emph{neuerMesswert} auf false gesetzt. Damit wird verhindere, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde. Sagt der Messwert hingenen aus, dass gegossen werden muss aber der Helligkeitsensor verhindert ein Giesen, dann wird die Variable \emph{neuerMesswert}
+Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird über die Variabel \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben). Iat das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist die Methode Gießen() mit dem Paramter False aufgerufen und die Variabel \emph{neuerMesswert} auf false gesetzt. Damit wird verhindere, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde. Sagt der Messwert hingegen aus, dass gegossen werden muss aber der Helligkeitssensor verhindert ein Gießen, dann wird die Variable \emph{neuerMesswert} nicht zurückgesetzt. Der Aktuelle Messerwert wird demnach solange abgeglichen, bis es hell genug ist, damit gegossen werden kann.
 
-		
-	In der Version~1.0 wurden die Messungen andauernd durchgeführt. 
-	Wie aber bereits oben erläutert hat dies zu einer starken Korrosion am Feuchtigkeitssensor geführt. 
-	Aus diesem Grund wurde für die Version~1.1 einige Änderungen eingeführt. 
-	Anstelle bei jedem Aufruf der Loop() Methode eine Messung durchzuführen wird nur noch alle 4 Stunden eine Messung vorgenommen. 
-	Ist das Intervall abgelaufen wird der Feuchtigkeitssensor über eine Transistorschaltung angeschaltet und anschließend ausgelesen. 
-	Dadurch ist der Sensoren nur noch für einen kurzen Zeitraum unter Strom, was die Lebensdauer des Feuchtigkeitssensor verlängert.
-		
-
-	
+Abschließend in der Kette wird eine Methode zum anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese Zeigt die Einstellung an, die mit der Mode Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, usw.). Die Ausgegrauten Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version 1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version 1.1 abgebildet.
 
 	
 %\subsection{BOM - Bill of Matirial}
