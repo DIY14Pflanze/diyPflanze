@@ -1,42 +1,45 @@
 
 \section{Arduino Variante}
 Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino Variante. 
-Es wird demnach auf folgende Bereich Eingegangen.  
+Es wird hierzu auf folgende Bereiche eingegangen:
 
 \begin{itemize}
-	\item Zu beginn beschreiben wir verschiedenen Möglichkeiten des Wassertransports zur Pflanze.
+	\item Zu Beginn beschreiben wir verschiedenen Möglichkeiten des Wassertransports zur Pflanze.
 	\item Im weiteren stellen wir das Vorgehen zur Erstellung des Gehäuses für die Elektronik dar.
-	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche Sensorschaltung, Stromversorgung und Kommunikation eingehen.
-	\item Anschließend gehen wir auf das Programm ein, mit dem entschieden wird wann der Zeitpunkt erreicht ist um die Pflanze zu gießen sowie.
-	\item Abschließend werden die verwendetet Materialien aufgelistet und
-	\item eine kurzer Kostenplan vorgestellt. 
+	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche \emph{Sensorschaltung}, \emph{Stromversorgung} und \emph{Kommunikation} eingehen.
+	\item Anschließend gehen wir auf das Programm ein, mit dem entschieden wird wann der Zeitpunkt erreicht ist um die Pflanze zu gießen.
+	\item Abschließenden wir eine Kostenplan vorgestellt. 
 	
 \end{itemize}
+	\begin{figure}[!h]
+	\includegraphics[width=0.8\linewidth]{bilder/_boxFron1.jpg}	
+	\caption{Gehäuse Frontansicht}
+	\label{fig-Gehäuse}
+	\end{figure}
 
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu halten haben wir uns für ein Pumpensystem entschieden. 
-Dadurch ist die Anordnung der Pflanze relativ zum Wassertank nicht relevant. 
+Dadurch ist die Anordnung der Pflanze zum Wassertank nicht relevant. 
 Der hiermit einhergehen erhöhte Strombedarf ist zu verkraften, da unser System nicht auf Batterien angewiesen ist.
 
 Für den Wassertransport haben wir uns für eine Zahnradpumpe entschieden.
-Diese setzte sich gegenüber anderen Lösungen vor allem wegen ihrer selbstsaugenden Eigenschaft durch.
-Selbstsaugend bedeutet, dass eine mit Luft gefüllten Wasserleitung und Pumpe Wasser ansaugen und fördern kann. 
+Die Zahnradpumpe gehört zu der Gruppe der rotierenden Verdränger Pumpen 
+\footnote{\href{http://www.ksb.com/Kreiselpumpenlexikon\_de/Pumpenlexikon/1563382/verdraengerpumpe.html}{www.ksb.com/Kreiselpumpenlexikon\_ \\ de/Pumpenlexikon/1563382/verdraengerpumpe.html}}.
+Das Fördermedium wird hierbei zwischen zwei Zahnrädern in einem in sich geschlossenen Volumenbereich gefördert.
+Die Bauweise dieser Pumpe ermöglicht zudem einen selbstsaugenden Betrieb. 
+Dies bedeutet, dass diese Pumpe in der Lage ist Gase zu transportieren und somit einen Unterdruck in der Zuleitung zu erzeugen, der ausreicht, um das Fördermedium (in unserem Fall Wasser) anzusaugen. 
+Diese Eigenschaft war schlussendlich ausschlaggebend, dass sich die Zahnradpumpe gegenüber den anderen Lösungen durchgesetzt hat.
 Als Alternativen wurden Ventile und Kreiselpumpen angedacht.
 Die Kreiselpumpe konnte trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. 
 Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind.  
 Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. 
-Auf Grund der Wahl der Zahnradpumpe kann ein 4 mm Schlauch zur Förderung des Wassers genutzt werden. 
-Das Gefäß ist frei wählbar deswegen wurde hier ein fünf-Liter-Weinballon gewählt. 
-In den der Schlauch gesteckt wird. 
-Auf der anderen Seite wird das Schlauchende mit einem durchbohrten Kantholz in der Pflanzenerde befestigt.
-	
-Die Nachteile der Zahnradpumpe (Stromverbrauch und Lärm) haben wir dadurch minimiert, dass das Gießsystem über ein Netzgerät mit Strom versorgt wird ist der erhöhte Stromverbrauch zwar unschön aber vertretbar. 
-Um den Geräuschpegel zu minimieren wird über einen Helligkeitssensor verhindert, dass in der Nacht gegossen wird. 
-Dies wird im Abschnitt~\ref{sensorik} näher erläutert.
+Auf Grund der Wahl der Zahnradpumpe kann ein 4\,mm Schlauch zur Förderung des Wassers genutzt werden, der nahezu beliebig verlegt werden kann.  
+Ebenso ist das Gefäß frei wählbar, für das Testsystem haben wir eine 1,5\,Liter Flasche verwendet. Im Dauerbetrieb wird ein fünf-Liter"~Weinballon verwendet. 
+In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzenerde befestigt.
+
 	
 \begin{table}
 	\centering
-
 		\onehalfspacing
 	\footnotesize
 	\caption{Vergleich Wasserpumpen und Ventil}
@@ -61,7 +64,7 @@ Dies wird im Abschnitt~\ref{sensorik} näher erläutert.
 	Das Gehäuse wurde so konzipiert, dass es möglichst klein ist aber genügend Platz für die Elektronik bietet.
 	Im Gehäuse verbaut sind:
 \begin{itemize}
-	\item das LCD-Display
+	\item ein LCD-Display zur Anzeige der Gießparameter (aktelle Feuchtigkeit, Gießintervall \dots)
 	\item zwei Taster zur Steuerung der Displayanzeige und zum manuellen Gießen
 	\item der Photowiderstand zur Messung der Helligkeit (platziert zwischen den Tastern)
 	\item Stromschluss auf der linken Seite
@@ -77,14 +80,14 @@ Dies wird im Abschnitt~\ref{sensorik} näher erläutert.
 	
 Das Gehäuse wurde in FabLab Erlangen mit einem Lasercutter gefertigt. 
 Für das Design des Gehäuses wurde der BoxMaker\footnote{ \href{http://boxmaker.connectionlab.org/}{http://boxmaker.connectionlab.org/}} verwendet. 
-Das Gehäuse besteht aus grünen 3mm dicken Acrylglas.
+Das Gehäuse besteht aus grünen 3\,mm dicken Acrylglas.
 	
 \subsection{Elektronik}
-	Im folgenden wird der Aufbau der Version~1.0 der Arduino Variante vorgestellt. 
-	Während des Aufbaus, vor allem aber während der Testphase sind ein paar Probleme aufgetreten die dazu geführt habe, dass eine neue Version~1.1 erstellt werden musste. 
-	Diese neue Version ist jedoch aus zeitlichen Gründen noch nicht komplett aufgebaut. 
-	Ein neues Layout wurden bereits erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
-	Daher wird wird die Funktionsweise auf Basis der Version~1.0 erläutert, an gegebener Stelle wird auf die Anpassungen eingegangen die bereits umgesetzt wurden bzw. noch in Planung sind. 
+Im folgenden wird der Aufbau der Version~1.0 der Arduino Variante vorgestellt. 
+Während des Aufbaus, vor allem aber während der Testphase sind ein paar Probleme aufgetreten die dazu geführt habe, dass eine neue Version~1.1 erstellt werden musste. 
+Diese neue Version ist jedoch aus zeitlichen Gründen noch nicht komplett aufgebaut. 
+Ein neues Layout wurden bereits erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
+Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert, an gegebener Stelle wird auf die Anpassungen eingegangen, die bereits umgesetzt wurden bzw. noch in Planung sind. 
 
 			
 \subsubsection{Sensorik} \label{sensorik}
@@ -99,11 +102,11 @@ Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widers
 	\caption{Feuchtigkeitssensor mit Vorschaltung}
 	\label{fig-SensorVorschaltung}
 \end{figure}
-Der Feuchtigkeitssensor benötigt keine weiteren Schaltelemente, da er über eine eine Vorschaltung verfügt, in der ein Spannungsteiler bereits verbaut ist. 
+Der Feuchtigkeitssensor benötigt keine weiteren Schaltelemente, da er über eine eine Vorschaltung verfügt in der ein Spannungsteiler bereits verbaut ist. 
 Abbildung \ref{fig-SensorVorschaltung} zeigt den verwendeten Sensor und die Vorschaltung. 
 Es ist möglich sowohl den Analogen Wert, oder ein Digitales Signal auszuwerten. 
 Das Digitale Signal liefert einen Null"-wert solange ein Grenzwiderstand nicht überschritten wird. 
-Über ein  Potentiometer(1) lässt sich diese Grenze Einstellen. 
+Über ein  Potentiometer(siehe Abbildung \ref{fig-SensorVorschaltung}) lässt sich diese Grenze einstellen. 
 Wegen des schlechten Zugangs zum Potentiometer im eingebautem Zustand wird der Digitale Output nicht verwendet, sondern der Analoge Messwert selbst ausgewertet und mit einer Variablen im Mikrocontroller abgeglichen.
 		
 \emph{Anpassung zu Version~1.1:}
@@ -112,8 +115,7 @@ Die Vorschaltung sieht keine Abschaltung des Messprozesses vor noch eine Umpolun
 Deswegen muss die gesamte Vorschaltung stromlos geschaltet werden, um das Auflösen des Sensors zu verlangsamen. 
 Hierfür haben, wir für die Version~1.1, eine Transistorschaltung für den Sensor eingefügt. 
 Über diese Schaltung wird die Vorschaltung des Feuchtigkeitssensor stromlos geschaltet und der Sensor ist nur für eine Messung unter Strom. 
-Eine Umpollung der Messgabel ist damit leider nicht möglich. 
-Dies kann jedoch relativ einfach gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
+Eine Umpollung der Messgabel ist auch nicht möglich, dies kann jedoch relativ einfach dadurch gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
 Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden und um \begin{math}180^{\circ}\end{math} gedreht wieder verbunden werden.
 
 \begin{figure}[!h]
@@ -124,17 +126,21 @@ Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden und
 \end{figure}
 
 \subsubsection{Kommunikation}
-Ziel der Kommunikation ist es, eine Möglichkeit zu haben das Gießsystem im laufenden Betrieb einzustellen. 
 Jede Pflanze braucht unterschiedlich viel Wasser. 
-Genauso hat die Zusammensetzung der Erde einen Einfluss auf den gemessenen Widerstand des Feuchtigkeitssensors. 
-Diese Werte müssen daher für jede Pflanze extra einstellbar sein. 
-Wir haben uns für eine Drahtlose Kommunikation entschieden und haben uns auf den XBee Standard geeinigt. 
-Das XBee Modul wurde direkt, d.h. ohne Verwendung eines \emph{Arduino XBEE-Shields}, mit dem Arduino verbunden. 
+Genauso hat die Zusammensetzung der Erde einen Einfluss auf den gemessenen Widerstand des Feuchtigkeitssensors.
+Ziel der Kommunikation soll es deswegen sein, dass Gießsystem im laufenden Betrieb zu kalibrieren. 
+Wir haben uns für eine drahtlose Kommunikation, auf Basis des XBee Standard, entschieden. 
+Das XBee Modul wurde direkt, d.h. ohne Verwendung eines \emph{Arduino XBEE"~Shields}, mit dem Arduino verbunden. 
 Hierfür ist es notwendig einen Pegelwandlung von 5\,V auf 3,3\,V vorzunehmen, da die Logik-Pins des XBee Moduls nicht mit 5\,V betrieben werden können. 
-Bei dieser Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. 
-Der Fehler war, dass für die Pegelwandlung für den Anschuss TX, der Transistor falsch beschaltet wurde. 
-Auf dem \emph{Gate} des Transistors wurde das falsche Spannungspotential geschalteten. 
-Dieser Fehler wird für die Version~1.1 behoben und noch getestet.
+%%%%%%
+Abbildung \ref{fig-Pegel} zeigt die Umsetzung der Pegelschaltung. Die Lables \emph{TXD} und \emph{RXD} repräsentieren die jeweiligen Anschlüsse am Arduino Micro. In dieser Schaltung lassen sich drei Zustände erkennen\footnote{http://www.adafruit.com/datasheets/an97055.pdf; Seite 10f}
+\begin{itemize}
+\item Wird keiner der beiden Seiten (Mikrocontroller bzw. XBee) auf GND gezogen, so werden die Eingänge durch ihre  Pull-Up 	Widerstände auf 5\,V bzw. 3,3\,V gezogen. Dadurch ist das Spannungsgefälle \emph{Gate"~zu"~Source} gleich Null, da an beiden 	Anschlüssen 3,3\,V anliegen. Der Transistor ist nicht leitend.
+\item Wird am XBee (DOUT) ein LOW Signal angelegt, so steigt das Spannungsfälle \emph{Gate"~zu"~Source} an und der Transistor wird leitfähig, was dazu führt das auch die Pins am Mikrocontroller(RXD) auf LOW gezogen werden.
+\item Wird hingen auf der Seite des Mikrocontroller (TXD) ein LOW Signal angelegt, so wird über die die Diode im Transistor das Spannungspotenzial der Source solange reduziert, bis das Spannungsgefälle \emph{Gate"~zu"~Source} groß genug wird, damit der Transistor leitfähig wird. Sobald dieser Grenzwert überschritten wird, wird auch DOUT am Xbee auf LOW gezogen.
+\end{itemize}
+
+Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. Dieser Fehler ist für die Version~1.1 behoben.
 
 \begin{figure}
 	\centering
@@ -145,9 +151,9 @@ Dieser Fehler wird für die Version~1.1 behoben und noch getestet.
 		
 Die zweite Schnittstelle mit dem Menschen wird über ein Display ermöglicht. 
 Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. 
-Bei dem Display Handelt es sich um ein 2 Zeiliges LCD-Display mit jeweils 16 Zeichen. 
-Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C-Schnittstelle bewerkstelligt. 
-Hierfür haben wir die frei verfügbare LiquidCrystal\_I2C Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
+Bei dem Display Handelt es sich um ein 2 Zeiliges LCD"~Display mit jeweils 16 Zeichen. 
+Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
+Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
 	
 	
 \subsubsection{Stromversorgung}
@@ -157,7 +163,7 @@ Deswegen muss auf eine leistungsfähigere Energiequelle gesetzt werden.
 Wir entschieden uns für Netzteile mit 12\,V Ausgangs"-spannung um die Pumpe direkt anschließen zu können. 
 Um den Strom der Pumpe zu begrenzen haben wir einen \begin{math}5~\Omega\end{math} Lastwiderstand in Reihe geschaltet.
 Dies führt zu geringerer Leistungsaufnahme und deutlichen Geräusch"-minderung.
-Die Ansteuerung der Pumpe über dem Mikrocontroller wurde über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
+Die Ansteuerung der Pumpe über dem Mikrocontroller ist über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
 Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdiode über die Anschlüsse \emph{VENTIL-1} und \emph{VENTIL-2} vor Überspannung zu schützen, die beim Abschalten der Pumpe auftreten können. 
  
 
@@ -197,7 +203,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	
 
 	
-\subsection{BOM - Bill of Matirial}
+%\subsection{BOM - Bill of Matirial}
 	
 \subsection{Kostenplan}
  Durch die geringen Kosten pro Entwicklungsstufe hatten wir genügend Geld um mehrere Iterationsstufen  zu durchlaufen.
