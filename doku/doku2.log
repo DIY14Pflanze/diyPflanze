@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  25 FEB 2015 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  25 FEB 2015 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -554,80 +554,105 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 )
 (c:/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (./doku2.aux
+)
+(c:/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count116
+\lst@gtempboxa=\box30
+\lst@token=\toks23
+\lst@length=\count117
+\lst@currlwidth=\dimen133
+\lst@column=\count118
+\lst@pos=\count119
+\lst@lostspace=\dimen134
+\lst@width=\dimen135
+\lst@newlines=\count120
+\lst@lineno=\count121
+\lst@maxwidth=\dimen136
+
+(c:/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count122
+\lst@skipnumbers=\count123
+\lst@framebox=\box31
+)
+(c:/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+ (./doku2.aux
 
 LaTeX Warning: Label `fig-SV_Ablaufplan' multiply defined.
 
 )
 \openout1 = `doku2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 24.
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 24.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 28.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring OFF on input line 28.
  (c:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (c:/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./doku2.out) (./doku2.out)
 \@outlinefile=\write3
@@ -636,17 +661,17 @@ LaTeX Info: Redefining \nameref on input line 24.
 
 (c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen133
-\scratchbox=\box31
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen134
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count125
+\scratchdimen=\dimen137
+\scratchbox=\box33
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen138
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks25
 ) (c:/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -662,22 +687,24 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count131
+
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 29).
+modes (line 33).
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 45.
+(babel)             in language append on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 45.
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+(babel)             in language append on input line 49.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
 
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 2042) in paragraph at lines 55--56
+Underfull \hbox (badness 2042) in paragraph at lines 59--60
 \T1/ptm/m/n/10 fal-len Ein-schrän-kun-gen bzgl. Wit-te-rungs-be-stän-dig-keit
  []
 
@@ -815,9 +842,22 @@ Package pdftex.def Info: diagramme/AV_Ablaufdiagramm.pdf used on input line 200
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 223.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 223.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 223.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 223.
+[4 <./diagramme/AV_Ablaufdiagramm.pdf>]
+
+LaTeX Warning: Reference `fig-AV_Ablaufplan' on page 5 undefined on input line 
+230.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 237.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 237.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -835,15 +875,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 11.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 11.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 11.
- [4 <./diagramme/AV_Ablaufdiagramm.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 11.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 11.
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language append on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 15.
@@ -852,7 +883,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 21.
 
-<Diagramme/SV_Ablaufdiagramm.png, id=295, 285.34605pt x 258.2448pt>
+<Diagramme/SV_Ablaufdiagramm.png, id=313, 285.34605pt x 258.2448pt>
 File: Diagramme/SV_Ablaufdiagramm.png Graphic file (type png)
 
 <use Diagramme/SV_Ablaufdiagramm.png>
@@ -873,8 +904,17 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 43.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 44.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language append on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language append on input line 44.
+[5]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 44.
-(c:/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
+ (c:/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -882,47 +922,55 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language append on input line 51.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 74.
- [5 <./Diagramme/SV_Ablaufdiagramm.png>]
+(babel)             in language append on input line 78.
+ [6
+
+ <./Diagramme/SV_Ablaufdiagramm.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 74.
+(babel)             in language append on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 74.
- [6 <./bilder/v1SchaltplanMicro0.JPG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+(babel)             in language append on input line 78.
+ [7 <./bilder/v1SchaltplanMicro0.JPG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
  (./doku2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `doku2.out' has not changed.
 (rerunfilecheck)             Checksum: 57613EE223743E913E616E2D28D5F13F;1114.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 7781 strings out of 493108
- 112586 string characters out of 6138446
- 206650 words of memory out of 5000000
- 11072 multiletter control sequences out of 15000+600000
- 119545 words of font info for 132 fonts, out of 8000000 for 9000
+ 9392 strings out of 493108
+ 133630 string characters out of 6138446
+ 228177 words of memory out of 5000000
+ 12652 multiletter control sequences out of 15000+600000
+ 123275 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,32p,429b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+ 29i,8n,32p,866b,1073s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
 , replaced by a fixed one
@@ -942,15 +990,16 @@ s/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:
-/texlive/2014/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/201
-4/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2014/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times
-/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/t
-exlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doku2.pdf (6 pages, 5847832 bytes).
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2
+014/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2014/texmf-di
+st/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.p
+fb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/201
+4/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on doku2.pdf (7 pages, 5862070 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 54 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -63,7 +63,7 @@ In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 \end{table}	
 	
 	
-	
+
 \subsection{Gehäuse}
 	Das Gehäuse wurde so konzipiert, dass es möglichst klein ist aber genügend Platz für die Elektronik bietet.
 	Im Gehäuse verbaut sind:
@@ -197,10 +197,38 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.9\linewidth]{diagramme/AV_Ablaufdiagramm.jpg}
+	\includegraphics[width=\linewidth]{diagramme/AV_Ablaufdiagramm.pdf}
 	\caption{Programmablauf der Arduino Version}
 	\label{fig-SV_Ablaufplan}
 \end{figure}
+	
+In Abbildung \ref{fig-SV_Ablaufplan} ist der Ablauf des Arudinoprogramms in der Loop"~Methode zu sehen.
+Wie in Abschnitt \ref{sensorik} beschrieben, führt eine dauerhafte Messung der Bodenfeuchtigkeit zu einer schnellen Zersetzung des Sensors.
+Aus diesem Grund wird die Messung nur einmal in einem Intervall von ca. 4 Stunden durchgeführt. Für die Intervallabfrage in der methode messung() wird die Funktion millis() verwendet. Diese Funktion gibt einen unsigned Long Wert zurück, der der Laufzeit des Arduino in Millisekunden entspricht. Nach ungefähr 49 Tagen wird der Counter einen Überlauf erzeugen und beginnt von vorne zu zählen. Damit dieser Überlauf keine Auswirkungen auf das Gießsystem hat, wird die Abfrage des Messintervalls wie folgt  ausgeführt.
+
+\begin{lstlisting}[basicstyle=\small]
+if ((millis()-prevMessung) >= messInterval)
+{
+ aktFeuchtigkeit = analogRead(MOISTURE_A);
+ aktHelligkeit = analogRead(PHOTO_PIN);
+ neueMesswerte = true; 
+ prevMessung = millis();
+}
+\end{lstlisting}
+
+Beim ersten Durchlauf, also direkt nach dem Anschalten des Mikrocontrollers, wird das If"~Bedinung immer als Wahr evaluiert und eine Messung wird durchgeführt und die Variable \emph{prevMessung} wird auf die aktuelle Zeit eingestellt. Dadurch wird die If"~Abfrage erst dann wieder Wahr, wenn die Zeit \emph{messInterval} abgelaufen ist. Auch bei einem Überlauf der Funktion millis() wird diese Abfrage ein korrektes Ergebnis liefen, da die Funktion millis() einen unsigned Long zurück gibt. Bei allen Intervall bezogenen Abfragen im Programmcode wird dieses vorgehen verwendet. 
+Anpassung zu Version~1.1: In dieser Abfrage wird nur die Messung alle 4 Stunden durchgeführt. Für die Version 1.1 muss in diesem Programmabschnitt noch and An- und Abschalten des Feuchtigkeitssensors durchgeführt werden. Außerdem ist es sinnvoll nach dem Anschalten des Sensors kurz zu warten, bevor eine Messung durchgeführt wird um Messfehler zu vermeinen.
+
+Unabhängig davon, ob eine Messung ausgeführt wurde oder nicht, wir im Anschluss überprüft ob der Mode"~Taster betätigt wurde. Wie in Abbildung \ref{fig-Schaltplanv1.0} zu sehen ist, wurden die Taster nicht über Kondensator entprellt, sondern per Software. Hierfür haben wir die Bounce2 Libary verwendet\footnote{http://playground.arduino.cc/Code/Bounce}. Wurde ein Knopfdruck registriert, so wird die Variabele \emph{Mode} um ein erhört. Über die Modulberechnung wird sichergestellt, dass die Variable immer das Intervall von 0 bis ANZAHK\_MODE durchläuft. Der Zweite Taster dient zum manuellen Gießen der Pflanze. Solange der Taster gedrückt ist, wird die Pumpe angesteuert und gegossen. 
+
+\begin{lstlisting}[basicstyle=\small]
+
+mode = (mode + 1) % ANZAHL_MODE;
+
+\end{lstlisting}
+
+Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird über die Variabel \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben). Iat das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist die Methode Gießen() mit dem Paramter False aufgerufen und die Variabel \emph{neuerMesswert} auf false gesetzt. Damit wird verhindere, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde. Sagt der Messwert hingenen aus, dass gegossen werden muss aber der Helligkeitsensor verhindert ein Giesen, dann wird die Variable \emph{neuerMesswert}
+
 		
 	In der Version~1.0 wurden die Messungen andauernd durchgeführt. 
 	Wie aber bereits oben erläutert hat dies zu einer starken Korrosion am Feuchtigkeitssensor geführt. 
@@ -209,10 +237,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	Ist das Intervall abgelaufen wird der Feuchtigkeitssensor über eine Transistorschaltung angeschaltet und anschließend ausgelesen. 
 	Dadurch ist der Sensoren nur noch für einen kurzen Zeitraum unter Strom, was die Lebensdauer des Feuchtigkeitssensor verlängert.
 		
-	
-	%\subsection{Setuptool}
-	Da die Erde in jeder Pflanze eine andere Zusammensetzung hat und jede Pflanze unterschiedlich viel Wasser benötigt ist es notwendig die Grenzwerte für die Feuchtigkeit und die Wassermenge einzustellen. 
-	Hierfür gibt es ein Cmd-Tool welches über die 
+
 	
 
 	
