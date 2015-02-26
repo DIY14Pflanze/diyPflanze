@@ -37,9 +37,10 @@ Wenn nicht das ständige Gießen wäre.
 Vor jedem längeren Urlaub stellt sich die Frage, was machen mit den Pflanzen? 
 Den Nachbarn fragen und hoffen er ist da und verlässlich? 
 Die Pflanzen \glqq absaufen\grqq \ lassen und hoffen, dass sie sich das Wasser einteilen? 
-Beides keine zufriedenstellende Lösung. Wieso lässt man sich die Pflanze nicht selbst gießen?
+Beides keine zufriedenstellende Lösung. Wieso lässt man die Pflanze sich nicht selbst gießen?
 Aus diesen Überlegungen ist die Idee entstanden eine Pflanze mit Sensoren auszustatten und so deren Zustand zu überwachen und über diesen zu informieren.
 Im Folgenden wird der Aufbau zweier Lösungen vorgestellt. 
+
 Der erste Ansatz basiert auf dem Arduino"~System, welches einen einfachen Einstieg in Umgang mit Mikrocontroller ermöglicht. 
 Der zweite Ansatz basiert auf ähnlicher Hardware, jedoch ohne die Verwendung der Arduino"~Software. 
 Dadurch wird die Verwendung von Sleep"~Modi und Interrupts möglich was eine Low"~Energy Variante des Gießsystems ermöglicht.  
@@ -48,7 +49,7 @@ Dadurch wird die Verwendung von Sleep"~Modi und Interrupts möglich was eine Low
 
 \section{Eingrenzung}
 Es lassen sich viele Faktoren finden, die einen Einfluss auf das Wohlbefinden eine Pflanze haben. 
-Hierunter fallen die Bodenfeuchtigkeit im Topf der Pflanze, die durchschnittliche Sonneneinstrahlung, der Luftqualität, der Nährstoffgehalt des Bodens sowie die Temperatur. 
+Hierunter fallen die Bodenfeuchtigkeit im Topf der Pflanze, die durchschnittliche Sonneneinstrahlung, die Luftqualität, der Nährstoffgehalt des Bodens sowie die Temperatur. 
 Diese nicht abschließende Aufzählung zeigt, dass eine Eingrenzung der zu untersuchenden Faktoren notwendig ist, um das Projekt in der gegeben Zeit fertigzustellen.
 Auch hinsichtlich des Einsatzgebietes gibt eine Vielfalt von unterschiedlichen Möglichkeiten wie z.B. Einpflanzenbetrieb oder Mehrpflanzenbetrieb sowie In"~ oder Outdoor"~Betrieb. 
 Im Rahmen des Projekts werden demnach folgende Eingrenzung vorgenommen:
@@ -58,12 +59,12 @@ Im Rahmen des Projekts werden demnach folgende Eingrenzung vorgenommen:
 	\item Das System soll für eine alleinstehende Pflanze aufgebaut werden. 
 	\item Das Einsatzgebiet wird im Innenraumbereich sein, dadurch fallen Einschränkungen bzgl. der Witterungs"-beständigkeit weg.
 	\item Die Stromversorgung wird über ein Netzteil bewerkstelligt. 
-	\item Das System soll über eine drahtlose Verbindung einstellbar sein. Diese Einschränkung gilt nur für die Arduino"~Variante, da in der Sparversion auf Grund energetischer Optimierung auf die Kommunikation verzichtet wird. Hier wird die Einstellung direkt im Code vorgenommen.
+	\item Das System soll über eine drahtlose Verbindung einstellbar sein. Diese Einschränkung gilt nur für die \emph{Arduino"~Variante}, da in der \emph{Sparversion} auf Grund energetischer Optimierung auf die Kommunikation verzichtet wird. Hier wird die Einstellung direkt im Code vorgenommen.
 
 \end{itemize}
 
 Weitere Ideen wie z.B. eine autarke, batteriebetriebene Lösung, ein Mehr"~Pflanzenbetrieb oder ein System für den Garten wurden zwar diskutiert, aber wegen dem erhörten Zeitaufwand hinsichtlich weiterer zu lösender Problemstellungen und begrenzten Budgets nicht weiter verfolgt. 
-Im folgenden wird die \emph{Arduino Version} ausführlich vorgestellt. 
+Im folgenden wird die \emph{Arduino"~Variante} ausführlich vorgestellt. 
 Die \emph{Sparversion} wird im Anschluss erläutert. Da viele der Funktionen grundsätzlich identisch sind und übernommen werden können, wird darauf verzichtet diese erneut auszuformulieren. 
 
 %section

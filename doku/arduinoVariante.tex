@@ -1,14 +1,14 @@
 \section{Arduino"~Variante}
 
 In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. Das Gießsystem besteht aus der Steuereinheit, dem Wasserbehälter sowie der Pumpe mit dem Schlauchsystem. Aus dem Steuergerät wird der Sensor über einen Cinch"~Anschluss herausgeführt. Auf der linken Seite wird das Netzteil mit einem Hohlstecker verbunden. 
-Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino"~Variante. 
+Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der \emph{Arduino"~Variante}. 
 Es wird hierzu auf folgende Bereiche eingegangen:
 
 \begin{itemize}
 	\item Zu Beginn beschreiben wir verschiedenen Möglichkeiten des Wassertransports zur Pflanze.
 	\item Im weiteren stellen wir das Vorgehen zur Erstellung des Gehäuses für die Elektronik dar.
-	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche \emph{Sensorschaltung}, \emph{Stromversorgung} und \emph{Kommunikation} eingehen.
-	\item Anschließend wird das Programm für den Mikrocontroller vorgestellt.
+	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche \emph{Sensorik}, \emph{Kommunikation} und \emph{Stromversorgung} eingehen.
+	\item Anschließend wird das Programm für den Mikrocontroller beschrieben.
 	\item Abschließend wir ein Kostenplan vorgestellt. 
 	
 \end{itemize}
@@ -23,17 +23,17 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu gestalten, haben wir uns für ein Pumpensystem entschieden. 
 Dadurch ist die Anordnung der Pflanze zum Wassertank nicht relevant. 
-Der hiermit einhergehende, erhöhte Strombedarf ist zu verkraften, da unser System nicht auf Batterien angewiesen ist.
+Der hiermit einhergehende, erhöhte Strombedarf ist zu verkraften, da das System nicht auf Batterien angewiesen ist.
 
 Für den Wassertransport haben wir uns für eine Zahnradpumpe entschieden.
-Die Zahnradpumpe gehört zu der Gruppe der rotierenden Verdränger Pumpen\footnote{\href{http://www.ksb.com/Kreiselpumpenlexikon\_de/Pumpenlexikon/1563382/verdraengerpumpe.html}{www.ksb.com/Kreiselpumpenlexikon\_ \\ de/Pumpenlexikon/1563382/verdraengerpumpe.html}}.
+Die Zahnradpumpe gehört zur Gruppe der rotierenden Verdränger Pumpen\footnote{\href{http://www.ksb.com/Kreiselpumpenlexikon\_de/Pumpenlexikon/1563382/verdraengerpumpe.html}{www.ksb.com/Kreiselpumpenlexikon\_ \\ de/Pumpenlexikon/1563382/verdraengerpumpe.html}}.
 Das Fördermedium wird hierbei zwischen zwei Zahnrädern in einem in sich geschlossenen Volumenbereich gefördert.
 Die Bauweise dieser Pumpe ermöglicht zudem einen selbstsaugenden Betrieb. 
 Dies bedeutet, dass diese Pumpe in der Lage ist Gase zu transportieren und somit einen Unterdruck in der Zuleitung zu erzeugen, der ausreicht um das Fördermedium (in unserem Fall Wasser) anzusaugen. 
 Diese Eigenschaft war schlussendlich ausschlaggebend, dass sich die Zahnradpumpe gegenüber den anderen Lösungen durchgesetzt hat.
 Als Alternativen wurden Ventile und Kreiselpumpen angedacht.
 Die Kreiselpumpe konnte sich trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. 
-Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind.  
+Das Ventil benötigt den geringsten Strom und ist sehr leise, jedoch ist es auf gespeicherte Energie angewiesen sind.  
 Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. 
 Auf Grund der Wahl der Zahnradpumpe kann ein 4\,mm Schlauch zur Förderung des Wassers genutzt werden, der nahezu beliebig verlegt werden kann.  
 Ebenso ist der Wassertank frei wählbar. Für das Testsystem haben wir eine 1,5\,Liter Flasche verwendet. Im Dauerbetrieb wird ein fünf-Liter"~Weinballon verwendet. 
@@ -66,7 +66,7 @@ An der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 	Das Gehäuse, wie es in Abbildung \ref{fig-Gehäuse} zu sehen ist, wurde so konzipiert, dass es möglichst klein ist aber dennoch genügend Platz für die Elektronik bietet.
 	Im Gehäuse verbaut sind:
 \begin{itemize}
-	\item ein LCD-Display zur Anzeige der Gießparameter (aktuelle Feuchtigkeit, Gießintervall \dots)
+	\item ein LCD-Display zur Anzeige der Gießparameter (aktuelle Feuchtigkeit, Gießintervall, \dots)
 	\item zwei Taster zur Steuerung der Displayanzeige und zum manuellen Gießen
 	\item der Photowiderstand zur Messung der Helligkeit (platziert zwischen den Tastern)
 	\item Stromschluss auf der linken Seite
@@ -86,8 +86,8 @@ Für das Design des Gehäuses wurde der BoxMaker\footnote{ \href{http://boxmaker
 Das Gehäuse besteht aus grünen 3\,mm dicken Acrylglas.
 	
 \subsection{Elektronik}
-Im folgenden wird der Aufbau der Version~1.0 der Arduino"~Variante vorgestellt. 
-Während des Aufbaus --- vor allem aber während der Testphase --- sind Probleme aufgetreten, die dazu geführt haben, dass eine neue Version~1.1 erstellt werden musste. 
+Im folgenden wird der Aufbau der Version~1.0 der \emph{Arduino"~Variante} vorgestellt. 
+Während des Aufbaus -- vor allem aber während der Testphase -- sind Probleme aufgetreten, die dazu geführt haben, dass eine neue Version~1.1 erstellt werden musste. 
 Diese neue Version ist jedoch aus zeitlichen Gründen noch nicht komplett aufgebaut. 
 Ein neues Layout wurde erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
 Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert, an gegebener Stelle wird auf die Anpassungen eingegangen, die bereits umgesetzt wurden bzw. noch in Planung sind. 
@@ -100,10 +100,10 @@ Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert,
 \end{figure}
 			
 \subsubsection{Sensorik} \label{sensorik}
-Für den Helligkeitssensor wird ein einfacher Photowiderstand verwendet, der über einen Spannungsteiler an einem der Analogen Pins des Arduino"~Bords angeschlossen ist. Der Pin verfügt über einen 10\,Bit AD Konverter und gibt demnach einen Integerwert von 
+Für den Helligkeitssensor wird ein einfacher Photowiderstand verwendet, der über einen Spannungsteiler an einem der analogen Pins des Arduino"~Bords angeschlossen ist. Der Pin verfügt über einen 10\,Bit"~AD Konverter und gibt demnach einen Integerwert von 
 0\,-\,1023 zurück.
-Der Bodenfeuchtigkeitssensor bestimmt den Wassergehalt des Bodens über eine Widerstandsmessung zwischen den zwei Zinken einer Messgabel. 
-Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widerstand des Bodens.
+Der Bodenfeuchtigkeitssensor bestimmt den Wassergehalt des Bodens über eine Widerstandsmessung zwischen den zwei Zinken der Messgabel. 
+Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widerstand.
 
 
 Der Feuchtigkeitssensor benötigt keine weiteren Schaltelemente, da er über eine eine Vorschaltung verfügt in der bereits ein Spannungsteiler integriert ist. 
@@ -127,8 +127,8 @@ Die Vorschaltung sieht weder eine Abschaltung des Messprozesses, noch eine Umpol
 Folglich muss die gesamte Vorschaltung stromlos geschaltet werden, um das Auflösen des Sensors möglichst zu verzögern. 
 Hierfür haben wir für die Version~1.1 eine Transistorschaltung für den Sensor eingefügt. 
 Über diese Schaltung wird die Vorschaltung des Feuchtigkeitssensor stromlos geschaltet und der Sensor nur für eine Messung mit Strom versorgt. 
-Eine Umpolung der Messgabel ist hiermit leider nicht möglich. Dies kann jedoch relativ einfach gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
-Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden, um \begin{math}180^{\circ}\end{math} gedreht und wieder verbunden werden.
+Eine Umpolung der Messgabel ist hiermit nicht möglich. Dies kann jedoch relativ einfach gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
+Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt, um \begin{math}180^{\circ}\end{math} gedreht und wieder verbunden werden.
 
 
 
@@ -147,19 +147,17 @@ Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden, um
 \end{figure*}
 
 \subsubsection{Kommunikation}
-Jede Pflanze braucht unterschiedlich viel Wasser. 
-Genauso hat die Zusammensetzung der Erde einen Einfluss auf den gemessenen Widerstand des Feuchtigkeitssensors.
-Ziel der Kommunikation soll es deswegen sein, das Gießsystem im laufenden Betrieb kalibrieren zu können. 
+Ziel der Kommunikation ist es, das Gießsystem im laufenden Betrieb kalibrieren zu können. 
 Wir haben uns für eine drahtlose Kommunikation auf Basis des XBee Standard entschieden. 
 Das XBee Modul wurde direkt, d.h. ohne Verwendung eines \emph{Arduino XBEE"~Shields} mit dem Arduino verbunden. 
 Hierfür war es notwendig eine Pegelwandlung von 5\,V auf 3,3\,V vorzunehmen, da die Logik-Pins des XBee"~Moduls nicht mit 5\,V des Arduinos betrieben werden können. 
 %%%%%%
-Abbildung \ref{fig-Pegel} zeigt die Umsetzung der Pegelschaltung. Die Lables \emph{TXD} und \emph{RXD} repräsentieren die jeweiligen Anschlüsse am Arduino Micro. In dieser Schaltung lassen sich drei Zustände erkennen\footnote{http://www.adafruit.com/datasheets/an97055.pdf; Seite 10f}
+Abbildung \ref{fig-Pegel} zeigt die Umsetzung der Pegelschaltung. Die Lables \emph{TXD} und \emph{RXD} repräsentieren die jeweiligen Anschlüsse am Arduino Micro. In dieser Schaltung lassen sich drei Zustände erkennen\footnote{http://www.adafruit.com/datasheets/an97055.pdf; Seite 10f}:
 \begin{itemize}
 \item Wird keiner der beiden Seiten (Mikrocontroller bzw. XBee) auf GND gezogen, so werden die Eingänge durch ihre Pull-Up 	Widerstände auf 5\,V bzw. 3,3\,V gezogen.
 Dadurch ist das Spannungsgefälle \emph{Gate"~zu"~Source} gleich Null, da an beiden Anschlüssen 3,3\,V anliegen. Der Transistor ist nicht leitend.
 \item Wird am XBee (DOUT) ein LOW Signal angelegt, so steigt das Spannungsfälle \emph{Gate"~zu"~Source} an und der Transistor wird leitfähig, was dazu führt das auch die Pins am Mikrocontroller(RXD) auf LOW gezogen werden.
-\item Wird hingen auf der Seite des Mikrocontroller (TXD) ein LOW Signal angelegt, so wird über die Diode im Transistor das Spannungspotenzial der Source solange reduziert, bis das Spannungsgefälle \emph{Gate"~zu"~Source} groß genug wird, damit der Transistor leitfähig wird. Sobald dieser Grenzwert überschritten wird, wird auch DOUT am Xbee auf LOW gezogen.
+\item Wird hingen auf der Seite des Mikrocontroller (TXD) ein LOW Signal angelegt, so wird über die Diode im Transistor das Spannungspotenzial der Source solange reduziert, bis das Spannungsgefälle \emph{Gate"~zu"~Source} groß genug wird, damit der Transistor leitfähig wird. Sobald dieser Grenzwert überschritten wird, wird auch DIN am Xbee auf LOW gezogen.
 \end{itemize}
 
 Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. Dieser Fehler ist für die Version~1.1 behoben.
@@ -169,9 +167,9 @@ Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen w
 
 
 		
-Die zweite Schnittstelle zum Anwender ist ein Display. 
+Die zweite Schnittstelle zum Anwender ist das Display. 
 Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten überprüfen. 
-Bei dem Display Handelt es sich um ein 2"~zeiliges LCD"~Display mit jeweils 16 Zeichen. 
+Bei dem Display handelt es sich um ein 2"~zeiliges LCD"~Display mit jeweils 16 Zeichen. 
 Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
 Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
 
@@ -181,8 +179,7 @@ Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fde
 
 Eine Stromversorgung über USB ist nicht möglich, da die Pumpe unter Voll"-last 12\,V und 2,8\,A benötigt. 
 Deswegen muss auf eine leistungsfähigere Energiequelle gesetzt werden.
-Wir entschieden uns für ein Netzteil mit 12\,V Ausgangs"-spannung um die Pumpe direkt anschließen zu können. 
-Um den Strom der Pumpe zu begrenzen, wurde ein \begin{math}5~\Omega\end{math} Lastwiderstand in Reihe geschaltet.
+Um den Strom der Pumpe zu begrenzen, wurde ein \begin{math}5~\Omega\end{math}\,Lastwiderstand in Reihe geschaltet.
 Dies führt zu geringerer Leistungsaufnahme und einer deutlichen Geräusch"-minderung.
 Die Ansteuerung der Pumpe über dem Mikrocontroller ist über eine Transistorschaltung gelöst (Ziffer 1 in Abbildung \ref{fig-Schaltplanv1.0}).
 Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdiode über die Anschlüsse \emph{VENTIL-1} und \emph{VENTIL-2} vor Überspannung zu schützen, die beim Abschalten der Pumpe auftreten können. 
@@ -208,7 +205,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 	
 In Abbildung \ref{fig-AV_Ablaufplan} ist der Ablauf des Arudino"~Programms in der Loop"~Methode zu sehen.
 Wie in Abschnitt \ref{sensorik} beschrieben, führt eine dauerhafte Messung der Bodenfeuchtigkeit zu einer schnellen Zersetzung des Sensors.
-Aus diesem Grund wird die Messung nur einmal in einem Intervall von ca. 4 Stunden durchgeführt. Für die Intervall"~Abfrage in der Methode \emph{messung()} wird die Funktion \emph{millis()} verwendet. Diese Funktion gibt einen unsigned Long Wert zurück, welcher der Laufzeit des Arduino in Millisekunden entspricht. Nach ungefähr 49 Tagen wird der Counter einen Überlauf erzeugen und beginnt von vorne zu zählen. Damit dieser Überlauf keine Auswirkungen auf das Gießsystem hat, wird die Abfrage des Messintervalls wie folgt ausgeführt.
+Aus diesem Grund wird die Messung nur einmal in einem Intervall von ca.~4~Stunden durchgeführt. Für die Intervall"~Abfrage in der Methode \emph{messung()} wird die Funktion \emph{millis()} verwendet. Diese Funktion gibt einen unsigned Long Wert zurück, welcher der Laufzeit des Arduino in Millisekunden entspricht. Nach ungefähr 49 Tagen wird der Counter einen Überlauf erzeugen und beginnt von vorne zu zählen. Damit dieser Überlauf keine Auswirkungen auf das Gießsystem hat, wird die Abfrage des Messintervalls wie folgt ausgeführt.
 
 \begin{lstlisting}[basicstyle=\small]
 if ((millis()-prevMessung) >= messInterval)
@@ -221,9 +218,10 @@ if ((millis()-prevMessung) >= messInterval)
 \end{lstlisting}
 
 Beim ersten Durchlauf, also direkt nach dem Anschalten des Mikrocontrollers, wird die If"~Bedingung immer als \emph{wahr} evaluiert und eine Messung wird durchgeführt. In die Variable \emph{prevMessung} wird die aktuelle Zeit eingestellt. Dadurch wird die If"~Abfrage erst dann wieder \emph{wahr}, wenn die Zeit \emph{messInterval} abgelaufen ist. Auch bei einem Überlauf der Funktion \emph{millis()} wird diese Abfrage ein korrektes Ergebnis liefen, da die Funktion \emph{millis()} einen unsigned Long zurück gibt. Bei allen Intervall"~bezogenen Abfragen im Programmcode wird dieses Vorgehen verwendet. 
+
 Anpassung zu Version~1.1: In dieser Abfrage wird die Messung lediglich alle 4 Stunden durchgeführt. Für die Version 1.1 muss in diesem Programmabschnitt noch das An- und Abschalten des Feuchtigkeitssensors durchgeführt werden. Außerdem ist es, um Messfehler zu vermeiden, sinnvoll, nach dem Anschalten des Sensors kurz zu warten bevor eine Messung durchgeführt wird.
 
-Unabhängig davon, ob eine Messung ausgeführt wurde oder nicht, wird im Anschluss überprüft, ob der Mode"~Taster betätigt wurde. Wie in Abbildung \ref{fig-Schaltplanv1.0} zu sehen ist, wurden die Taster nicht über einen Kondensator entprellt, sondern per Software. Hierfür haben wir die Bounce2 Libary verwendet\footnote{http://playground.arduino.cc/Code/Bounce}. Wurde ein Knopfdruck registriert, so wird die Variable \emph{Mode} um inkrementell erhört. Über die Modulberechnung wird sichergestellt, dass die Variable immer das Intervall von \emph{0 bis ANZAHL\_MODE} durchläuft. Der Zweite Taster dient zum manuellen Gießen der Pflanze. Solange der Taster gedrückt ist, wird die Pumpe angesteuert und es wird gegossen. 
+Unabhängig davon, ob eine Messung ausgeführt wurde oder nicht, wird im Anschluss überprüft, ob der Mode"~Taster betätigt wurde. Wie in Abbildung \ref{fig-Schaltplanv1.0} zu sehen ist, wurden die Taster nicht über einen Kondensator entprellt, sondern per Software. Hierfür haben wir die Bounce2 Libary verwendet\footnote{http://playground.arduino.cc/Code/Bounce}. Wurde ein Knopfdruck registriert, so wird die Variable \emph{Mode} inkrementell erhört. Über die Modulberechnung wird sichergestellt, dass die Variable immer das Intervall von \emph{0~bis~ANZAHL\_MODE} durchläuft. Der Zweite Taster dient zum manuellen Gießen der Pflanze. Solange der Taster gedrückt ist, wird die Pumpe angesteuert und es wird gegossen. 
 
 \begin{lstlisting}[basicstyle=\small]
 
@@ -233,12 +231,13 @@ mode = (mode + 1) % ANZAHL_MODE;
 
 Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist.
 Dies wird über die Variable \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben).
-Ist das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist, die Methode Gießen() mit dem Parameter \emph{false} aufgerufen und die Variable \emph{neuerMesswert} auf \emph{false} gesetzt.
-Damit wird verhindert, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde.
+Ist das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist, die Methode \emph{Gießen()} mit dem Parameter \emph{false} aufgerufen und die Variable \emph{neuerMesswert} auf \emph{false} gesetzt.
+Damit wird verhindert, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wird.
 Sagt der Messwert hingegen aus, dass gegossen werden muss aber der Helligkeitssensor verhindert ein Gießen, dann wird die Variable \emph{neuerMesswert} nicht zurückgesetzt.
 Der Aktuelle Messwert wird demnach solange abgeglichen, bis es hell genug ist, damit gegossen werden kann.
 
-Abschließend wird in der Logikkette eine Methode zum Anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese zeigt die Einstellung an, welche mit der Mode"~Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, \dots). Die Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version~1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version~1.1 abgebildet.
+Abschließend wird in der Logikkette eine Methode zum Anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese zeigt die Einstellung an, welche mit der Mode"~Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, \dots). 
+Die Bausteine \emph{DatenEmpfang()} und \emph{DatenSenden()} sind in Version~1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version~1.1 abgebildet.
 
 \begin{figure}[h]
 	\centering

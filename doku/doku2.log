@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  26 FEB 2015 20:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.7.27)  26 FEB 2015 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ verted-to.pdf bilder/Bild_Aufbau.eps>
 (epstopdf)             \includegraphics on input line 18.
 Package epstopdf Info: Output file is already uptodate.
 
-<bilder/Bild_Aufbau-eps-converted-to.pdf, id=85, 1551.7975pt x 1100.11pt>
+<bilder/Bild_Aufbau-eps-converted-to.pdf, id=89, 1551.7975pt x 1100.11pt>
 File: bilder/Bild_Aufbau-eps-converted-to.pdf Graphic file (type pdf)
 
 <use bilder/Bild_Aufbau-eps-converted-to.pdf>
@@ -753,7 +753,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 65.
 
-<bilder/_boxFron1.jpg, id=106, 2235.35126pt x 1676.2625pt>
+<bilder/_boxFron1.jpg, id=110, 2235.35126pt x 1676.2625pt>
 File: bilder/_boxFron1.jpg Graphic file (type jpg)
 
 <use bilder/_boxFron1.jpg>
@@ -772,7 +772,7 @@ Underfull \hbox (badness 2119) in paragraph at lines 89--94
 []\T1/ptm/m/n/10 Im fol-gen-den wird der Auf-bau der Ver-si-on 1.0 der
  []
 
-<bilder/_feuchteSensor1.jpg, id=109, 1613.02625pt x 1210.5225pt>
+<bilder/_feuchteSensor1.jpg, id=113, 1613.02625pt x 1210.5225pt>
 File: bilder/_feuchteSensor1.jpg Graphic file (type jpg)
 
 <use bilder/_feuchteSensor1.jpg>
@@ -791,7 +791,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 107.
  [2 <./bilder/_boxFron1.jpg> <./bilder/_feuchteSensor1.jpg>]
-<bilder/_fechtesensorVergleich0.jpg, id=123, 1553.805pt x 2071.74pt>
+<bilder/_fechtesensorVergleich0.jpg, id=127, 1553.805pt x 2071.74pt>
 File: bilder/_fechtesensorVergleich0.jpg Graphic file (type jpg)
 
 <use bilder/_fechtesensorVergleich0.jpg>
@@ -799,14 +799,14 @@ Package pdftex.def Info: bilder/_fechtesensorVergleich0.jpg used on input line
 119.
 (pdftex.def)             Requested size: 226.79846pt x 302.37036pt.
 
-<bilder/v1SchaltplanXbee.jpg, id=125, 450.18187pt x 354.57469pt>
+<bilder/v1SchaltplanXbee.jpg, id=129, 450.18187pt x 354.57469pt>
 File: bilder/v1SchaltplanXbee.jpg Graphic file (type jpg)
 
 <use bilder/v1SchaltplanXbee.jpg>
 Package pdftex.def Info: bilder/v1SchaltplanXbee.jpg used on input line 137.
 (pdftex.def)             Requested size: 226.79846pt x 178.63408pt.
 
-<bilder/v1SchaltplanMicro0.JPG, id=126, 1098.1025pt x 498.86375pt>
+<bilder/v1SchaltplanMicro0.JPG, id=130, 1098.1025pt x 498.86375pt>
 File: bilder/v1SchaltplanMicro0.JPG Graphic file (type jpg)
 
 <use bilder/v1SchaltplanMicro0.JPG>
@@ -817,22 +817,25 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 150.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 175.
  [3 <./bilder/_fechtesensorVergleich0.jpg> <./bilder/v1SchaltplanXbee.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 188.
+
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 225.
 Package babel Info: Redefining ngerman shorthand "~
@@ -842,11 +845,11 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 225.
  [4 <./bilder/v1SchaltplanMicro0.JPG>]
-<diagramme/AV_Ablaufdiagramm.pdf, id=161, 432.11438pt x 729.47531pt>
+<diagramme/AV_Ablaufdiagramm.pdf, id=166, 432.11438pt x 729.47531pt>
 File: diagramme/AV_Ablaufdiagramm.pdf Graphic file (type pdf)
 
 <use diagramme/AV_Ablaufdiagramm.pdf>
-Package pdftex.def Info: diagramme/AV_Ablaufdiagramm.pdf used on input line 245
+Package pdftex.def Info: diagramme/AV_Ablaufdiagramm.pdf used on input line 244
 .
 (pdftex.def)             Requested size: 252.0pt x 425.4112pt.
 
@@ -854,9 +857,9 @@ Package pdftex.def Info: diagramme/AV_Ablaufdiagramm.pdf used on input line 245
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 249.
 ) (./sparversion.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
@@ -866,22 +869,19 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
  [5 <./diagramme/AV_Ablaufdiagramm.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
@@ -896,7 +896,7 @@ Underfull \hbox (badness 5008) in paragraph at lines 21--23
 Weg-fal-len der
  []
 
-<Diagramme/SV_Ablaufdiagramm.png, id=333, 285.34605pt x 258.2448pt>
+<Diagramme/SV_Ablaufdiagramm.png, id=444, 285.34605pt x 258.2448pt>
 File: Diagramme/SV_Ablaufdiagramm.png Graphic file (type png)
 
 <use Diagramme/SV_Ablaufdiagramm.png>
@@ -921,6 +921,10 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
@@ -940,17 +944,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
 Package rerunfilecheck Info: File `doku2.out' has not changed.
-(rerunfilecheck)             Checksum: D452471B46E3AB7F170BD02352ADADFF;1253.
+(rerunfilecheck)             Checksum: A466F4016C50FE386980C91F575F481E;1321.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 9374 strings out of 493108
- 133468 string characters out of 6138446
+ 9376 strings out of 493108
+ 133498 string characters out of 6138446
  227340 words of memory out of 5000000
- 12633 multiletter control sequences out of 15000+600000
+ 12634 multiletter control sequences out of 15000+600000
  121547 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,32p,792b,1073s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,8n,32p,789b,1073s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -983,10 +987,10 @@ nts/cm/cmr7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 st/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doku2.pdf (6 pages, 5857291 bytes).
+Output written on doku2.pdf (6 pages, 5860123 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 336 compressed objects within 4 object streams
- 56 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

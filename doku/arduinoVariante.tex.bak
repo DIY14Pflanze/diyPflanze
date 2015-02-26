@@ -1,14 +1,14 @@
 \section{Arduino"~Variante}
 
 In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. Das Gießsystem besteht aus der Steuereinheit, dem Wasserbehälter sowie der Pumpe mit dem Schlauchsystem. Aus dem Steuergerät wird der Sensor über einen Cinch"~Anschluss herausgeführt. Auf der linken Seite wird das Netzteil mit einem Hohlstecker verbunden. 
-Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino"~Variante. 
+Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der \emph{Arduino"~Variante}. 
 Es wird hierzu auf folgende Bereiche eingegangen:
 
 \begin{itemize}
 	\item Zu Beginn beschreiben wir verschiedenen Möglichkeiten des Wassertransports zur Pflanze.
 	\item Im weiteren stellen wir das Vorgehen zur Erstellung des Gehäuses für die Elektronik dar.
-	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche \emph{Sensorschaltung}, \emph{Stromversorgung} und \emph{Kommunikation} eingehen.
-	\item Anschließend wird das Programm für den Mikrocontroller vorgestellt.
+	\item In Abschnitt Elektronik werden wir auf den Aufbau der Platine und die hiermit verbunden Bereiche \emph{Sensorik}, \emph{Kommunikation} und \emph{Stromversorgung} eingehen.
+	\item Anschließend wird das Programm für den Mikrocontroller beschrieben.
 	\item Abschließend wir ein Kostenplan vorgestellt. 
 	
 \end{itemize}
@@ -23,18 +23,17 @@ Es wird hierzu auf folgende Bereiche eingegangen:
 \subsection{Wassertransport}
 Um den Einsatzbereich so flexibel wie möglich zu gestalten, haben wir uns für ein Pumpensystem entschieden. 
 Dadurch ist die Anordnung der Pflanze zum Wassertank nicht relevant. 
-Der hiermit einhergehende, erhöhte Strombedarf ist zu verkraften, da unser System nicht auf Batterien angewiesen ist.
+Der hiermit einhergehende, erhöhte Strombedarf ist zu verkraften, da das System nicht auf Batterien angewiesen ist.
 
 Für den Wassertransport haben wir uns für eine Zahnradpumpe entschieden.
-Die Zahnradpumpe gehört zu der Gruppe der rotierenden Verdränger Pumpen 
-\footnote{\href{http://www.ksb.com/Kreiselpumpenlexikon\_de/Pumpenlexikon/1563382/verdraengerpumpe.html}{www.ksb.com/Kreiselpumpenlexikon\_ \\ de/Pumpenlexikon/1563382/verdraengerpumpe.html}}.
+Die Zahnradpumpe gehört zur Gruppe der rotierenden Verdränger Pumpen\footnote{\href{http://www.ksb.com/Kreiselpumpenlexikon\_de/Pumpenlexikon/1563382/verdraengerpumpe.html}{www.ksb.com/Kreiselpumpenlexikon\_ \\ de/Pumpenlexikon/1563382/verdraengerpumpe.html}}.
 Das Fördermedium wird hierbei zwischen zwei Zahnrädern in einem in sich geschlossenen Volumenbereich gefördert.
 Die Bauweise dieser Pumpe ermöglicht zudem einen selbstsaugenden Betrieb. 
 Dies bedeutet, dass diese Pumpe in der Lage ist Gase zu transportieren und somit einen Unterdruck in der Zuleitung zu erzeugen, der ausreicht um das Fördermedium (in unserem Fall Wasser) anzusaugen. 
 Diese Eigenschaft war schlussendlich ausschlaggebend, dass sich die Zahnradpumpe gegenüber den anderen Lösungen durchgesetzt hat.
 Als Alternativen wurden Ventile und Kreiselpumpen angedacht.
 Die Kreiselpumpe konnte sich trotz dem geringeren Stromverbrauch und geringerem Geräuschpegel nicht durchsetzen. 
-Noch weniger Strom und Lärm verursachen Ventile, die aber auf gespeicherte Energie angewiesen sind.  
+Das Ventil benötigt den geringsten Strom und ist sehr leise, jedoch ist es auf gespeicherte Energie angewiesen sind.  
 Entweder durch Druck im Wassertank oder durch Erhöhung des Tankes über den Ausfluss. 
 Auf Grund der Wahl der Zahnradpumpe kann ein 4\,mm Schlauch zur Förderung des Wassers genutzt werden, der nahezu beliebig verlegt werden kann.  
 Ebenso ist der Wassertank frei wählbar. Für das Testsystem haben wir eine 1,5\,Liter Flasche verwendet. Im Dauerbetrieb wird ein fünf-Liter"~Weinballon verwendet. 
@@ -67,7 +66,7 @@ An der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 	Das Gehäuse, wie es in Abbildung \ref{fig-Gehäuse} zu sehen ist, wurde so konzipiert, dass es möglichst klein ist aber dennoch genügend Platz für die Elektronik bietet.
 	Im Gehäuse verbaut sind:
 \begin{itemize}
-	\item ein LCD-Display zur Anzeige der Gießparameter (aktuelle Feuchtigkeit, Gießintervall \dots)
+	\item ein LCD-Display zur Anzeige der Gießparameter (aktuelle Feuchtigkeit, Gießintervall, \dots)
 	\item zwei Taster zur Steuerung der Displayanzeige und zum manuellen Gießen
 	\item der Photowiderstand zur Messung der Helligkeit (platziert zwischen den Tastern)
 	\item Stromschluss auf der linken Seite
@@ -87,8 +86,8 @@ Für das Design des Gehäuses wurde der BoxMaker\footnote{ \href{http://boxmaker
 Das Gehäuse besteht aus grünen 3\,mm dicken Acrylglas.
 	
 \subsection{Elektronik}
-Im folgenden wird der Aufbau der Version~1.0 der Arduino"~Variante vorgestellt. 
-Während des Aufbaus --- vor allem aber während der Testphase --- sind Probleme aufgetreten, die dazu geführt haben, dass eine neue Version~1.1 erstellt werden musste. 
+Im folgenden wird der Aufbau der Version~1.0 der \emph{Arduino"~Variante} vorgestellt. 
+Während des Aufbaus -- vor allem aber während der Testphase -- sind Probleme aufgetreten, die dazu geführt haben, dass eine neue Version~1.1 erstellt werden musste. 
 Diese neue Version ist jedoch aus zeitlichen Gründen noch nicht komplett aufgebaut. 
 Ein neues Layout wurde erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
 Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert, an gegebener Stelle wird auf die Anpassungen eingegangen, die bereits umgesetzt wurden bzw. noch in Planung sind. 
@@ -101,14 +100,15 @@ Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert,
 \end{figure}
 			
 \subsubsection{Sensorik} \label{sensorik}
-Für den Helligkeitssensor wird ein einfacher Photowiderstand verwendet, der über einen Spannungsteiler an einem der Analogen Pins des Arduino"~Bords angeschlossen ist. Der Pin verfügt über einen 10\,Bit AD Konverter und gibt demnach einen Integerwert von 
+Für den Helligkeitssensor wird ein einfacher Photowiderstand verwendet, der über einen Spannungsteiler an einem der analogen Pins des Arduino"~Bords angeschlossen ist. Der Pin verfügt über einen 10\,Bit"~AD Konverter und gibt demnach einen Integerwert von 
 0\,-\,1023 zurück.
-Der Bodenfeuchtigkeitssensor bestimmt den Wassergehalt des Bodens über eine Widerstandsmessung zwischen den zwei Zinken einer Messgabel. 
+Der Bodenfeuchtigkeitssensor bestimmt den Wassergehalt des Bodens über eine Widerstandsmessung zwischen den zwei Zinken der Messgabel. 
 Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widerstand des Bodens.
 
 
 Der Feuchtigkeitssensor benötigt keine weiteren Schaltelemente, da er über eine eine Vorschaltung verfügt in der bereits ein Spannungsteiler integriert ist. 
 Abbildung \ref{fig-SensorVorschaltung} zeigt den verwendeten Sensor und die Vorschaltung. 
+
 Es ist möglich sowohl den analogen Wert als auch ein digitales Signal auszuwerten.
 Das digitale Signal liefert einen Null"-wert solange ein Grenzwiderstand nicht überschritten wird. 
 Über ein  Potentiometer (siehe Abbildung \ref{fig-SensorVorschaltung}) lässt sich diese Schaltwert einstellen. 
@@ -132,6 +132,20 @@ Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden, um
 
 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanXbee.jpg}
+	\caption{Pegelwandler mit Small-Signal-Transistor BSS138W }
+	\label{fig-Pegel}
+\end{figure}
+
+\begin{figure*}[th]
+	\centering
+	\includegraphics[width=0.85\linewidth]{bilder/v1SchaltplanMicro0.JPG}
+	\caption{Schaltpaln V1.0 mit Arduino Micro}
+	\label{fig-Schaltplanv1.0}
+\end{figure*}
+
 \subsubsection{Kommunikation}
 Jede Pflanze braucht unterschiedlich viel Wasser. 
 Genauso hat die Zusammensetzung der Erde einen Einfluss auf den gemessenen Widerstand des Feuchtigkeitssensors.
@@ -150,19 +164,9 @@ Dadurch ist das Spannungsgefälle \emph{Gate"~zu"~Source} gleich Null, da an bei
 
 Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen wir keine Verbindung mit ein Computer aufbauen konnten. Dieser Fehler ist für die Version~1.1 behoben.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\linewidth]{bilder/v1SchaltplanXbee.jpg}
-	\caption{Pegelwandler mit Small-Signal-Transistor BSS138W }
-	\label{fig-Pegel}
-\end{figure}
 
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=0.85\linewidth]{bilder/v1SchaltplanMicro0.JPG}
-	\caption{Schaltpaln V1.0 mit Arduino Micro}
-	\label{fig-Schaltplanv1.0}
-\end{figure*}
+
+
 
 		
 Die zweite Schnittstelle zum Anwender ist ein Display. 
@@ -200,12 +204,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 		\end{itemize}
 		
 	
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{diagramme/AV_Ablaufdiagramm.pdf}
-	\caption{Programmablauf der Arduino Version}
-	\label{fig-AV_Ablaufplan}
-\end{figure}
+
 	
 In Abbildung \ref{fig-AV_Ablaufplan} ist der Ablauf des Arudino"~Programms in der Loop"~Methode zu sehen.
 Wie in Abschnitt \ref{sensorik} beschrieben, führt eine dauerhafte Messung der Bodenfeuchtigkeit zu einer schnellen Zersetzung des Sensors.
@@ -241,8 +240,15 @@ Der Aktuelle Messwert wird demnach solange abgeglichen, bis es hell genug ist, d
 
 Abschließend wird in der Logikkette eine Methode zum Anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese zeigt die Einstellung an, welche mit der Mode"~Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, \dots). Die Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version~1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version~1.1 abgebildet.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagramme/AV_Ablaufdiagramm.pdf}
+	\caption{Programmablauf der Arduino Version}
+	\label{fig-AV_Ablaufplan}
+\end{figure}
 	
 \subsection{Kostenplan}
+
  Durch die geringen Kosten pro Entwicklungsstufe hatten wir genügend Mittel um mehrere Iterationsstufen  zu durchlaufen.
  Dementsprechend benötigten wir für die gesamte Entwicklung etwas über einhundert Euro.
  Ein einzelnes Modul kann für etwa 45\,\euro\ nachgebaut werden. 
@@ -250,6 +256,7 @@ Abschließend wird in der Logikkette eine Methode zum Anzeigen der Messwerte auf
  
  Nicht berücksichtigt sind das Wassergefäß, die zwei \begin{math}4mm\end{math}\,-Schlauch"-Stücke und die Befestigung in der Pflanze.
  Bei diesen handelt es sich um Reste oder Lagerfunde im Wert von unter 1\,\euro. 
+
  
 \begin{table}[ht]
 	\centering
