@@ -1,6 +1,6 @@
 \section{Arduino Variante}
 
-In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. Das Gießsystem besteht aus der Steuereinheit, dem Wasserbehälter sowie der Pumpe mit dem Schlauchsystem. Aus dem Steuergerät wird der Sensor über einen Chin"~Anschluss herausgeführt. Auf der linken Seite wird das Netzteil mit einem Hohlstecker verbunden. 
+In Abbildung \ref{fig-SchemaAufbau} ist der schematische Aufbau des Projektes zu sehen. Das Gießsystem besteht aus der Steuereinheit, dem Wasserbehälter sowie der Pumpe mit dem Schlauchsystem. Aus dem Steuergerät wird der Sensor über einen Cinch"~Anschluss herausgeführt. Auf der linken Seite wird das Netzteil mit einem Hohlstecker verbunden. 
 Im Folgenden beschreiben wir das Vorgehen für das Gießsystem basierend auf der Arduino Variante. 
 Es wird hierzu auf folgende Bereiche eingegangen:
 
@@ -64,7 +64,7 @@ In der Pflanze wird der Schlauch mit einem durchbohrten Kantholz in der Pflanzen
 	
 
 \subsection{Gehäuse}
-	Das Gehäuse wurde so konzipiert, dass es möglichst klein ist aber genügend Platz für die Elektronik bietet.
+	Das Gehäuse, wie es in Abbildung \ref{fig-Gehäuse} zu sehen ist, wurde so konzipiert, dass es möglichst klein ist aber genügend Platz für die Elektronik bietet.
 	Im Gehäuse verbaut sind:
 \begin{itemize}
 	\item ein LCD-Display zur Anzeige der Gießparameter (aktelle Feuchtigkeit, Gießintervall \dots)
@@ -90,7 +90,7 @@ Das Gehäuse besteht aus grünen 3\,mm dicken Acrylglas.
 Im folgenden wird der Aufbau der Version~1.0 der Arduino Variante vorgestellt. 
 Während des Aufbaus, vor allem aber während der Testphase sind ein paar Probleme aufgetreten die dazu geführt habe, dass eine neue Version~1.1 erstellt werden musste. 
 Diese neue Version ist jedoch aus zeitlichen Gründen noch nicht komplett aufgebaut. 
-Ein neues Layout wurden bereits erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
+Ein neues Layout wurden erstellt und die Software ist so angepasst worden, dass diese ohne größere Änderungen übernommen werden kann. 
 Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert, an gegebener Stelle wird auf die Anpassungen eingegangen, die bereits umgesetzt wurden bzw. noch in Planung sind. 
 
 			
@@ -98,7 +98,7 @@ Daher wird im folgenden die Funktionsweise auf Basis der Version~1.0 erläutert,
 Für den Helligkeitssensor wird ein einfacher Photowiderstand verwendet, der über einen Spannungsteiler an einem der Analogen Pins des Arduino Bords angeschlossen ist. Der Pin verfügt über einen 10\,Bit AD Konverter und gibt demnach einen Integerwert von 
 0\,-\,1023 zurück.
 Der Bodenfeuchtigkeitssensor bestimmt den Wassergehalt des Bodens über eine Widerstandsmessung zwischen den zwei Zinken einer Messgabel. 
-Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widerstand im Boden.
+Je mehr Wasser im Erdreich vorhanden ist, desto kleiner ist der gemessene Widerstand des Bodens.
 
 \begin{figure}[!h]
 	\centering
@@ -119,7 +119,7 @@ Die Vorschaltung sieht keine Abschaltung des Messprozesses vor noch eine Umpolun
 Deswegen muss die gesamte Vorschaltung stromlos geschaltet werden, um das Auflösen des Sensors zu verlangsamen. 
 Hierfür haben, wir für die Version~1.1, eine Transistorschaltung für den Sensor eingefügt. 
 Über diese Schaltung wird die Vorschaltung des Feuchtigkeitssensor stromlos geschaltet und der Sensor ist nur für eine Messung unter Strom. 
-Eine Umpollung der Messgabel ist auch nicht möglich, dies kann jedoch relativ einfach dadurch gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
+Eine Umpollung der Messgabel ist auch nicht möglich, dies kann jedoch relativ einfach gelöst werden, indem der Sensor alle paar Wochen \emph{manuell} umgepolt wird. 
 Hierfür muss lediglich die Messgabel vom Verbindungskabel abgesteckt werden und um \begin{math}180^{\circ}\end{math} gedreht wieder verbunden werden.
 
 \begin{figure}[!h]
@@ -161,8 +161,8 @@ Bei der Pegelschaltung ist uns in Version~1.0 ein Fehler unterlaufen, weswegen w
 \end{figure*}
 
 		
-Die zweite Schnittstelle mit dem Menschen wird über ein Display ermöglicht. 
-Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten Überprüfen. 
+Die zweite Schnittstelle zum Menschen ist ein Display. 
+Hier lässt sich über einen Taster die einzelnen Variablen mit ihren aktuellen Werten überprüfen. 
 Bei dem Display Handelt es sich um ein 2 Zeiliges LCD"~Display mit jeweils 16 Zeichen. 
 Die Kommunikation zwischen Display und Mikrocontroller wird über eine I2C"~Schnittstelle bewerkstelligt. 
 Hierfür haben wir die frei verfügbare \mbox{LiquidCrystal\_I2C} Libary von fderbrabander verwendet.\footnote{\href{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}{https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library}}
@@ -192,7 +192,7 @@ Es ist zu überlegen, den Transistor und den Mikrocontroller über eine Schutzdi
 			\item Ausgabe der wichtigen Variablen auf dem Display über Taster
 			\item Manuelles Gießen über Taster
 			\item Display Hintergrundbeleuchtung abschalten nach 60  Sekunden
-			\item Übertragen/Empfangen von Einstellungen über xBee Verbindung
+			\item Übertragen/Empfangen von Einstellungen über XBee Verbindung
 		\end{itemize}
 		
 	
@@ -217,10 +217,10 @@ if ((millis()-prevMessung) >= messInterval)
 }
 \end{lstlisting}
 
-Beim ersten Durchlauf, also direkt nach dem Anschalten des Mikrocontrollers, wird das If"~Bedinung immer als Wahr evaluiert und eine Messung wird durchgeführt und die Variable \emph{prevMessung} wird auf die aktuelle Zeit eingestellt. Dadurch wird die If"~Abfrage erst dann wieder Wahr, wenn die Zeit \emph{messInterval} abgelaufen ist. Auch bei einem Überlauf der Funktion millis() wird diese Abfrage ein korrektes Ergebnis liefen, da die Funktion millis() einen unsigned Long zurück gibt. Bei allen Intervall bezogenen Abfragen im Programmcode wird dieses vorgehen verwendet. 
-Anpassung zu Version~1.1: In dieser Abfrage wird nur die Messung alle 4 Stunden durchgeführt. Für die Version 1.1 muss in diesem Programmabschnitt noch and An- und Abschalten des Feuchtigkeitssensors durchgeführt werden. Außerdem ist es sinnvoll nach dem Anschalten des Sensors kurz zu warten, bevor eine Messung durchgeführt wird um Messfehler zu vermeinen.
+Beim ersten Durchlauf, also direkt nach dem Anschalten des Mikrocontrollers, wird das If"~Bedingung immer als Wahr evaluiert und eine Messung wird durchgeführt und die Variable \emph{prevMessung} wird auf die aktuelle Zeit eingestellt. Dadurch wird die If"~Abfrage erst dann wieder Wahr, wenn die Zeit \emph{messInterval} abgelaufen ist. Auch bei einem Überlauf der Funktion millis() wird diese Abfrage ein korrektes Ergebnis liefen, da die Funktion millis() einen unsigned Long zurück gibt. Bei allen Intervall bezogenen Abfragen im Programmcode wird dieses vorgehen verwendet. 
+Anpassung zu Version~1.1: In dieser Abfrage wird nur die Messung alle 4 Stunden durchgeführt. Für die Version 1.1 muss in diesem Programmabschnitt noch and An- und Abschalten des Feuchtigkeitssensors durchgeführt werden. Außerdem ist es sinnvoll nach dem Anschalten des Sensors kurz zu warten, bevor eine Messung durchgeführt wird um Messfehler zu vermeiden.
 
-Unabhängig davon, ob eine Messung ausgeführt wurde oder nicht, wir im Anschluss überprüft ob der Mode"~Taster betätigt wurde. Wie in Abbildung \ref{fig-Schaltplanv1.0} zu sehen ist, wurden die Taster nicht über Kondensator entprellt, sondern per Software. Hierfür haben wir die Bounce2 Libary verwendet\footnote{http://playground.arduino.cc/Code/Bounce}. Wurde ein Knopfdruck registriert, so wird die Variabele \emph{Mode} um ein erhört. Über die Modulberechnung wird sichergestellt, dass die Variable immer das Intervall von 0 bis ANZAHK\_MODE durchläuft. Der Zweite Taster dient zum manuellen Gießen der Pflanze. Solange der Taster gedrückt ist, wird die Pumpe angesteuert und gegossen. 
+Unabhängig davon, ob eine Messung ausgeführt wurde oder nicht, wir im Anschluss überprüft, ob der Mode"~Taster betätigt wurde. Wie in Abbildung \ref{fig-Schaltplanv1.0} zu sehen ist, wurden die Taster nicht über Kondensator entprellt, sondern per Software. Hierfür haben wir die Bounce2 Libary verwendet\footnote{http://playground.arduino.cc/Code/Bounce}. Wurde ein Knopfdruck registriert, so wird die Variabele \emph{Mode} um ein erhört. Über die Modulberechnung wird sichergestellt, dass die Variable immer das Intervall von 0 bis ANZAHL\_MODE durchläuft. Der Zweite Taster dient zum manuellen Gießen der Pflanze. Solange der Taster gedrückt ist, wird die Pumpe angesteuert und gegossen. 
 
 \begin{lstlisting}[basicstyle=\small]
 
@@ -228,11 +228,9 @@ mode = (mode + 1) % ANZAHL_MODE;
 
 \end{lstlisting}
 
-Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird über die Variabel \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben). Iat das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist die Methode Gießen() mit dem Paramter False aufgerufen und die Variabel \emph{neuerMesswert} auf false gesetzt. Damit wird verhindere, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde. Sagt der Messwert hingegen aus, dass gegossen werden muss aber der Helligkeitssensor verhindert ein Gießen, dann wird die Variable \emph{neuerMesswert} nicht zurückgesetzt. Der Aktuelle Messerwert wird demnach solange abgeglichen, bis es hell genug ist, damit gegossen werden kann.
+Als nächstes wird überprüft, ob ein neuer Messwert vorhanden ist. Dies wird über die Variabel \emph{neueMesswerte} bewerkstelligt. Diese Variable wird gesetzt, sobald eine Messung durchgeführt wurde (siehe oben). Ist das nicht der Fall, so wird wie in Abbildung \ref{fig-AV_Ablaufplan} zu sehen ist die Methode Gießen() mit dem Parameter False aufgerufen und die Variabel \emph{neuerMesswert} auf false gesetzt. Damit wird verhindere, dass auf Grundlage des selben Messwertes erneut eine Entscheidung getroffen wurde. Sagt der Messwert hingegen aus, dass gegossen werden muss aber der Helligkeitssensor verhindert ein Gießen, dann wird die Variable \emph{neuerMesswert} nicht zurückgesetzt. Der Aktuelle Messerwert wird demnach solange abgeglichen, bis es hell genug ist, damit gegossen werden kann.
 
-Abschließend in der Kette wird eine Methode zum anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese Zeigt die Einstellung an, die mit der Mode Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, usw.). Die Ausgegrauten Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version 1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version 1.1 abgebildet.
-
-	
+Abschließend in der Kette wird eine Methode zum anzeigen der Messwerte auf dem LCD"~Display aufgerufen. Diese zeigt die Einstellung an, die mit der Mode Variable korrespondiert ( 1 = akt. Bodenfeuchtigkeit, 2 = akt.  Helligkeit, usw.). Die ausgegrauten Bausteine \emph{DatenEmpfang} und \emph{DatenSenden} sind in Version 1.0 noch nicht implementiert, da ein Fehler im Schaltkreis der Kommunikationsschnittstelle eine Kommunikation nicht möglich macht. Diese werden jedoch in Version 1.1 abgebildet.
 
 	
 \subsection{Kostenplan}

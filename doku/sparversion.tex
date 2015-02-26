@@ -7,11 +7,11 @@
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
 	Dadurch wird viel der Verkabelung gespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
-	Der Wegfall zu weniger Platz"-bedarf des Systems führt und damit in ein kleineres Gehäuse passt.
+	Dies führt zu weniger Platz"-bedarf des Systems und dazu das es in ein kleineres Gehäuse passt.
 	\subsection{Elektronik}
-	Durch das wegfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
-	Dadurch reduziert sich die Größe der Hauptplatine auf \begin{math} 55 mm \times 32 mm \end{math}.
-	Dies entspricht nicht nicht mal der Hälfte der Fläche der Version 1.1 mit \begin{math} 56 mm \times 65 mm \end{math}.
+	Durch das WEgfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
+	Die Größe der Hauptplatine  reduziert sich auf \begin{math} 55 mm \times 32 mm \end{math}.
+	Dies entspricht weniger als der Hälfte der Fläche der Version 1.1 mit \begin{math} 56 mm \times 65 mm \end{math}.
 	\subsection{Programmierung}
 	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
 	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
@@ -19,9 +19,8 @@
 	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten über die Programmierung festgelegt werden.
 	\subsubsection{Programmierwerkzeuge}
 	Durch das Wegfallen der Arduino Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
-	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} wird der Microcontroller direkt mit den Binärcode beschrieben. 
-	Dazu wird der AVRISP mkII während des Betriebs des \glqq Arduino Nano\grqq\ an die ISP angesteckt. 
-	Mit Hilfe der ISP-Schnittstelle lässt sich der Mikrocontroller direkt rogrammieren.
+	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} kann der Mikrocontroller über die ISP-Schnittstelle mit den Binärcode beschrieben werden. 
+
 	\subsubsection{Logik}
 		\begin{figure}[!h]
 	\centering
