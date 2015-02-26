@@ -1,24 +1,24 @@
 
 \section{Sparversion}
-	Um Strom zu sparen, die Größe zu schrumpfen und Kosten günstiger zu werden, haben wir die \glqq Sparversion\grqq entwickelt.
-	In dieser Variante der Gießanlage wurde die Anlage auf das wesentlichste beschränkt,das Gießen.
-	Sie wurde so konzipiert, dass sie genau auf eine Pflanze zugeschnitten ist.
+	Um Strom zu sparen, die Größe zu minimieren und Kosten zu reduzieren, haben wir die \glqq Sparversion\grqq entwickelt.
+	In dieser Variante der Gießanlage wurde die Anlage auf die wesentlichen Komponenten beschränkt.
+	Sie wurde so konzipiert, dass sie genau auf das Gießen einer Pflanze zugeschnitten ist.
 	Sie kann nur durch erneutes Programmieren auf andere Pflanzen und Böden angelernt werden. 	
 	\subsection{Aufbau}
 	In dieser Version wird auf das Display und die Kommunikation verzichtet.
-	Dadurch wird viel der Verkabelung gespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
-	Dies führt zu weniger Platz"-bedarf des Systems und dazu das es in ein kleineres Gehäuse passt.
+	Dadurch wird ein Großteil der Verkabelung eingespart, außerdem lässt sich die Hauptplatine deutlich kleiner gestalten.
+	Dies führt zu geringerem Platz"-bedarf des Systems und folglich zu geringeren Gehäuseabmessungen.
 	\subsection{Elektronik}
-	Durch das WEgfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
-	Die Größe der Hauptplatine  reduziert sich auf \begin{math} 55 mm \times 32 mm \end{math}.
+	Durch das Wegfallen der XBee Platine und deren Beschaltung wird das 3,3\,V Netz nicht mehr benötigt.
+	Die Größe der Hauptplatine reduziert sich auf \begin{math} 55 mm \times 32 mm \end{math}.
 	Dies entspricht weniger als der Hälfte der Fläche der Version 1.1 mit \begin{math} 56 mm \times 65 mm \end{math}.
 	\subsection{Programmierung}
-	Um weiter Stromsparen zu können wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
-	Dies ermöglicht die Ausnutzung der Sleep Modi und die Interrupts des ATMega328. 
+	Um dem Stromverbrauch weiter zu senken wurde diese Version nicht mit Arduino, sondern mit C geschriebenen Programm programmiert.
+	Dies ermöglicht die Nutzung der Sleep"~Modi und der Interrupts des ATMega328.
 	Dadurch befindet sich der \glqq Arduino Nano\grqq \ hauptsächlich im Schlafmodus und verbraucht deutlich weniger Energie.
-	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten über die Programmierung festgelegt werden.
+	Die Gießeinstellungen müssen auf Grund der fehlenden Kommunikation und Eingabemöglichkeiten bei der Programmierung festgelegt werden.
 	\subsubsection{Programmierwerkzeuge}
-	Durch das Wegfallen der Arduino Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
+	Durch das Wegfallen der Arduino"~Bootloaders, kann die Hardware nicht mehr per USB programmiert werden. 
 	Mit Hilfe des AVRISP mkII \footnote{\href{http://www.atmel.com/tools/avrispmkii.aspx}{www.atmel.com/tools/avrispmkii.aspx}} kann der Mikrocontroller über die ISP-Schnittstelle mit den Binärcode beschrieben werden. 
 
 	\subsubsection{Logik}
@@ -30,22 +30,18 @@
 \end{figure}
 
 	Der Ablaufplan (Abbildung \ref{fig-SV_Ablaufplan}) der Sparversion wurde vereinfacht. Das Programm läuft linear immer wieder durch.
-	Die meiste Zeit verbringt das System in der \glqq Sleep"~Schleife\grqq in dem nach jedem Timer"~Überlauf der Zähler um eins dekrementiert wird.
-	Nach ungefähr 3 Stunden ist der Zähler klein genug und das Programm fährt die Sensoren hoch, indem er sie über den Transistor mit Strom versorgt.
+	Die meiste Zeit verbringt das System in der \glqq Sleep"~Schleife\grqq, in dem nach jedem Timer"~Überlauf der Zähler um eins dekrementiert wird.
+	Nach ungefähr drei Stunden ist der Zähler klein genug und das Programm fährt die Sensoren hoch, indem er sie über den Transistor mit Strom versorgt.
 	Dann erfolgt die Messung der Sensorwerte.
-	Anhand der Sensorwerte wird nun entschieden ob gegossen wird.
+	Anhand der Sensorwerte wird nun entschieden, ob der Bedarf besteht zu Gießen.
 	Nachdem Gießen wird der Zähler wieder hochgestellt und das Programm beginnt von vorne.
 	\subsubsection{Kalbrierung der Sensoren}
-	Da der Bodensensoren für jede Pflanze, jeden Boden und teilweise jede Einstich"-stelle im Boden neu kalibriert wird, wurde über diesen Prozess Gedanken gemacht.
-	Es wurde entschieden dies manuell zu machen. 
+	Es wurde auch berücksichtigt, dass der Bodensensor für jede Pflanze bzw. jeden Boden und teilweise jede Einstich"-stelle im Boden neu kalibriert werden muss.
+	Es wurde entschieden dies manuell durchzuführen. 
 	Dazu wird der Sensor in den trockenen Boden gesteckt und über die Vorschaltung mit Strom versorgt.
-	Die Spannungsquelle an der Vorschaltung auf 5\,V gestellt und mit einem Multimeter die Spannung zwischen analog Ausgang und Grund gemessen.
-	Nun wird solange gegossen bis die Erde feucht genug erscheint, die dazu passende Spannung wird notiert.
-	Mit Hilfe der Formel \begin{math} { \frac{Messwert}{5,0\,V} } \times 1023 \end{math} wird der Wert errechnet, der in das Programm in die Definiton 
-	\begin{verbatim}
-	#define FEUCHTE	
-	\end{verbatim} 
-	eingetragen wird.
+	Die Spannungsquelle an der Vorschaltung wird auf 5\,V eingestellt und die Spannung zwischen analogen Ausgang und Grund mit einem Multimeter gemessen.
+	Nun wird solange gegossen bis die Erde feucht genug ist. Die gemessene Spannung wird notiert.
+	Mit Hilfe der Formel \begin{math} { \frac{Messwert}{5,0\,V} } \times 1023 \end{math} wird der Wert errechnet, der in das Programm in die Definiton \emph{\#define FEUCHTE} eingetragen wird.
 	
 	
 	
@@ -74,9 +70,9 @@
 	
 	  	
 	Allein auf Grund des fehlenden XBee-Moduls halbiert sich der Preis der Anlage.
-	Dazu kommt das fehlende Display, das kleinere Gehäuse und günstigere Hauptplatine.
-	So ist der Nachbau der Sparversion ca. 15 \euro\ teuer. 
-	In Tabelle \ref{Kosten für eine Sparversion Giesanlage} sind die Kosten nochmal zusammen getragen.
+	Dazu kommt das nicht vorhandene Display, das kleinere Gehäuse und die günstigere Hauptplatine.
+	So betragen die Kosten der Sparversion ca. 15 \euro\. 
+	Einen Überblick über die respektiven Kosten gibt Tabelle \ref{Kosten für eine Sparversion Giesanlage}.
 	 
 
 	
